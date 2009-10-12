@@ -18,11 +18,24 @@ namespace nothinbutdotnetprep.collections
             return list_of_movies.one_at_a_time();
         }
 
+        public IEnumerable<Movie> all_matching(Predicate<Movie> condition)
+        {
+            foreach (var movie in list_of_movies)
+            {
+                if (condition(movie)) yield return movie;
+            }
+        }
+
         public void add(Movie movie)
         {
             if (already_contains(movie)) return;
 
             list_of_movies.Add(movie);
+        }
+
+        bool already_contains(Movie movie)
+        {
+            return list_of_movies.Contains(movie);
         }
 
         public IEnumerable<Movie> sort_all_movies_by_title_descending()
@@ -48,11 +61,6 @@ namespace nothinbutdotnetprep.collections
         public IEnumerable<Movie> sort_all_movies_by_date_published_ascending()
         {
             throw new NotImplementedException();
-        }
-
-        private bool already_contains(Movie movie)
-        {
-            return list_of_movies.Contains(movie);
         }
     }
 }
