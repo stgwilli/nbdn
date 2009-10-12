@@ -6,7 +6,7 @@ namespace nothinbutdotnetprep.collections
 {
     public class MovieLibrary
     {
-        IList<Movie> list_of_movies;
+        readonly IList<Movie> list_of_movies;
 
         public MovieLibrary(IList<Movie> list_of_movies)
         {
@@ -30,6 +30,7 @@ namespace nothinbutdotnetprep.collections
             return list_of_movies.Contains(movie);
         }
 
+        
         public IEnumerable<Movie> sort_all_movies_by_title_descending()
         {
             throw new NotImplementedException();
@@ -37,12 +38,15 @@ namespace nothinbutdotnetprep.collections
 
         public IEnumerable<Movie> all_movies_published_by_pixar()
         {
-            throw new NotImplementedException();
+            return (list_of_movies.Search(p => p.production_studio == ProductionStudio.Pixar));
         }
 
         public IEnumerable<Movie> all_movies_published_by_pixar_or_disney()
         {
-            throw new NotImplementedException();
+            return
+                (list_of_movies.Search(
+                           p => p.production_studio == ProductionStudio.Pixar
+                        || p.production_studio == ProductionStudio.Disney));
         }
 
         public IEnumerable<Movie> sort_all_movies_by_title_ascending()
@@ -57,27 +61,28 @@ namespace nothinbutdotnetprep.collections
 
         public IEnumerable<Movie> all_movies_not_published_by_pixar()
         {
-            throw new NotImplementedException();
+            return list_of_movies.Search(p => p.production_studio != ProductionStudio.Pixar);
         }
 
         public IEnumerable<Movie> all_movies_published_after(int year)
         {
-            throw new NotImplementedException();
+            return list_of_movies.Search(p => p.date_published.Year > year);
         }
 
         public IEnumerable<Movie> all_movies_published_between_years(int startingYear, int endingYear)
         {
-            throw new NotImplementedException();
+            return list_of_movies.Search(p => p.date_published.Year >= startingYear
+                                              && p.date_published.Year <= endingYear);
         }
 
         public IEnumerable<Movie> all_kid_movies()
         {
-            throw new NotImplementedException();
+            return list_of_movies.Search(p => p.genre == Genre.kids);
         }
 
         public IEnumerable<Movie> all_action_movies()
         {
-            throw new NotImplementedException();
+            return list_of_movies.Search(p => p.genre == Genre.action);
         }
 
         public IEnumerable<Movie> sort_all_movies_by_date_published_descending()
