@@ -62,6 +62,26 @@ namespace nothinbutdotnetprep.tests
             };
         } ;
 
+        public class when_iterating_using_yield : concern {
+
+            context c = () =>
+            {
+                movie_collection.Add(new Movie());
+            };
+            because b = () =>
+            {
+                results = sut.all_movies();
+            };
+
+            it should_be_able_to_iterate = () =>
+            {
+                results.Count();
+
+            };
+
+            static IEnumerable<Movie> results;
+        }
+
         [Concern(typeof (MovieLibrary))]
         public class when_counting_the_number_of_movies : concern
         {
