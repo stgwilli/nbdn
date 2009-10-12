@@ -1,0 +1,600 @@
+<Configuration>
+  <TipsManager version="2" showTips="False">
+    <activityData>
+      <activity>
+        <Id>viewing</Id>
+        <Language>c#</Language>
+      </activity>
+      <data>
+        <TotalWorkTime>338</TotalWorkTime>
+        <LastTimeUsed>05/07/2009 14:52:47</LastTimeUsed>
+      </data>
+    </activityData>
+    <activityData>
+      <activity>
+        <Id>editing</Id>
+        <Language>c#</Language>
+      </activity>
+      <data>
+        <TotalWorkTime>268</TotalWorkTime>
+        <LastTimeUsed>05/07/2009 14:52:34</LastTimeUsed>
+      </data>
+    </activityData>
+    <activityData>
+      <activity>
+        <Id>viewing</Id>
+        <Language>vb</Language>
+      </activity>
+      <data>
+        <TotalWorkTime>0</TotalWorkTime>
+        <LastTimeUsed>
+        </LastTimeUsed>
+      </data>
+    </activityData>
+    <activityData>
+      <activity>
+        <Id>editing</Id>
+        <Language>vb</Language>
+      </activity>
+      <data>
+        <TotalWorkTime>0</TotalWorkTime>
+        <LastTimeUsed>
+        </LastTimeUsed>
+      </data>
+    </activityData>
+    <activityData>
+      <activity>
+        <Id>viewing</Id>
+        <Language />
+      </activity>
+      <data>
+        <TotalWorkTime>341</TotalWorkTime>
+        <LastTimeUsed>05/08/2009 00:33:14</LastTimeUsed>
+      </data>
+    </activityData>
+    <activityData>
+      <activity>
+        <Id>editing</Id>
+        <Language />
+      </activity>
+      <data>
+        <TotalWorkTime>270</TotalWorkTime>
+        <LastTimeUsed>05/07/2009 14:52:34</LastTimeUsed>
+      </data>
+    </activityData>
+    <featureData>
+      <feature>
+        <Feature>GoToInheritor</Feature>
+        <Language />
+      </feature>
+      <data>
+        <StartWorkAmount>341</StartWorkAmount>
+        <UseCount>0</UseCount>
+        <TipShownTime>
+        </TipShownTime>
+      </data>
+    </featureData>
+    <featureData>
+      <feature>
+        <Feature>GoToBase</Feature>
+        <Language>c#</Language>
+      </feature>
+      <data>
+        <StartWorkAmount>338</StartWorkAmount>
+        <UseCount>0</UseCount>
+        <TipShownTime>
+        </TipShownTime>
+      </data>
+    </featureData>
+    <featureData>
+      <feature>
+        <Feature>GoToBase</Feature>
+        <Language>vb</Language>
+      </feature>
+      <data>
+        <StartWorkAmount>0</StartWorkAmount>
+        <UseCount>0</UseCount>
+        <TipShownTime>
+        </TipShownTime>
+      </data>
+    </featureData>
+    <featureData>
+      <feature>
+        <Feature>GoToType</Feature>
+        <Language />
+      </feature>
+      <data>
+        <StartWorkAmount>341</StartWorkAmount>
+        <UseCount>0</UseCount>
+        <TipShownTime>
+        </TipShownTime>
+      </data>
+    </featureData>
+    <featureData>
+      <feature>
+        <Feature>GoToFile</Feature>
+        <Language />
+      </feature>
+      <data>
+        <StartWorkAmount>341</StartWorkAmount>
+        <UseCount>0</UseCount>
+        <TipShownTime>
+        </TipShownTime>
+      </data>
+    </featureData>
+    <featureData>
+      <feature>
+        <Feature>NextPrevMethod</Feature>
+        <Language />
+      </feature>
+      <data>
+        <StartWorkAmount>341</StartWorkAmount>
+        <UseCount>0</UseCount>
+        <TipShownTime>
+        </TipShownTime>
+      </data>
+    </featureData>
+    <featureData>
+      <feature>
+        <Feature>GoToFileMember</Feature>
+        <Language />
+      </feature>
+      <data>
+        <StartWorkAmount>341</StartWorkAmount>
+        <UseCount>0</UseCount>
+        <TipShownTime>
+        </TipShownTime>
+      </data>
+    </featureData>
+    <featureData>
+      <feature>
+        <Feature>FindUsages</Feature>
+        <Language />
+      </feature>
+      <data>
+        <StartWorkAmount>341</StartWorkAmount>
+        <UseCount>0</UseCount>
+        <TipShownTime>
+        </TipShownTime>
+      </data>
+    </featureData>
+    <featureData>
+      <feature>
+        <Feature>HighlightUsages</Feature>
+        <Language />
+      </feature>
+      <data>
+        <StartWorkAmount>341</StartWorkAmount>
+        <UseCount>0</UseCount>
+        <TipShownTime>
+        </TipShownTime>
+      </data>
+    </featureData>
+    <featureData>
+      <feature>
+        <Feature>GoToUsage</Feature>
+        <Language />
+      </feature>
+      <data>
+        <StartWorkAmount>0</StartWorkAmount>
+        <UseCount>0</UseCount>
+        <TipShownTime>
+        </TipShownTime>
+      </data>
+    </featureData>
+    <featureData>
+      <feature>
+        <Feature>FindResults.NextPrevOccurence</Feature>
+        <Language />
+      </feature>
+      <data>
+        <StartWorkAmount>0</StartWorkAmount>
+        <UseCount>0</UseCount>
+        <TipShownTime>
+        </TipShownTime>
+      </data>
+    </featureData>
+    <featureData>
+      <feature>
+        <Feature>HighlightUsages.NextPrevOccurence</Feature>
+        <Language />
+      </feature>
+      <data>
+        <StartWorkAmount>0</StartWorkAmount>
+        <UseCount>0</UseCount>
+        <TipShownTime>
+        </TipShownTime>
+      </data>
+    </featureData>
+    <featureData>
+      <feature>
+        <Feature>NextPrevError</Feature>
+        <Language>c#</Language>
+      </feature>
+      <data>
+        <StartWorkAmount>268</StartWorkAmount>
+        <UseCount>0</UseCount>
+        <TipShownTime>
+        </TipShownTime>
+      </data>
+    </featureData>
+    <featureData>
+      <feature>
+        <Feature>IntroduceVariable.PutExpressionValue</Feature>
+        <Language>c#</Language>
+      </feature>
+      <data>
+        <StartWorkAmount>268</StartWorkAmount>
+        <UseCount>0</UseCount>
+        <TipShownTime>
+        </TipShownTime>
+      </data>
+    </featureData>
+    <featureData>
+      <feature>
+        <Feature>IntroduceVariable.PutExpressionValue</Feature>
+        <Language>vb</Language>
+      </feature>
+      <data>
+        <StartWorkAmount>0</StartWorkAmount>
+        <UseCount>0</UseCount>
+        <TipShownTime>
+        </TipShownTime>
+      </data>
+    </featureData>
+    <featureData>
+      <feature>
+        <Feature>BasicCompletion</Feature>
+        <Language>c#</Language>
+      </feature>
+      <data>
+        <StartWorkAmount>-1</StartWorkAmount>
+        <UseCount>0</UseCount>
+        <TipShownTime>
+        </TipShownTime>
+      </data>
+    </featureData>
+    <featureData>
+      <feature>
+        <Feature>SmartCompletion</Feature>
+        <Language>c#</Language>
+      </feature>
+      <data>
+        <StartWorkAmount>268</StartWorkAmount>
+        <UseCount>0</UseCount>
+        <TipShownTime>
+        </TipShownTime>
+      </data>
+    </featureData>
+    <featureData>
+      <feature>
+        <Feature>SmartCompletion</Feature>
+        <Language>vb</Language>
+      </feature>
+      <data>
+        <StartWorkAmount>0</StartWorkAmount>
+        <UseCount>0</UseCount>
+        <TipShownTime>
+        </TipShownTime>
+      </data>
+    </featureData>
+    <featureData>
+      <feature>
+        <Feature>TypeNameCompletion</Feature>
+        <Language />
+      </feature>
+      <data>
+        <StartWorkAmount>270</StartWorkAmount>
+        <UseCount>0</UseCount>
+        <TipShownTime>
+        </TipShownTime>
+      </data>
+    </featureData>
+    <featureData>
+      <feature>
+        <Feature>VariableNameCompletion</Feature>
+        <Language>c#</Language>
+      </feature>
+      <data>
+        <StartWorkAmount>0</StartWorkAmount>
+        <UseCount>0</UseCount>
+        <TipShownTime>
+        </TipShownTime>
+      </data>
+    </featureData>
+    <featureData>
+      <feature>
+        <Feature>SmartCompletionAfterNew</Feature>
+        <Language>c#</Language>
+      </feature>
+      <data>
+        <StartWorkAmount>0</StartWorkAmount>
+        <UseCount>0</UseCount>
+        <TipShownTime>
+        </TipShownTime>
+      </data>
+    </featureData>
+    <featureData>
+      <feature>
+        <Feature>SmartCompletionAfterNew</Feature>
+        <Language>vb</Language>
+      </feature>
+      <data>
+        <StartWorkAmount>0</StartWorkAmount>
+        <UseCount>0</UseCount>
+        <TipShownTime>
+        </TipShownTime>
+      </data>
+    </featureData>
+    <featureData>
+      <feature>
+        <Feature>SmartCompletionForCast</Feature>
+        <Language>c#</Language>
+      </feature>
+      <data>
+        <StartWorkAmount>0</StartWorkAmount>
+        <UseCount>0</UseCount>
+        <TipShownTime>
+        </TipShownTime>
+      </data>
+    </featureData>
+    <featureData>
+      <feature>
+        <Feature>ParameterInfo</Feature>
+        <Language>c#</Language>
+      </feature>
+      <data>
+        <StartWorkAmount>268</StartWorkAmount>
+        <UseCount>0</UseCount>
+        <TipShownTime>
+        </TipShownTime>
+      </data>
+    </featureData>
+    <featureData>
+      <feature>
+        <Feature>ParameterInfo</Feature>
+        <Language>vb</Language>
+      </feature>
+      <data>
+        <StartWorkAmount>0</StartWorkAmount>
+        <UseCount>0</UseCount>
+        <TipShownTime>
+        </TipShownTime>
+      </data>
+    </featureData>
+    <featureData>
+      <feature>
+        <Feature>SurroundWith</Feature>
+        <Language />
+      </feature>
+      <data>
+        <StartWorkAmount>270</StartWorkAmount>
+        <UseCount>0</UseCount>
+        <TipShownTime>
+        </TipShownTime>
+      </data>
+    </featureData>
+    <featureData>
+      <feature>
+        <Feature>Generate</Feature>
+        <Language />
+      </feature>
+      <data>
+        <StartWorkAmount>270</StartWorkAmount>
+        <UseCount>0</UseCount>
+        <TipShownTime>
+        </TipShownTime>
+      </data>
+    </featureData>
+    <featureData>
+      <feature>
+        <Feature>ExtendSelection</Feature>
+        <Language>c#</Language>
+      </feature>
+      <data>
+        <StartWorkAmount>268</StartWorkAmount>
+        <UseCount>0</UseCount>
+        <TipShownTime>
+        </TipShownTime>
+      </data>
+    </featureData>
+    <featureData>
+      <feature>
+        <Feature>ExtendSelection</Feature>
+        <Language>vb</Language>
+      </feature>
+      <data>
+        <StartWorkAmount>0</StartWorkAmount>
+        <UseCount>0</UseCount>
+        <TipShownTime>
+        </TipShownTime>
+      </data>
+    </featureData>
+    <featureData>
+      <feature>
+        <Feature>DuplicateText</Feature>
+        <Language />
+      </feature>
+      <data>
+        <StartWorkAmount>270</StartWorkAmount>
+        <UseCount>0</UseCount>
+        <TipShownTime>
+        </TipShownTime>
+      </data>
+    </featureData>
+    <featureData>
+      <feature>
+        <Feature>RecentFiles</Feature>
+        <Language />
+      </feature>
+      <data>
+        <StartWorkAmount>341</StartWorkAmount>
+        <UseCount>0</UseCount>
+        <TipShownTime>
+        </TipShownTime>
+      </data>
+    </featureData>
+    <featureData>
+      <feature>
+        <Feature>GoToLastChange</Feature>
+        <Language />
+      </feature>
+      <data>
+        <StartWorkAmount>270</StartWorkAmount>
+        <UseCount>0</UseCount>
+        <TipShownTime>
+        </TipShownTime>
+      </data>
+    </featureData>
+    <featureData>
+      <feature>
+        <Feature>CommentUncomment</Feature>
+        <Language />
+      </feature>
+      <data>
+        <StartWorkAmount>270</StartWorkAmount>
+        <UseCount>0</UseCount>
+        <TipShownTime>
+        </TipShownTime>
+      </data>
+    </featureData>
+    <featureData>
+      <feature>
+        <Feature>UncommentBlockComment</Feature>
+        <Language />
+      </feature>
+      <data>
+        <StartWorkAmount>0</StartWorkAmount>
+        <UseCount>0</UseCount>
+        <TipShownTime>
+        </TipShownTime>
+      </data>
+    </featureData>
+    <featureData>
+      <feature>
+        <Feature>QuickDoc</Feature>
+        <Language>c#</Language>
+      </feature>
+      <data>
+        <StartWorkAmount>338</StartWorkAmount>
+        <UseCount>0</UseCount>
+        <TipShownTime>
+        </TipShownTime>
+      </data>
+    </featureData>
+    <featureData>
+      <feature>
+        <Feature>QuickDoc</Feature>
+        <Language>vb</Language>
+      </feature>
+      <data>
+        <StartWorkAmount>0</StartWorkAmount>
+        <UseCount>0</UseCount>
+        <TipShownTime>
+        </TipShownTime>
+      </data>
+    </featureData>
+    <featureData>
+      <feature>
+        <Feature>CtrlClick</Feature>
+        <Language />
+      </feature>
+      <data>
+        <StartWorkAmount>341</StartWorkAmount>
+        <UseCount>0</UseCount>
+        <TipShownTime>
+        </TipShownTime>
+      </data>
+    </featureData>
+    <featureData>
+      <feature>
+        <Feature>CamelCaseInGoTo</Feature>
+        <Language />
+      </feature>
+      <data>
+        <StartWorkAmount>0</StartWorkAmount>
+        <UseCount>0</UseCount>
+        <TipShownTime>
+        </TipShownTime>
+      </data>
+    </featureData>
+    <featureData>
+      <feature>
+        <Feature>TypeHierarchy</Feature>
+        <Language />
+      </feature>
+      <data>
+        <StartWorkAmount>341</StartWorkAmount>
+        <UseCount>0</UseCount>
+        <TipShownTime>
+        </TipShownTime>
+      </data>
+    </featureData>
+  </TipsManager>
+  <UpdatesManager><![CDATA[<Stream>
+  <XmlExternalizable />
+  <Categories>
+    <UpdatesCategory>
+      <XmlExternalizable>
+        <LastActivationDate>03/24/2009 01:57:22</LastActivationDate>
+        <LastDownloadAttemptDate>03/24/2009 06:39:57</LastDownloadAttemptDate>
+        <LastDownloadSummary />
+        <LastSuccessfulDownloadDate>03/24/2009 06:39:59</LastSuccessfulDownloadDate>
+        <LastSuccessfulDownloadVersion>4.5.1215.0</LastSuccessfulDownloadVersion>
+        <Name>ShellProduct</Name>
+        <UpdatesFilterUri>http://www.jetbrains.net/confluence/download/attachments/11797800/UpdateFilter.xslt</UpdatesFilterUri>
+      </XmlExternalizable>
+      <UpdateInfos />
+    </UpdatesCategory>
+  </Categories>
+</Stream>]]></UpdatesManager>
+  <ActivityTracker>
+    <UniqueUserId>11264b3b-f92d-4afd-adae-c1091828420d</UniqueUserId>
+  </ActivityTracker>
+  <VSWindowManager>
+    <IDToGuidMap>
+      <entry key="SearchResultsWindow" value="1EA986C6-340F-42C8-892E-F5779818D569" visible="False" />
+      <entry key="HierarchyResultsWindow" value="AB97F511-6AF2-4d27-B468-E4048600093E" visible="False" />
+      <entry key="StackTraceManager" value="0024BEE0-BCE9-484F-AFA7-B5647916C26B" visible="False" />
+      <entry key="Resharper.RichableDefenitionsExplorerWindow" value="435AD293-774D-49c6-9E2D-3740C322BE52" visible="False" />
+      <entry key="CodeStructureWindow" value="e23045c1-967d-4e64-9ed1-d698de65807f" visible="False" />
+      <entry key="TodoExplorerWindow" value="AE42D903-E5A3-417D-BA25-3CE77B315EED" visible="False" />
+      <entry key="UnitTestExplorerWindow" value="532ddd98-f6a6-4a76-a84e-4aea5211f733" visible="False" />
+      <entry key="UnitTestSessionsWindow" value="b2bc9916-e3e6-43a8-ad5f-3bdb95f53db5" visible="False" />
+      <entry key="ErrorsView" value="7DD08AD7-93B2-491F-A0E8-EE2BB4E78240" visible="False" />
+      <entry key="ToolWindowID_LiveTemplates" value="888c821a-6430-40bd-9bfe-1610b91df560" visible="False" />
+    </IDToGuidMap>
+  </VSWindowManager>
+  <SettingsComponent>
+    <string>
+      <setting name="jetbrains.resharper.generate.Constructor.XmlDocumentation">False</setting>
+      <setting name="jetbrains.resharper.generate.Delegating.XmlDocumentation">False</setting>
+      <setting name="jetbrains.resharper.generate.Implementations.WrapInRegion">False</setting>
+      <setting name="jetbrains.resharper.generate.Implementations.XmlDocumentation">False</setting>
+      <setting name="jetbrains.resharper.generate.Overrides.WrapInRegion">False</setting>
+      <setting name="jetbrains.resharper.generate.Overrides.XmlDocumentation">False</setting>
+    </string>
+    <integer>
+      <setting name="JetBrains.ReSharper.Features.Environment.Options.Inspections.InspectionSeverityPage.SplitterDistance">150</setting>
+      <setting name="jetbrains.resharper.occurence.view.groupby">5</setting>
+      <setting name="jetbrains.resharper.TreeModelBrowserPanelPsi.Orientation">0</setting>
+      <setting name="jetbrains.resharper.TreeModelBrowserPanelPsi.SplitPosition.Horizontal">300</setting>
+      <setting name="jetbrains.resharper.unittesting.build">0</setting>
+    </integer>
+    <boolean>
+      <setting name="CodeCompletionController.HINT_USED">True</setting>
+      <setting name="jetbrains.resharper.generate.Constructor.GroupBy">True</setting>
+      <setting name="jetbrains.resharper.generate.Constructor.SortBy">False</setting>
+      <setting name="jetbrains.resharper.generate.Delegating.GroupBy">True</setting>
+      <setting name="jetbrains.resharper.generate.Delegating.SortBy">False</setting>
+      <setting name="jetbrains.resharper.generate.Implementations.GroupBy">True</setting>
+      <setting name="jetbrains.resharper.generate.Implementations.SortBy">False</setting>
+      <setting name="jetbrains.resharper.generate.Overrides.GroupBy">True</setting>
+      <setting name="jetbrains.resharper.generate.Overrides.SortBy">False</setting>
+      <setting name="jetbrains.resharper.occurence.view.merge">True</setting>
+      <setting name="jetbrains.resharper.TreeModelBrowserPanelPsi.PreviewVisible">False</setting>
+      <setting name="ReSharper.CurrentSession.HINT_USED">True</setting>
+      <setting name="ReSharper.HighlightUsagesAction.HintUsed">True</setting>
+    </boolean>
+  </SettingsComponent>
+</Configuration>

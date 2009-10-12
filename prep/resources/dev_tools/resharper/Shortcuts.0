@@ -1,0 +1,444 @@
+<Shortcuts>
+  <VSCommands>
+    <VSCommand name="Format.AlignBottoms" scope="VC Dialog Editor" shortcut="Shift+Control+Down" />
+    <VSCommand name="Edit.SizeControlDown" scope="Global" shortcut="Shift+Control+Down" />
+    <VSCommand name="Edit.SizeControlDown" scope="Windows Forms Designer" shortcut="Shift+Control+Down" />
+    <VSCommand name="Edit.SizeControlDown" scope="Report Designer" shortcut="Shift+Control+Down" />
+    <VSCommand name="VisualSVN.NextDifference" scope="Text Editor" shortcut="Shift+Control+Down" />
+    <VSCommand name="Format.AlignMiddles" scope="VC Dialog Editor" shortcut="F9" />
+    <VSCommand name="Debug.ToggleBreakpoint" scope="Global" shortcut="F9" />
+    <VSCommand name="Format.AlignLefts" scope="VC Dialog Editor" shortcut="Shift+Control+Left" />
+    <VSCommand name="Edit.WordPreviousExtend" scope="Text Editor" shortcut="Shift+Control+Left" />
+    <VSCommand name="Edit.SizeControlLeft" scope="Global" shortcut="Shift+Control+Left" />
+    <VSCommand name="Edit.SizeControlLeft" scope="Windows Forms Designer" shortcut="Shift+Control+Left" />
+    <VSCommand name="Edit.SizeControlLeft" scope="Report Designer" shortcut="Shift+Control+Left" />
+    <VSCommand name="Image.PreviousRightColor" scope="VC Image Editor" shortcut="Shift+Control+Left" />
+    <VSCommand name="Format.AlignRights" scope="VC Dialog Editor" shortcut="Shift+Control+Right" />
+    <VSCommand name="Edit.WordNextExtend" scope="Text Editor" shortcut="Shift+Control+Right" />
+    <VSCommand name="Edit.SizeControlRight" scope="Global" shortcut="Shift+Control+Right" />
+    <VSCommand name="Edit.SizeControlRight" scope="Windows Forms Designer" shortcut="Shift+Control+Right" />
+    <VSCommand name="Edit.SizeControlRight" scope="Report Designer" shortcut="Shift+Control+Right" />
+    <VSCommand name="Image.NextRightColor" scope="VC Image Editor" shortcut="Shift+Control+Right" />
+    <VSCommand name="Format.AlignTops" scope="VC Dialog Editor" shortcut="Shift+Control+Up" />
+    <VSCommand name="Edit.SizeControlUp" scope="Global" shortcut="Shift+Control+Up" />
+    <VSCommand name="Edit.SizeControlUp" scope="Windows Forms Designer" shortcut="Shift+Control+Up" />
+    <VSCommand name="Edit.SizeControlUp" scope="Report Designer" shortcut="Shift+Control+Up" />
+    <VSCommand name="VisualSVN.PreviousDifference" scope="Text Editor" shortcut="Shift+Control+Up" />
+    <VSCommand name="Format.AlignCenters" scope="VC Dialog Editor" shortcut="Shift+F9" />
+    <VSCommand name="Debug.QuickWatch" scope="Global" shortcut="Shift+F9" />
+    <VSCommand name="Edit.Copy" scope="Global" shortcut="Control+C" />
+    <VSCommand name="Edit.Copy" scope="Global" shortcut="Control+Insert" />
+    <VSCommand name="Edit.Cut" scope="Global" shortcut="Control+X" />
+    <VSCommand name="Edit.Cut" scope="Global" shortcut="Shift+Delete" />
+    <VSCommand name="Edit.Delete" scope="Class Diagram" shortcut="Control+Delete" />
+    <VSCommand name="Edit.WordDeleteToEnd" scope="Text Editor" shortcut="Control+Delete" />
+    <VSCommand name="Edit.Delete" scope="Global" shortcut="Delete" />
+    <VSCommand name="Edit.Remove" scope="Managed Resources Editor" shortcut="Delete" />
+    <VSCommand name="Edit.RemovefromDiagram" scope="Class Diagram" shortcut="Delete" />
+    <VSCommand name="Edit.Paste" scope="Global" shortcut="Control+V" />
+    <VSCommand name="Edit.Paste" scope="Global" shortcut="Shift+Insert" />
+    <VSCommand name="Edit.SelectAll" scope="Global" shortcut="Control+A" />
+    <VSCommand name="Image.AirbrushTool" scope="VC Image Editor" shortcut="Control+A" />
+    <VSCommand name="View.Toolbox" scope="Global" shortcut="Control+Alt+X" />
+    <VSCommand name="Edit.Undo" scope="Global" shortcut="Control+Z" />
+    <VSCommand name="Edit.Undo" scope="Global" shortcut="Alt+Back" />
+    <VSCommand name="Format.Bold" scope="HTML Editor Design View" shortcut="Control+B" />
+    <VSCommand name="Format.ButtonBottom" scope="VC Dialog Editor" shortcut="Control+B" />
+    <VSCommand name="Image.BrushTool" scope="VC Image Editor" shortcut="Control+B" />
+    <VSCommand name="EditorContextMenus.CodeWindow.ReSharper_GotoDeclarationInContextMenu" scope="Text Editor" shortcut="Control+B" />
+    <VSCommand name="EditorContextMenus.CodeWindow.ReSharper_GotoDeclarationInContextMenu" scope="Global" shortcut="Control+B" />
+    <VSCommand name="Format.Italic" scope="HTML Editor Design View" shortcut="Control+I" />
+    <VSCommand name="Image.PencilTool" scope="VC Image Editor" shortcut="Control+I" />
+    <VSCommand name="Format.Underline" scope="HTML Editor Design View" shortcut="Control+U" />
+    <VSCommand name="Image.UseSelectionasBrush" scope="VC Image Editor" shortcut="Control+U" />
+    <VSCommand name="QueryDesigner.SQL" scope="Query Designer" shortcut="Control+D3" />
+    <VSCommand name="QueryDesigner.SQL" scope="View Designer" shortcut="Control+D3" />
+    <VSCommand name="Resources.Icons" scope="Managed Resources Editor" shortcut="Control+D3" />
+    <VSCommand name="QueryDesigner.Diagram" scope="Query Designer" shortcut="Control+D1" />
+    <VSCommand name="QueryDesigner.Diagram" scope="View Designer" shortcut="Control+D1" />
+    <VSCommand name="Resources.Strings" scope="Managed Resources Editor" shortcut="Control+D1" />
+    <VSCommand name="OtherContextMenus.ORDesignerContextMenu.HideMethodsPane" scope="VisualStudio" shortcut="Control+D1" />
+    <VSCommand name="QueryDesigner.Results" scope="Query Designer" shortcut="Control+D4" />
+    <VSCommand name="QueryDesigner.Results" scope="View Designer" shortcut="Control+D4" />
+    <VSCommand name="Resources.Audio" scope="Managed Resources Editor" shortcut="Control+D4" />
+    <VSCommand name="QueryDesigner.Criteria" scope="Query Designer" shortcut="Control+D2" />
+    <VSCommand name="QueryDesigner.Criteria" scope="View Designer" shortcut="Control+D2" />
+    <VSCommand name="Resources.Images" scope="Managed Resources Editor" shortcut="Control+D2" />
+    <VSCommand name="Debug.StopDebugging" scope="Global" shortcut="Shift+F5" />
+    <VSCommand name="Debug.BreakAll" scope="Global" shortcut="Control+Alt+Pause" />
+    <VSCommand name="QueryDesigner.ExecuteSQL" scope="Query Designer" shortcut="Control+R" />
+    <VSCommand name="QueryDesigner.ExecuteSQL" scope="View Designer" shortcut="Control+R" />
+    <VSCommand name="Format.ButtonRight" scope="VC Dialog Editor" shortcut="Control+R" />
+    <VSCommand name="QueryDesigner.GotoRow" scope="Query Designer" shortcut="Control+G" />
+    <VSCommand name="QueryDesigner.GotoRow" scope="View Designer" shortcut="Control+G" />
+    <VSCommand name="Edit.GoTo" scope="Global" shortcut="Control+G" />
+    <VSCommand name="Format.ToggleGuides" scope="VC Dialog Editor" shortcut="Control+G" />
+    <VSCommand name="File.OpenProject" scope="Global" shortcut="Shift+Control+O" />
+    <VSCommand name="Project.AddNewItem" scope="Global" shortcut="Shift+Control+A" />
+    <VSCommand name="File.SaveAll" scope="Global" shortcut="Shift+Control+S" />
+    <VSCommand name="Edit.Replace" scope="Global" shortcut="Control+H" />
+    <VSCommand name="Image.FlipHorizontal" scope="VC Image Editor" shortcut="Control+H" />
+    <VSCommand name="View.PropertyPages" scope="Global" shortcut="Shift+F4" />
+    <VSCommand name="View.FullScreen" scope="Global" shortcut="Shift+Alt+Return" />
+    <VSCommand name="View.SolutionExplorer" scope="Global" shortcut="Control+Alt+L" />
+    <VSCommand name="View.PropertiesWindow" scope="Global" shortcut="F4" />
+    <VSCommand name="View.TaskList" scope="Global" shortcut="Control+OemBackslash Control+T" />
+    <VSCommand name="View.TaskList" scope="Global" shortcut="Control+OemBackslash T" />
+    <VSCommand name="View.ErrorList" scope="Global" shortcut="Control+OemBackslash Control+E" />
+    <VSCommand name="View.ErrorList" scope="Global" shortcut="Control+OemBackslash E" />
+    <VSCommand name="View.CodeDefinitionWindow" scope="Global" shortcut="Control+OemBackslash Control+D" />
+    <VSCommand name="View.CodeDefinitionWindow" scope="Global" shortcut="Control+OemBackslash D" />
+    <VSCommand name="View.Output" scope="Global" shortcut="Control+Alt+O" />
+    <VSCommand name="View.ObjectBrowser" scope="Global" shortcut="Control+Alt+J" />
+    <VSCommand name="Debug.Immediate" scope="Global" shortcut="Control+Alt+I" />
+    <VSCommand name="Debug.Locals" scope="Global" shortcut="Control+Alt+V L" />
+    <VSCommand name="Debug.Autos" scope="Global" shortcut="Control+Alt+V A" />
+    <VSCommand name="Debug.CallStack" scope="Global" shortcut="Control+Alt+C" />
+    <VSCommand name="Project.AddExistingItem" scope="Global" shortcut="Shift+Alt+A" />
+    <VSCommand name="Debug.StepInto" scope="Global" shortcut="F11" />
+    <VSCommand name="Debug.StepOver" scope="Global" shortcut="F10" />
+    <VSCommand name="Debug.StepOut" scope="Global" shortcut="Shift+F11" />
+    <VSCommand name="Debug.StepOut" scope="Global" shortcut="Shift+Control+F11" />
+    <VSCommand name="Debug.RunToCursor" scope="Global" shortcut="Control+F10" />
+    <VSCommand name="Debug.QuickWatch" scope="Global" shortcut="Control+Alt+Q" />
+    <VSCommand name="Debug.DeleteAllBreakpoints" scope="Global" shortcut="Shift+Control+F9" />
+    <VSCommand name="Format.CenterHorizontal" scope="VC Dialog Editor" shortcut="Shift+Control+F9" />
+    <VSCommand name="Debug.SetNextStatement" scope="Global" shortcut="Shift+Control+F10" />
+    <VSCommand name="Debug.ShowNextStatement" scope="Global" shortcut="Alt+Multiply" />
+    <VSCommand name="Edit.FindinFiles" scope="Global" shortcut="Shift+Control+F" />
+    <VSCommand name="Edit.ReplaceinFiles" scope="Global" shortcut="Shift+Control+H" />
+    <VSCommand name="Image.Rotate90Degrees" scope="VC Image Editor" shortcut="Shift+Control+H" />
+    <VSCommand name="Edit.GoToNextLocation" scope="Global" shortcut="F8" />
+    <VSCommand name="Edit.GoToPrevLocation" scope="Global" shortcut="Shift+F8" />
+    <VSCommand name="Window.NextTab" scope="Global" shortcut="Control+Next" />
+    <VSCommand name="View.NextView" scope="HTML Editor Design View" shortcut="Control+Next" />
+    <VSCommand name="View.NextView" scope="HTML Editor Source View" shortcut="Control+Next" />
+    <VSCommand name="Edit.ViewBottom" scope="Text Editor" shortcut="Control+Next" />
+    <VSCommand name="Window.PreviousTab" scope="Global" shortcut="Control+PageUp" />
+    <VSCommand name="Window.PreviousTab" scope="HTML Editor Design View" shortcut="Control+PageUp" />
+    <VSCommand name="Window.PreviousTab" scope="HTML Editor Source View" shortcut="Control+PageUp" />
+    <VSCommand name="Edit.ViewTop" scope="Text Editor" shortcut="Control+PageUp" />
+    <VSCommand name="Window.CloseToolWindow" scope="Global" shortcut="Shift+Escape" />
+    <VSCommand name="" scope="Windows Forms Designer" shortcut="Shift+Escape" />
+    <VSCommand name="" scope="Report Designer" shortcut="Shift+Escape" />
+    <VSCommand name="Window.ActivateDocumentWindow" scope="Global" shortcut="Escape" />
+    <VSCommand name="Window.MovetoNavigationBar" scope="Global" shortcut="Control+F2" />
+    <VSCommand name="Debug.Start" scope="Global" shortcut="F5" />
+    <VSCommand name="Debug.Restart" scope="Global" shortcut="Shift+Control+F5" />
+    <VSCommand name="Window.NextPane" scope="Global" shortcut="Alt+F6" />
+    <VSCommand name="Window.PreviousPane" scope="Global" shortcut="Shift+Alt+F6" />
+    <VSCommand name="File.SaveSelectedItems" scope="Global" shortcut="Control+S" />
+    <VSCommand name="View.ViewDesigner" scope="HTML Editor Source View" shortcut="Shift+F7" />
+    <VSCommand name="View.ViewMarkup" scope="HTML Editor Design View" shortcut="Shift+F7" />
+    <VSCommand name="Format.SizetoContent" scope="VC Dialog Editor" shortcut="Shift+F7" />
+    <VSCommand name="View.ViewCode" scope="Settings Designer" shortcut="F7" />
+    <VSCommand name="View.ToggleDesigner" scope="Global" shortcut="F7" />
+    <VSCommand name="View.ViewCode" scope="Class Diagram" shortcut="Return" />
+    <VSCommand name="Edit.BreakLine" scope="Windows Forms Designer" shortcut="Return" />
+    <VSCommand name="Edit.BreakLine" scope="Text Editor" shortcut="Return" />
+    <VSCommand name="Edit.BreakLine" scope="Report Designer" shortcut="Return" />
+    <VSCommand name="Edit.ShowTileGrid" scope="Global" shortcut="Return" />
+    <VSCommand name="File.ViewinBrowser" scope="Global" shortcut="Shift+Control+W" />
+    <VSCommand name="View.EditLabel" scope="Global" shortcut="F2" />
+    <VSCommand name="Edit.EditCell" scope="Managed Resources Editor" shortcut="F2" />
+    <VSCommand name="Edit.EditCell" scope="Settings Designer" shortcut="F2" />
+    <VSCommand name="Debug.Exceptions" scope="Global" shortcut="Control+Alt+E" />
+    <VSCommand name="Edit.StopSearch" scope="Global" shortcut="Alt+F3 S" />
+    <VSCommand name="Debug.StartWithoutDebugging" scope="Global" shortcut="Control+F5" />
+    <VSCommand name="Edit.FindNext" scope="Global" shortcut="F3" />
+    <VSCommand name="Edit.FindPrevious" scope="Global" shortcut="Shift+F3" />
+    <VSCommand name="Edit.FindNextSelected" scope="Global" shortcut="Control+F3" />
+    <VSCommand name="Edit.FindPreviousSelected" scope="Global" shortcut="Shift+Control+F3" />
+    <VSCommand name="Debug.EnableBreakpoint" scope="Global" shortcut="Control+F9" />
+    <VSCommand name="Format.CenterVertical" scope="VC Dialog Editor" shortcut="Control+F9" />
+    <VSCommand name="Help.F1Help" scope="Global" shortcut="F1" />
+    <VSCommand name="ClassViewContextMenus.ClassViewMultiselectProjectreferencesItems.Properties" scope="Global" shortcut="Alt+Return" />
+    <VSCommand name="Tools.GoToCommandLine" scope="Global" shortcut="Control+Divide" />
+    <VSCommand name="View.ClassView" scope="Global" shortcut="Shift+Control+C" />
+    <VSCommand name="Window.PreviousDocumentWindow" scope="Global" shortcut="Shift+Control+F6" />
+    <VSCommand name="Edit.CycleClipboardRing" scope="Global" shortcut="Shift+Control+V" />
+    <VSCommand name="Edit.CycleClipboardRing" scope="Global" shortcut="Shift+Control+Insert" />
+    <VSCommand name="View.CommandWindow" scope="Global" shortcut="Control+Alt+A" />
+    <VSCommand name="View.NavigateBackward" scope="Global" shortcut="Control+Subtract" />
+    <VSCommand name="Image.SmallerBrush" scope="VC Image Editor" shortcut="Control+Subtract" />
+    <VSCommand name="View.NavigateForward" scope="Global" shortcut="Shift+Control+Subtract" />
+    <VSCommand name="Build.BuildSolution" scope="Global" shortcut="Shift+Control+B" />
+    <VSCommand name="Build.Cancel" scope="Global" shortcut="Control+Pause" />
+    <VSCommand name="Project.Override" scope="Global" shortcut="Control+Alt+Insert" />
+    <VSCommand name="View.FindSymbolResults" scope="Global" shortcut="Control+Alt+F12" />
+    <VSCommand name="Help.WindowHelp" scope="Global" shortcut="Shift+F1" />
+    <VSCommand name="Tools.AttachtoProcess" scope="Global" shortcut="Control+Alt+P" />
+    <VSCommand name="View.PopBrowseContext" scope="Global" shortcut="Shift+Control+D8" />
+    <VSCommand name="View.BrowseNext" scope="Global" shortcut="Shift+Control+D1" />
+    <VSCommand name="View.BrowsePrevious" scope="Global" shortcut="Shift+Control+D2" />
+    <VSCommand name="View.BookmarkWindow" scope="Global" shortcut="Control+K Control+W" />
+    <VSCommand name="Tools.CodeSnippetsManager" scope="Global" shortcut="Control+K Control+B" />
+    <VSCommand name="Edit.SwapAnchor" scope="Text Editor" shortcut="Control+K Control+A" />
+    <VSCommand name="Edit.DeleteHorizontalWhiteSpace" scope="Text Editor" shortcut="Control+K Control+OemBackslash" />
+    <VSCommand name="Edit.ClearBookmarks" scope="Text Editor" shortcut="Control+K Control+L" />
+    <VSCommand name="Edit.ToggleBookmark" scope="Text Editor" shortcut="Control+K Control+K" />
+    <VSCommand name="Edit.NextBookmark" scope="Global" shortcut="Control+K Control+N" />
+    <VSCommand name="Edit.PreviousBookmark" scope="Global" shortcut="Control+K Control+P" />
+    <VSCommand name="Edit.FormatSelection" scope="Text Editor" shortcut="Control+K Control+F" />
+    <VSCommand name="Edit.ToggleTaskListShortcut" scope="Text Editor" shortcut="Control+K Control+H" />
+    <VSCommand name="Edit.QuickInfo" scope="Text Editor" shortcut="Control+K Control+I" />
+    <VSCommand name="Edit.CommentSelection" scope="Text Editor" shortcut="Control+K Control+C" />
+    <VSCommand name="Edit.UncommentSelection" scope="Text Editor" shortcut="Control+K Control+U" />
+    <VSCommand name="Edit.FormatDocument" scope="Text Editor" shortcut="Control+K Control+D" />
+    <VSCommand name="Edit.InsertSnippet" scope="Global" shortcut="Control+K Control+X" />
+    <VSCommand name="" scope="Global" shortcut="Control+K Control+F" />
+    <VSCommand name="Edit.GenerateMethodStub" scope="Global" shortcut="Control+K Control+M" />
+    <VSCommand name="Edit.SurroundWith" scope="Global" shortcut="Control+K Control+S" />
+    <VSCommand name="View.ClassViewGoToSearchCombo" scope="Global" shortcut="Control+K Control+V" />
+    <VSCommand name="View.ObjectBrowserGoToSearchCombo" scope="Global" shortcut="Control+K Control+R" />
+    <VSCommand name="Window.NextDocumentWindowNav" scope="Global" shortcut="Control+Tab" />
+    <VSCommand name="Window.PreviousDocumentWindowNav" scope="Global" shortcut="Shift+Control+Tab" />
+    <VSCommand name="View.ForwardBrowseContext" scope="Global" shortcut="Shift+Control+D7" />
+    <VSCommand name="Help.Contents" scope="Global" shortcut="Control+Alt+F1" />
+    <VSCommand name="Help.Index" scope="Global" shortcut="Control+Alt+F2" />
+    <VSCommand name="Help.Search" scope="Global" shortcut="Control+Alt+F3" />
+    <VSCommand name="Help.HowDoI" scope="Global" shortcut="Control+F1" />
+    <VSCommand name="Help.SearchResults" scope="Global" shortcut="Shift+Alt+F3" />
+    <VSCommand name="Edit.DeleteBackwards" scope="Text Editor" shortcut="Shift+Back" />
+    <VSCommand name="Edit.DeleteBackwards" scope="Text Editor" shortcut="Back" />
+    <VSCommand name="Edit.BreakLine" scope="Text Editor" shortcut="Shift+Return" />
+    <VSCommand name="Edit.InsertTab" scope="Windows Forms Designer" shortcut="Tab" />
+    <VSCommand name="Edit.InsertTab" scope="Text Editor" shortcut="Tab" />
+    <VSCommand name="Edit.InsertTab" scope="Report Designer" shortcut="Tab" />
+    <VSCommand name="Edit.SelectNextControl" scope="Global" shortcut="Tab" />
+    <VSCommand name="Edit.TabLeft" scope="Windows Forms Designer" shortcut="Shift+Tab" />
+    <VSCommand name="Edit.TabLeft" scope="Text Editor" shortcut="Shift+Tab" />
+    <VSCommand name="Edit.TabLeft" scope="Report Designer" shortcut="Shift+Tab" />
+    <VSCommand name="Edit.SelectPreviousControl" scope="Global" shortcut="Shift+Tab" />
+    <VSCommand name="Edit.CharLeft" scope="Windows Forms Designer" shortcut="Left" />
+    <VSCommand name="Edit.CharLeft" scope="Text Editor" shortcut="Left" />
+    <VSCommand name="Edit.CharLeft" scope="Report Designer" shortcut="Left" />
+    <VSCommand name="Edit.MoveControlLeft" scope="VC Dialog Editor" shortcut="Left" />
+    <VSCommand name="Edit.MoveControlLeftGrid" scope="Global" shortcut="Left" />
+    <VSCommand name="Edit.CharLeftExtend" scope="Windows Forms Designer" shortcut="Shift+Left" />
+    <VSCommand name="Edit.CharLeftExtend" scope="Text Editor" shortcut="Shift+Left" />
+    <VSCommand name="Edit.CharLeftExtend" scope="Report Designer" shortcut="Shift+Left" />
+    <VSCommand name="Edit.SizeControlLeft" scope="VC Dialog Editor" shortcut="Shift+Left" />
+    <VSCommand name="Edit.SizeControlLeftGrid" scope="Global" shortcut="Shift+Left" />
+    <VSCommand name="Edit.CharRight" scope="Windows Forms Designer" shortcut="Right" />
+    <VSCommand name="Edit.CharRight" scope="Text Editor" shortcut="Right" />
+    <VSCommand name="Edit.CharRight" scope="Report Designer" shortcut="Right" />
+    <VSCommand name="Edit.MoveControlRight" scope="VC Dialog Editor" shortcut="Right" />
+    <VSCommand name="Edit.MoveControlRightGrid" scope="Global" shortcut="Right" />
+    <VSCommand name="Edit.CharRightExtend" scope="Windows Forms Designer" shortcut="Shift+Right" />
+    <VSCommand name="Edit.CharRightExtend" scope="Text Editor" shortcut="Shift+Right" />
+    <VSCommand name="Edit.CharRightExtend" scope="Report Designer" shortcut="Shift+Right" />
+    <VSCommand name="Edit.SizeControlRight" scope="VC Dialog Editor" shortcut="Shift+Right" />
+    <VSCommand name="Edit.SizeControlRightGrid" scope="Global" shortcut="Shift+Right" />
+    <VSCommand name="Edit.LineUp" scope="Windows Forms Designer" shortcut="Up" />
+    <VSCommand name="Edit.LineUp" scope="Text Editor" shortcut="Up" />
+    <VSCommand name="Edit.LineUp" scope="Report Designer" shortcut="Up" />
+    <VSCommand name="Edit.MoveControlUp" scope="VC Dialog Editor" shortcut="Up" />
+    <VSCommand name="Edit.MoveControlUpGrid" scope="Global" shortcut="Up" />
+    <VSCommand name="Edit.LineUpExtend" scope="Windows Forms Designer" shortcut="Shift+Down" />
+    <VSCommand name="Edit.LineDownExtend" scope="Text Editor" shortcut="Shift+Down" />
+    <VSCommand name="Edit.LineDownExtend" scope="Report Designer" shortcut="Shift+Down" />
+    <VSCommand name="Edit.SizeControlDown" scope="VC Dialog Editor" shortcut="Shift+Down" />
+    <VSCommand name="Edit.SizeControlDownGrid" scope="Global" shortcut="Shift+Down" />
+    <VSCommand name="Edit.LineUpExtend" scope="Text Editor" shortcut="Shift+Up" />
+    <VSCommand name="Edit.LineUpExtend" scope="Report Designer" shortcut="Shift+Up" />
+    <VSCommand name="Edit.LineDownExtend" scope="Windows Forms Designer" shortcut="Shift+Up" />
+    <VSCommand name="Edit.SizeControlUp" scope="VC Dialog Editor" shortcut="Shift+Up" />
+    <VSCommand name="Edit.SizeControlUpGrid" scope="Global" shortcut="Shift+Up" />
+    <VSCommand name="Edit.LineDown" scope="Windows Forms Designer" shortcut="Down" />
+    <VSCommand name="Edit.LineDown" scope="Text Editor" shortcut="Down" />
+    <VSCommand name="Edit.LineDown" scope="Report Designer" shortcut="Down" />
+    <VSCommand name="Edit.MoveControlDown" scope="VC Dialog Editor" shortcut="Down" />
+    <VSCommand name="Edit.MoveControlDownGrid" scope="Global" shortcut="Down" />
+    <VSCommand name="Edit.DocumentStart" scope="Windows Forms Designer" shortcut="Home" />
+    <VSCommand name="Edit.LineStart" scope="Text Editor" shortcut="Home" />
+    <VSCommand name="Edit.DocumentStart" scope="Text Editor" shortcut="Control+Home" />
+    <VSCommand name="Edit.DocumentStartExtend" scope="Windows Forms Designer" shortcut="Shift+Home" />
+    <VSCommand name="Edit.LineStartExtend" scope="Text Editor" shortcut="Shift+Home" />
+    <VSCommand name="Edit.DocumentStartExtend" scope="Text Editor" shortcut="Shift+Control+Home" />
+    <VSCommand name="Edit.DocumentEnd" scope="Windows Forms Designer" shortcut="End" />
+    <VSCommand name="Edit.LineEnd" scope="Text Editor" shortcut="End" />
+    <VSCommand name="Edit.DocumentEnd" scope="Text Editor" shortcut="Control+End" />
+    <VSCommand name="Edit.DocumentEndExtend" scope="Windows Forms Designer" shortcut="Shift+End" />
+    <VSCommand name="Edit.LineEndExtend" scope="Text Editor" shortcut="Shift+End" />
+    <VSCommand name="Edit.DocumentEndExtend" scope="Text Editor" shortcut="Shift+Control+End" />
+    <VSCommand name="Edit.PageUp" scope="Text Editor" shortcut="PageUp" />
+    <VSCommand name="Edit.PageUpExtend" scope="Text Editor" shortcut="Shift+PageUp" />
+    <VSCommand name="Edit.PageDown" scope="Text Editor" shortcut="Next" />
+    <VSCommand name="Edit.PageDownExtend" scope="Text Editor" shortcut="Shift+Next" />
+    <VSCommand name="Edit.ViewTopExtend" scope="Text Editor" shortcut="Shift+Control+PageUp" />
+    <VSCommand name="Edit.ViewBottomExtend" scope="Text Editor" shortcut="Shift+Control+Next" />
+    <VSCommand name="Edit.ScrollLineUp" scope="VC Dialog Editor" shortcut="Control+Up" />
+    <VSCommand name="Edit.ScrollLineUp" scope="Text Editor" shortcut="Control+Up" />
+    <VSCommand name="Edit.MoveControlUp" scope="Global" shortcut="Control+Up" />
+    <VSCommand name="Edit.MoveControlUp" scope="HTML Editor Design View" shortcut="Control+Up" />
+    <VSCommand name="Edit.MoveControlUp" scope="Windows Forms Designer" shortcut="Control+Up" />
+    <VSCommand name="Edit.MoveControlUp" scope="Report Designer" shortcut="Control+Up" />
+    <VSCommand name="Image.ZoomIn" scope="VC Image Editor" shortcut="Control+Up" />
+    <VSCommand name="Edit.ScrollLineDown" scope="VC Dialog Editor" shortcut="Control+Down" />
+    <VSCommand name="Edit.ScrollLineDown" scope="Text Editor" shortcut="Control+Down" />
+    <VSCommand name="Edit.MoveControlDown" scope="Global" shortcut="Control+Down" />
+    <VSCommand name="Edit.MoveControlDown" scope="HTML Editor Design View" shortcut="Control+Down" />
+    <VSCommand name="Edit.MoveControlDown" scope="Windows Forms Designer" shortcut="Control+Down" />
+    <VSCommand name="Edit.MoveControlDown" scope="Report Designer" shortcut="Control+Down" />
+    <VSCommand name="Image.ZoomOut" scope="VC Image Editor" shortcut="Control+Down" />
+    <VSCommand name="Edit.ScrollColumnLeft" scope="VC Dialog Editor" shortcut="Control+Left" />
+    <VSCommand name="Edit.WordPrevious" scope="Text Editor" shortcut="Control+Left" />
+    <VSCommand name="Edit.MoveControlLeft" scope="Global" shortcut="Control+Left" />
+    <VSCommand name="Edit.MoveControlLeft" scope="Windows Forms Designer" shortcut="Control+Left" />
+    <VSCommand name="Edit.MoveControlLeft" scope="Report Designer" shortcut="Control+Left" />
+    <VSCommand name="Image.PreviousColor" scope="VC Image Editor" shortcut="Control+Left" />
+    <VSCommand name="Edit.ScrollColumnRight" scope="VC Dialog Editor" shortcut="Control+Right" />
+    <VSCommand name="Edit.WordNext" scope="Text Editor" shortcut="Control+Right" />
+    <VSCommand name="Edit.MoveControlRight" scope="Global" shortcut="Control+Right" />
+    <VSCommand name="Edit.MoveControlRight" scope="Windows Forms Designer" shortcut="Control+Right" />
+    <VSCommand name="Edit.MoveControlRight" scope="Report Designer" shortcut="Control+Right" />
+    <VSCommand name="Image.NextColor" scope="VC Image Editor" shortcut="Control+Right" />
+    <VSCommand name="Edit.MakeUppercase" scope="Text Editor" shortcut="Shift+Control+U" />
+    <VSCommand name="Image.CopyandOutlineSelection" scope="VC Image Editor" shortcut="Shift+Control+U" />
+    <VSCommand name="Edit.GotoBraceExtend" scope="Text Editor" shortcut="Shift+Control+Oem6" />
+    <VSCommand name="Image.NextRightColor" scope="VC Image Editor" shortcut="Shift+Control+Oem6" />
+    <VSCommand name="Edit.OvertypeMode" scope="Text Editor" shortcut="Insert" />
+    <VSCommand name="Edit.NewAccelerator" scope="VC Accelerator Editor" shortcut="Insert" />
+    <VSCommand name="Edit.NewString" scope="VC String Editor" shortcut="Insert" />
+    <VSCommand name="Image.NewImageType" scope="VC Image Editor" shortcut="Insert" />
+    <VSCommand name="Data.InsertColumn" scope="DataSet Editor" shortcut="Insert" />
+    <VSCommand name="Edit.LineCut" scope="Text Editor" shortcut="Control+L" />
+    <VSCommand name="Format.ConverttoHyperlink" scope="HTML Editor Design View" shortcut="Control+L" />
+    <VSCommand name="Image.LineTool" scope="VC Image Editor" shortcut="Control+L" />
+    <VSCommand name="Data.Column" scope="DataSet Editor" shortcut="Control+L" />
+    <VSCommand name="Edit.LineDelete" scope="Text Editor" shortcut="Shift+Control+L" />
+    <VSCommand name="Format.InsertBookmark" scope="HTML Editor Design View" shortcut="Shift+Control+L" />
+    <VSCommand name="Edit.LineOpenBelow" scope="Text Editor" shortcut="Shift+Control+Return" />
+    <VSCommand name="Edit.LineTranspose" scope="Text Editor" shortcut="Shift+Alt+T" />
+    <VSCommand name="Edit.SelectCurrentWord" scope="Text Editor" shortcut="Control+W" />
+    <VSCommand name="Edit.NextKeyTyped" scope="VC Accelerator Editor" shortcut="Control+W" />
+    <VSCommand name="Edit.WordDeleteToStart" scope="Text Editor" shortcut="Control+Back" />
+    <VSCommand name="Edit.CompleteWord" scope="Text Editor" shortcut="Alt+Right" />
+    <VSCommand name="Format.SpaceAcross" scope="VC Dialog Editor" shortcut="Alt+Right" />
+    <VSCommand name="View.Forward" scope="Global" shortcut="Alt+Right" />
+    <VSCommand name="Edit.CompleteWord" scope="Text Editor" shortcut="Control+Space" />
+    <VSCommand name="" scope="Report Designer" shortcut="Control+Space" />
+    <VSCommand name="Edit.CharLeftExtendColumn" scope="Text Editor" shortcut="Shift+Alt+Left" />
+    <VSCommand name="Edit.CharRightExtendColumn" scope="Text Editor" shortcut="Shift+Alt+Right" />
+    <VSCommand name="Edit.LineUpExtendColumn" scope="Text Editor" shortcut="Shift+Alt+Up" />
+    <VSCommand name="Edit.LineDownExtendColumn" scope="Text Editor" shortcut="Shift+Alt+Down" />
+    <VSCommand name="Edit.ReverseIncrementalSearch" scope="Text Editor" shortcut="Shift+Control+I" />
+    <VSCommand name="Image.EraseTool" scope="VC Image Editor" shortcut="Shift+Control+I" />
+    <VSCommand name="Edit.LineStartExtendColumn" scope="Text Editor" shortcut="Shift+Alt+Home" />
+    <VSCommand name="Edit.LineEndExtendColumn" scope="Text Editor" shortcut="Shift+Alt+End" />
+    <VSCommand name="Edit.HideSelection" scope="Text Editor" shortcut="Control+M Control+H" />
+    <VSCommand name="Edit.ToggleOutliningExpansion" scope="Text Editor" shortcut="Control+M Control+M" />
+    <VSCommand name="Edit.ToggleAllOutlining" scope="Text Editor" shortcut="Control+M Control+L" />
+    <VSCommand name="Edit.StopOutlining" scope="Text Editor" shortcut="Control+M Control+P" />
+    <VSCommand name="Edit.StopHidingCurrent" scope="Text Editor" shortcut="Control+M Control+U" />
+    <VSCommand name="Edit.CollapsetoDefinitions" scope="Text Editor" shortcut="Control+M Control+O" />
+    <VSCommand name="View.EditMaster" scope="HTML Editor Design View" shortcut="Control+M Control+M" />
+    <VSCommand name="Edit.CollapseTag" scope="Text Editor" shortcut="Control+M Control+T" />
+    <VSCommand name="Project.AddContentPage" scope="HTML Editor Design View" shortcut="Control+M Control+C" />
+    <VSCommand name="Format.CheckMnemonics" scope="VC Dialog Editor" shortcut="Control+M" />
+    <VSCommand name="Image.MagnificationTool" scope="VC Image Editor" shortcut="Control+M" />
+    <VSCommand name="EditorContextMenus.CodeWindow.AddView" scope="Global" shortcut="Control+M Control+V" />
+    <VSCommand name="Edit.SelectToLastGoBack" scope="Text Editor" shortcut="Control+Oemplus" />
+    <VSCommand name="Image.LargerBrush" scope="VC Image Editor" shortcut="Control+Oemplus" />
+    <VSCommand name="Edit.IncreaseFilterLevel" scope="Text Editor" shortcut="Alt+OemPeriod" />
+    <VSCommand name="Edit.DecreaseFilterLevel" scope="Text Editor" shortcut="Alt+Oemcomma" />
+    <VSCommand name="View.ShowSmartTag" scope="Global" shortcut="Shift+Alt+F10" />
+    <VSCommand name="View.ShowSmartTag" scope="HTML Editor Design View" shortcut="Shift+Alt+F10" />
+    <VSCommand name="View.ShowSmartTag" scope="Global" shortcut="Control+OemPeriod" />
+    <VSCommand name="Image.SmallBrush" scope="VC Image Editor" shortcut="Control+OemPeriod" />
+    <VSCommand name="Edit.CopyParameterTip" scope="Text Editor" shortcut="Shift+Control+Alt+C" />
+    <VSCommand name="Edit.PasteParameterTip" scope="Text Editor" shortcut="Shift+Control+Alt+P" />
+    <VSCommand name="Image.FilledEllipseTool" scope="VC Image Editor" shortcut="Shift+Control+Alt+P" />
+    <VSCommand name="View.AutoCloseTagOverride" scope="HTML Editor Source View" shortcut="Shift+Control+OemPeriod" />
+    <VSCommand name="Image.ZoomIn" scope="VC Image Editor" shortcut="Shift+Control+OemPeriod" />
+    <VSCommand name="Edit.NextBookmarkInFolder" scope="Global" shortcut="Shift+Control+K Shift+Control+N" />
+    <VSCommand name="Edit.PreviousBookmarkInFolder" scope="Global" shortcut="Shift+Control+K Shift+Control+P" />
+    <VSCommand name="Format.TestDialog" scope="VC Dialog Editor" shortcut="Control+T" />
+    <VSCommand name="Image.TextTool" scope="VC Image Editor" shortcut="Control+T" />
+    <VSCommand name="QueryDesigner.CancelRetrievingData" scope="Query Designer" shortcut="Control+T" />
+    <VSCommand name="QueryDesigner.CancelRetrievingData" scope="View Designer" shortcut="Control+T" />
+    <VSCommand name="Format.SpaceAcross" scope="VC Dialog Editor" shortcut="Alt+Left" />
+    <VSCommand name="View.Backward" scope="Global" shortcut="Alt+Left" />
+    <VSCommand name="Format.SpaceDown" scope="VC Dialog Editor" shortcut="Alt+Down" />
+    <VSCommand name="Help.Nexttopic" scope="WebBrowser" shortcut="Alt+Down" />
+    <VSCommand name="Format.SpaceDown" scope="VC Dialog Editor" shortcut="Alt+Up" />
+    <VSCommand name="Help.Previoustopic" scope="WebBrowser" shortcut="Alt+Up" />
+    <VSCommand name="Format.TabOrder" scope="VC Dialog Editor" shortcut="Control+D" />
+    <VSCommand name="Image.FlipVertical" scope="VC Image Editor" shortcut="Shift+Alt+H" />
+    <VSCommand name="Image.DrawOpaque" scope="VC Image Editor" shortcut="Control+J" />
+    <VSCommand name="Image.ShowGrid" scope="VC Image Editor" shortcut="Control+Alt+S" />
+    <VSCommand name="View.ServerExplorer" scope="Global" shortcut="Control+Alt+S" />
+    <VSCommand name="Image.ShowTileGrid" scope="VC Image Editor" shortcut="Shift+Control+Alt+S" />
+    <VSCommand name="Image.Magnify" scope="VC Image Editor" shortcut="Shift+Control+M" />
+    <VSCommand name="Image.RectangleSelectionTool" scope="VC Image Editor" shortcut="Shift+Alt+S" />
+    <VSCommand name="Image.FillTool" scope="VC Image Editor" shortcut="Control+F" />
+    <VSCommand name="Image.RectangleTool" scope="VC Image Editor" shortcut="Alt+R" />
+    <VSCommand name="Image.OutlinedRectangleTool" scope="VC Image Editor" shortcut="Shift+Alt+R" />
+    <VSCommand name="Image.FilledRectangleTool" scope="VC Image Editor" shortcut="Shift+Control+Alt+R" />
+    <VSCommand name="TestDriven.NET.RerunTests" scope="Global" shortcut="Shift+Control+Alt+R" />
+    <VSCommand name="Image.RoundedRectangleTool" scope="VC Image Editor" shortcut="Alt+W" />
+    <VSCommand name="Image.OutlinedRoundedRectangleTool" scope="VC Image Editor" shortcut="Shift+Alt+W" />
+    <VSCommand name="Image.FilledRoundedRectangleTool" scope="VC Image Editor" shortcut="Shift+Control+Alt+W" />
+    <VSCommand name="Image.EllipseTool" scope="VC Image Editor" shortcut="Alt+P" />
+    <VSCommand name="Image.OutlinedEllipseTool" scope="VC Image Editor" shortcut="Shift+Alt+P" />
+    <VSCommand name="Image.ZoomOut" scope="VC Image Editor" shortcut="Shift+Control+Oemcomma" />
+    <VSCommand name="Image.PreviousColor" scope="VC Image Editor" shortcut="Control+OemOpenBrackets" />
+    <VSCommand name="Image.PreviousRightColor" scope="VC Image Editor" shortcut="Shift+Control+OemOpenBrackets" />
+    <VSCommand name="Image.NextColor" scope="VC Image Editor" shortcut="Control+Oem6" />
+    <VSCommand name="View.NextError" scope="Global" shortcut="Shift+Control+F12" />
+    <VSCommand name="Data.StepInto" scope="Global" shortcut="Alt+F5" />
+    <VSCommand name="Data.Execute" scope="Global" shortcut="Control+Alt+F5" />
+    <VSCommand name="Debug.Disassembly" scope="Global" shortcut="Control+Alt+D" />
+    <VSCommand name="View.Datasets" scope="Report Designer" shortcut="Control+Alt+D" />
+    <VSCommand name="Debug.Registers" scope="Global" shortcut="Control+Alt+G" />
+    <VSCommand name="Debug.ApplyCodeChanges" scope="Global" shortcut="Alt+F10" />
+    <VSCommand name="Debug.Processes" scope="Global" shortcut="Control+Alt+Z" />
+    <VSCommand name="Debug.LocationToolbar.ToggleFlaggedThreads" scope="Global" shortcut="Control+D9" />
+    <VSCommand name="Debug.StepIntoCurrentProcess" scope="Global" shortcut="Control+Alt+F11" />
+    <VSCommand name="Debug.StepOverCurrentProcess" scope="Global" shortcut="Control+Alt+F10" />
+    <VSCommand name="Debug.StepOutCurrentProcess" scope="Global" shortcut="Shift+Control+Alt+F11" />
+    <VSCommand name="Debug.StepIntoSpecific" scope="Global" shortcut="Shift+Alt+F11" />
+    <VSCommand name="DebuggerContextMenus.BreakpointsWindow.Delete" scope="Global" shortcut="Alt+F9 D" />
+    <VSCommand name="DebuggerContextMenus.BreakpointsWindow.GoToSourceCode" scope="Global" shortcut="Alt+F9 S" />
+    <VSCommand name="DebuggerContextMenus.BreakpointsWindow.GoToDisassembly" scope="Global" shortcut="Alt+F9 A" />
+    <VSCommand name="Debug.Memory1" scope="Global" shortcut="Control+Alt+M D1" />
+    <VSCommand name="Debug.Memory2" scope="Global" shortcut="Control+Alt+M D2" />
+    <VSCommand name="Debug.Memory3" scope="Global" shortcut="Control+Alt+M D3" />
+    <VSCommand name="Debug.Memory4" scope="Global" shortcut="Control+Alt+M D4" />
+    <VSCommand name="Debug.Watch" scope="Global" shortcut="Control+Alt+W D1" />
+    <VSCommand name="Debug.Watch2" scope="Global" shortcut="Control+Alt+W D2" />
+    <VSCommand name="Debug.Watch3" scope="Global" shortcut="Control+Alt+W D3" />
+    <VSCommand name="Debug.Watch4" scope="Global" shortcut="Control+Alt+W D4" />
+    <VSCommand name="EditorContextMenus.CodeWindow.ReSharper_GotoImplementationInContextMenu" scope="Text Editor" shortcut="Shift+Control+Alt+B" />
+    <VSCommand name="EditorContextMenus.CodeWindow.ReSharper_GotoImplementationInContextMenu" scope="Global" shortcut="Shift+Control+Alt+B" />
+    <VSCommand name="File.NewWebSite" scope="Global" shortcut="Shift+Alt+N" />
+    <VSCommand name="File.OpenWebSite" scope="Global" shortcut="Shift+Alt+O" />
+    <VSCommand name="Data.ShowDataSources" scope="Global" shortcut="Shift+Alt+D" />
+    <VSCommand name="Resources.Files" scope="Managed Resources Editor" shortcut="Control+D5" />
+    <VSCommand name="Debug.LocationToolbar.ProcessCombo" scope="Global" shortcut="Control+D5" />
+    <VSCommand name="Resources.Other" scope="Managed Resources Editor" shortcut="Control+D6" />
+    <VSCommand name="Debug.LocationToolbar.ThreadCombo" scope="Global" shortcut="Control+D6" />
+    <VSCommand name="Edit.ExpandCollapseBaseTypeList" scope="Class Diagram" shortcut="Shift+Alt+B" />
+    <VSCommand name="Edit.NavigateToLollipop" scope="Class Diagram" shortcut="Shift+Alt+L" />
+    <VSCommand name="ClassDiagram.Collapse" scope="Class Diagram" shortcut="Subtract" />
+    <VSCommand name="ClassDiagram.Expand" scope="Class Diagram" shortcut="Add" />
+    <VSCommand name="View.SynchronizeViews" scope="HTML Editor Source View" shortcut="Shift+Control+Y" />
+    <VSCommand name="" scope="Global" shortcut="Control+Oem1" />
+    <VSCommand name="" scope="Global" shortcut="Control+Oem7" />
+    <VSCommand name="Edit.UpdateJScriptIntellisense" scope="HTML Editor Source View" shortcut="Shift+Control+J" />
+    <VSCommand name="QueryDesigner.JoinMode" scope="Query Designer" shortcut="Shift+Control+J" />
+    <VSCommand name="QueryDesigner.JoinMode" scope="View Designer" shortcut="Shift+Control+J" />
+    <VSCommand name="Table.ColumntotheLeft" scope="HTML Editor Design View" shortcut="Control+Alt+Left" />
+    <VSCommand name="Table.ColumntotheRight" scope="HTML Editor Design View" shortcut="Control+Alt+Right" />
+    <VSCommand name="Table.RowAbove" scope="HTML Editor Design View" shortcut="Control+Alt+Up" />
+    <VSCommand name="Table.RowBelow" scope="HTML Editor Design View" shortcut="Control+Alt+Down" />
+    <VSCommand name="View.ASP.NETNonvisualControls" scope="HTML Editor Design View" shortcut="Shift+Control+N" />
+    <VSCommand name="View.MacroExplorer" scope="Global" shortcut="Alt+F8" />
+    <VSCommand name="Tools.MacrosIDE" scope="Global" shortcut="Alt+F11" />
+    <VSCommand name="" scope="Report Designer" shortcut="Shift+Space" />
+    <VSCommand name="Debug.LocationToolbar.StackFrameCombo" scope="Global" shortcut="Control+D7" />
+    <VSCommand name="TestDriven.NET.RunTests" scope="Global" shortcut="Shift+Control+Alt+T" />
+  </VSCommands>
+  <ConflictingActions />
+</Shortcuts>

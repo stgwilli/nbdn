@@ -1,0 +1,12 @@
+USE [master]
+GO
+
+IF EXISTS(SELECT * FROM Sysdatabases WHERE NAME LIKE '@initial_catalog@')
+  DROP DATABASE [@initial_catalog@]
+  GO
+
+CREATE DATABASE [@initial_catalog@] ON  PRIMARY 
+( NAME = N'@initial_catalog@', FILENAME = N'@database_path@\@initial_catalog@.mdf' , SIZE = 2240KB , MAXSIZE = UNLIMITED, FILEGROWTH = 1024KB )
+ LOG ON 
+( NAME = N'@initial_catalog@_log', FILENAME = N'@database_path@\@initial_catalog@.ldf' , SIZE = 768KB , MAXSIZE = 2048GB , FILEGROWTH = 10%)
+GO

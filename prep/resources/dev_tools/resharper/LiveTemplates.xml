@@ -1,0 +1,520 @@
+<TemplatesExport family="Live Templates">
+  <Template uid="bd50d57b-5ad6-4e16-873e-6b555a293ffd" shortcut="ccb" description="Code CopyRight Blurb" text="//Copyright (c) 2009 Jean-Paul S. Boodhoo (http://www.jpboodhoo.com)&#xD;&#xA;//&#xD;&#xA;//Permission is hereby granted, free of charge, to any person obtaining a copy&#xD;&#xA;//of this software and associated documentation files (the &quot;Software&quot;), to deal&#xD;&#xA;//in the Software without restriction, including without limitation the rights&#xD;&#xA;//to use, copy, modify, merge, publish, distribute, sublicense, and/or sell&#xD;&#xA;//copies of the Software, and to permit persons to whom the Software is&#xD;&#xA;//furnished to do so, subject to the following conditions:&#xD;&#xA;//&#xD;&#xA;//The above copyright notice and this permission notice shall be included in&#xD;&#xA;//all copies or substantial portions of the Software.&#xD;&#xA;//&#xD;&#xA;//THE SOFTWARE IS PROVIDED &quot;AS IS&quot;, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR&#xD;&#xA;//IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,&#xD;&#xA;//FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE&#xD;&#xA;//AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER&#xD;&#xA;//LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,&#xD;&#xA;//OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN&#xD;&#xA;//THE SOFTWARE." reformat="True" shortenQualifiedReferences="True">
+    <Context>
+      <CSharpContext context="Everywhere" minimumLanguageVersion="3.0" />
+    </Context>
+    <Categories />
+    <Variables />
+    <CustomProperties />
+  </Template>
+  <Template uid="686e7658-dc23-40d6-8559-c150f28f50d6" shortcut="dest" description="Destructor" text="~$NAME$()&#xD;&#xA;{&#xD;&#xA;  Dispose(false);&#xD;&#xA;}" reformat="True" shortenQualifiedReferences="True">
+    <Context>
+      <CSharpContext context="Everywhere" minimumLanguageVersion="3.0" />
+    </Context>
+    <Categories />
+    <Variables>
+      <Variable name="NAME" expression="getFileNameWithoutExtension()" initialRange="0" />
+    </Variables>
+    <CustomProperties />
+  </Template>
+  <Template uid="65780f88-cd4f-4883-8786-e4ff3bb6813f" shortcut="nie" description="Throw New NotImplementedException" text="throw new NotImplementedException();" reformat="True" shortenQualifiedReferences="True">
+    <Context>
+      <CSharpContext context="Everywhere" minimumLanguageVersion="3.0" />
+    </Context>
+    <Categories />
+    <Variables />
+    <CustomProperties />
+  </Template>
+  <Template uid="b6926f8d-953e-4b79-a3bb-6dec8b42cafe" shortcut="ps" description="public string" text="public string $VARIABLE_NAME$;$END$" reformat="True" shortenQualifiedReferences="True">
+    <Context>
+      <CSharpContext context="Everywhere" minimumLanguageVersion="3.0" />
+    </Context>
+    <Categories />
+    <Variables>
+      <Variable name="VARIABLE_NAME" expression="" initialRange="0" />
+    </Variables>
+    <CustomProperties />
+  </Template>
+  <Template uid="9c871800-0367-4968-b56b-d1e996100faf" shortcut="pucs" description="public string" text="public string $NAME$;" reformat="True" shortenQualifiedReferences="True">
+    <Context>
+      <CSharpContext context="Everywhere" minimumLanguageVersion="3.0" />
+    </Context>
+    <Categories />
+    <Variables>
+      <Variable name="NAME" expression="" initialRange="0" />
+    </Variables>
+    <CustomProperties />
+  </Template>
+  <Template uid="2d480da0-1c82-4ccd-a86b-b064787dd0d8" shortcut="pv" description="public void" text="public void $METHOD_NAME$()&#xD;&#xA;{&#xD;&#xA;  $END$&#xD;&#xA;}" reformat="True" shortenQualifiedReferences="True">
+    <Context>
+      <CSharpContext context="Everywhere" minimumLanguageVersion="3.0" />
+    </Context>
+    <Categories />
+    <Variables>
+      <Variable name="METHOD_NAME" expression="" initialRange="0" />
+    </Variables>
+    <CustomProperties />
+  </Template>
+  <Template uid="90dea78f-7524-466a-b3ea-34d81b8d31fc" shortcut="v" description="private" text="private $TYPE$ $NAME$;$END$" reformat="True" shortenQualifiedReferences="True">
+    <Context>
+      <CSharpContext context="Everywhere" minimumLanguageVersion="3.0" />
+    </Context>
+    <Categories />
+    <Variables>
+      <Variable name="TYPE" expression="" initialRange="0" />
+      <Variable name="NAME" expression="" initialRange="0" />
+    </Variables>
+    <CustomProperties />
+  </Template>
+  <Template uid="684f05d6-17aa-433f-9823-0437613b9642" shortcut="ae" description="Assert Equality" text="$result$.should_be_equal_to($expected$);$END$" reformat="True" shortenQualifiedReferences="True">
+    <Context>
+      <CSharpContext context="Everywhere" minimumLanguageVersion="3.0" />
+    </Context>
+    <Categories>
+      <Category name="bdd" />
+    </Categories>
+    <Variables>
+      <Variable name="result" expression="" initialRange="0" />
+      <Variable name="expected" expression="" initialRange="0" />
+    </Variables>
+    <CustomProperties />
+  </Template>
+  <Template uid="6935edd8-b498-41d7-a494-a56e4c685197" shortcut="ann" description="MbUnit Assert.IsNotNull" text="$object$.should_not_be_null();$END$" reformat="True" shortenQualifiedReferences="True">
+    <Context>
+      <CSharpContext context="Everywhere" minimumLanguageVersion="3.0" />
+    </Context>
+    <Categories>
+      <Category name="bdd" />
+    </Categories>
+    <Variables>
+      <Variable name="object" expression="" initialRange="0" />
+    </Variables>
+    <CustomProperties />
+  </Template>
+  <Template uid="2d681748-f392-4f5d-8831-cb6768eb4a33" shortcut="at" description="MbUnit Assert.IsTrue" text="$condition$.should_be_true();$END$" reformat="True" shortenQualifiedReferences="True">
+    <Context>
+      <CSharpContext context="Everywhere" minimumLanguageVersion="3.0" />
+    </Context>
+    <Categories>
+      <Category name="bdd" />
+    </Categories>
+    <Variables>
+      <Variable name="condition" expression="" initialRange="0" />
+    </Variables>
+    <CustomProperties />
+  </Template>
+  <Template uid="ea67fcd8-8835-40aa-a3f1-a44222a737c8" shortcut="bddac" description="After the sut has been created" text="after_the_sut_has_been_created ac = () =&gt;&#xD;&#xA;{&#xD;&#xA;  $END$&#xD;&#xA;};" reformat="True" shortenQualifiedReferences="True">
+    <Context>
+      <CSharpContext context="Everywhere" minimumLanguageVersion="2.0" />
+    </Context>
+    <Categories>
+      <Category name="bdd" />
+    </Categories>
+    <Variables />
+    <CustomProperties />
+  </Template>
+  <Template uid="c8614277-00b5-4fdb-baa0-18e00e416a2a" shortcut="bddae" description="After each observation" text="after_each_observation a = () =&gt;&#xD;&#xA;{&#xD;&#xA;   $END$&#xD;&#xA;};" reformat="True" shortenQualifiedReferences="True">
+    <Context>
+      <CSharpContext context="Everywhere" minimumLanguageVersion="3.0" />
+    </Context>
+    <Categories>
+      <Category name="bdd" />
+    </Categories>
+    <Variables />
+    <CustomProperties />
+  </Template>
+  <Template uid="ea0eba99-5802-44af-b603-44a3c3a80e9d" shortcut="bddb" description="BDD Because" text="because b = () =&gt;&#xD;&#xA;{&#xD;&#xA;     $END$&#xD;&#xA;};" reformat="True" shortenQualifiedReferences="True">
+    <Context>
+      <CSharpContext context="Everywhere" minimumLanguageVersion="3.0" />
+    </Context>
+    <Categories>
+      <Category name="bdd" />
+    </Categories>
+    <Variables />
+    <CustomProperties />
+  </Template>
+  <Template uid="9d29c398-b0b2-4b14-bc91-f3bef3ee8b67" shortcut="bddc" description="BDD Concern" text="context c = () =&gt;&#xD;&#xA;{&#xD;&#xA;   $END$&#xD;&#xA;};" reformat="True" shortenQualifiedReferences="True">
+    <Context>
+      <CSharpContext context="Everywhere" minimumLanguageVersion="3.0" />
+    </Context>
+    <Categories>
+      <Category name="bdd" />
+    </Categories>
+    <Variables />
+    <CustomProperties />
+  </Template>
+  <Template uid="5c50421e-629e-42be-b2e9-f4596334dec5" shortcut="ca" description="ConcernAttribute" text="[Concern(typeof($concern_type$))]" reformat="True" shortenQualifiedReferences="True">
+    <Context>
+      <CSharpContext context="Everywhere" minimumLanguageVersion="3.0" />
+    </Context>
+    <Categories>
+      <Category name="bdd" />
+    </Categories>
+    <Variables>
+      <Variable name="concern_type" expression="" initialRange="0" />
+    </Variables>
+    <CustomProperties />
+  </Template>
+  <Template uid="875ce880-3665-461b-8b97-b6bb2abec83e" shortcut="ig" description="MbUnit Ignore Attribute" text="[Ignore(&quot;$reason$&quot;)]$END$" reformat="True" shortenQualifiedReferences="True">
+    <Context>
+      <CSharpContext context="Everywhere" minimumLanguageVersion="3.0" />
+    </Context>
+    <Categories>
+      <Category name="bdd" />
+    </Categories>
+    <Variables>
+      <Variable name="reason" expression="" initialRange="0" />
+    </Variables>
+    <CustomProperties />
+  </Template>
+  <Template uid="4e8240f1-e38e-441e-a4d7-4f60a0dbe270" shortcut="owc" description="Observations for a sut with a contract" text="    public abstract class concern : observations_for_a_sut_with_a_contract&lt;$contract_interface$,&#xD;&#xA;        $contract_implementation$&gt;&#xD;&#xA;    {&#xD;&#xA;        &#xD;&#xA;    }&#xD;&#xA;&#xD;&#xA;    [Concern(typeof($contract_implementation$))]&#xD;&#xA;    public class when_$observation_name$ : concern&#xD;&#xA;    {&#xD;&#xA;        context c = () =&gt;&#xD;&#xA;        {&#xD;&#xA;            &#xD;&#xA;        };&#xD;&#xA;&#xD;&#xA;        because b = () =&gt;&#xD;&#xA;        {&#xD;&#xA;        &#xD;&#xA;        };&#xD;&#xA;&#xD;&#xA;        &#xD;&#xA;        it $first_observation$ = ()=&gt;&#xD;&#xA;        {&#xD;&#xA;            $END$&#xD;&#xA;            &#xD;&#xA;        };&#xD;&#xA;    }" reformat="True" shortenQualifiedReferences="True">
+    <Context>
+      <CSharpContext context="Everywhere" minimumLanguageVersion="3.0" />
+    </Context>
+    <Categories>
+      <Category name="bdd" />
+    </Categories>
+    <Variables>
+      <Variable name="contract_interface" expression="" initialRange="0" />
+      <Variable name="contract_implementation" expression="" initialRange="0" />
+      <Variable name="observation_name" expression="" initialRange="0" />
+      <Variable name="first_observation" expression="" initialRange="0" />
+    </Variables>
+    <CustomProperties />
+  </Template>
+  <Template uid="441152df-b007-4d0f-9f4e-c3c160337221" shortcut="owoc" description="Observations for a sut without a contract" text="    public abstract class concern : observations_for_a_sut_without_a_contract&lt;$implementation$&gt;&#xD;&#xA;    {&#xD;&#xA;        &#xD;&#xA;    }&#xD;&#xA;&#xD;&#xA;    [Concern(typeof($implementation$))]&#xD;&#xA;    public class when_$observation_name$ : concern&#xD;&#xA;    {&#xD;&#xA;        context c = () =&gt;&#xD;&#xA;        {&#xD;&#xA;            &#xD;&#xA;        };&#xD;&#xA;&#xD;&#xA;        because b = () =&gt;&#xD;&#xA;        {&#xD;&#xA;        &#xD;&#xA;        };&#xD;&#xA;&#xD;&#xA;        &#xD;&#xA;        it $first_observation$ = () =&gt;&#xD;&#xA;        {&#xD;&#xA;            $END$&#xD;&#xA;            &#xD;&#xA;        };&#xD;&#xA;    }" reformat="True" shortenQualifiedReferences="True">
+    <Context>
+      <CSharpContext context="Everywhere" minimumLanguageVersion="3.0" />
+    </Context>
+    <Categories>
+      <Category name="bdd" />
+    </Categories>
+    <Variables>
+      <Variable name="implementation" expression="" initialRange="0" />
+      <Variable name="observation_name" expression="" initialRange="0" />
+      <Variable name="first_observation" expression="" initialRange="0" />
+    </Variables>
+    <CustomProperties />
+  </Template>
+  <Template uid="048173ae-b526-46ac-bb0c-1818a9e681f9" shortcut="p" description="public" text="public" reformat="True" shortenQualifiedReferences="True">
+    <Context>
+      <CSharpContext context="Everywhere" minimumLanguageVersion="3.0" />
+    </Context>
+    <Categories>
+      <Category name="bdd" />
+    </Categories>
+    <Variables />
+    <CustomProperties />
+  </Template>
+  <Template uid="5af06698-750b-4313-9628-b95b37706e3f" shortcut="pca" description="Provide sut with a constructor argument" text="provide_a_basic_sut_constructor_argument($arg$);$END$" reformat="True" shortenQualifiedReferences="True">
+    <Context>
+      <CSharpContext context="Everywhere" minimumLanguageVersion="3.0" />
+    </Context>
+    <Categories>
+      <Category name="bdd" />
+    </Categories>
+    <Variables>
+      <Variable name="arg" expression="" initialRange="0" />
+    </Variables>
+    <CustomProperties />
+  </Template>
+  <Template uid="cf621454-3637-4ff1-8dfb-42880fe49e2c" shortcut="so" description="Static Observations" text="    public abstract class concern : observations_for_a_static_sut&#xD;&#xA;    {&#xD;&#xA;&#xD;&#xA;    }&#xD;&#xA;&#xD;&#xA;    [Concern(typeof($sut$))]&#xD;&#xA;    public class when_$name_of_first_context$ : concern&#xD;&#xA;    {&#xD;&#xA;        context c = () =&gt;&#xD;&#xA;        {&#xD;&#xA;        &#xD;&#xA;        };&#xD;&#xA;&#xD;&#xA;        because b = () =&gt;&#xD;&#xA;        {&#xD;&#xA;        &#xD;&#xA;        };&#xD;&#xA;S&#xD;&#xA;&#xD;&#xA;        &#xD;&#xA;        it $first_observation$ = () =&gt;&#xD;&#xA;        {&#xD;&#xA;          $END$&#xD;&#xA;          &#xD;&#xA;        };&#xD;&#xA;    }" reformat="True" shortenQualifiedReferences="True">
+    <Context>
+      <CSharpContext context="Everywhere" minimumLanguageVersion="3.0" />
+    </Context>
+    <Categories>
+      <Category name="bdd" />
+    </Categories>
+    <Variables>
+      <Variable name="sut" expression="" initialRange="0" />
+      <Variable name="name_of_first_context" expression="" initialRange="0" />
+      <Variable name="first_observation" expression="" initialRange="0" />
+    </Variables>
+    <CustomProperties />
+  </Template>
+  <Template uid="4f6dcc61-511a-4346-91c6-c0bf7a5cb097" shortcut="stub" description="Stub" text="$object$.Stub(x =&gt; x.$method_name$).Return($result$)" reformat="True" shortenQualifiedReferences="True">
+    <Context>
+      <CSharpContext context="Everywhere" minimumLanguageVersion="3.0" />
+    </Context>
+    <Categories>
+      <Category name="bdd" />
+    </Categories>
+    <Variables>
+      <Variable name="result" expression="" initialRange="0" />
+      <Variable name="object" expression="" initialRange="0" />
+      <Variable name="method_name" expression="" initialRange="0" />
+    </Variables>
+    <CustomProperties />
+  </Template>
+  <Template uid="b1e543b6-9d15-40fe-8349-b95ac6a91979" shortcut="tc" description="Test case" text="it $OBSERVATION_NAME$ = () =&gt;&#xD;&#xA;{&#xD;&#xA;  $END$&#xD;&#xA;  &#xD;&#xA;  &#xD;&#xA;};" reformat="True" shortenQualifiedReferences="True">
+    <Context>
+      <CSharpContext context="Everywhere" minimumLanguageVersion="3.0" />
+    </Context>
+    <Categories>
+      <Category name="bdd" />
+    </Categories>
+    <Variables>
+      <Variable name="OBSERVATION_NAME" expression="" initialRange="0" />
+    </Variables>
+    <CustomProperties />
+  </Template>
+  <Template uid="bd50d57b-5ad6-4e16-873e-6b555a293ffd" shortcut="ccb" description="Code CopyRight Blurb" text="//Copyright (c) 2009 Jean-Paul S. Boodhoo (http://www.jpboodhoo.com)&#xD;&#xA;//&#xD;&#xA;//Permission is hereby granted, free of charge, to any person obtaining a copy&#xD;&#xA;//of this software and associated documentation files (the &quot;Software&quot;), to deal&#xD;&#xA;//in the Software without restriction, including without limitation the rights&#xD;&#xA;//to use, copy, modify, merge, publish, distribute, sublicense, and/or sell&#xD;&#xA;//copies of the Software, and to permit persons to whom the Software is&#xD;&#xA;//furnished to do so, subject to the following conditions:&#xD;&#xA;//&#xD;&#xA;//The above copyright notice and this permission notice shall be included in&#xD;&#xA;//all copies or substantial portions of the Software.&#xD;&#xA;//&#xD;&#xA;//THE SOFTWARE IS PROVIDED &quot;AS IS&quot;, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR&#xD;&#xA;//IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,&#xD;&#xA;//FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE&#xD;&#xA;//AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER&#xD;&#xA;//LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,&#xD;&#xA;//OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN&#xD;&#xA;//THE SOFTWARE." reformat="True" shortenQualifiedReferences="True">
+    <Context>
+      <CSharpContext context="Everywhere" minimumLanguageVersion="3.0" />
+    </Context>
+    <Categories />
+    <Variables />
+    <CustomProperties />
+  </Template>
+  <Template uid="686e7658-dc23-40d6-8559-c150f28f50d6" shortcut="dest" description="Destructor" text="~$NAME$()&#xD;&#xA;{&#xD;&#xA;  Dispose(false);&#xD;&#xA;}" reformat="True" shortenQualifiedReferences="True">
+    <Context>
+      <CSharpContext context="Everywhere" minimumLanguageVersion="3.0" />
+    </Context>
+    <Categories />
+    <Variables>
+      <Variable name="NAME" expression="getFileNameWithoutExtension()" initialRange="0" />
+    </Variables>
+    <CustomProperties />
+  </Template>
+  <Template uid="65780f88-cd4f-4883-8786-e4ff3bb6813f" shortcut="nie" description="Throw New NotImplementedException" text="throw new NotImplementedException();" reformat="True" shortenQualifiedReferences="True">
+    <Context>
+      <CSharpContext context="Everywhere" minimumLanguageVersion="3.0" />
+    </Context>
+    <Categories />
+    <Variables />
+    <CustomProperties />
+  </Template>
+  <Template uid="b6926f8d-953e-4b79-a3bb-6dec8b42cafe" shortcut="ps" description="public string" text="public string $VARIABLE_NAME$;$END$" reformat="True" shortenQualifiedReferences="True">
+    <Context>
+      <CSharpContext context="Everywhere" minimumLanguageVersion="3.0" />
+    </Context>
+    <Categories />
+    <Variables>
+      <Variable name="VARIABLE_NAME" expression="" initialRange="0" />
+    </Variables>
+    <CustomProperties />
+  </Template>
+  <Template uid="9c871800-0367-4968-b56b-d1e996100faf" shortcut="pucs" description="public string" text="public string $NAME$;" reformat="True" shortenQualifiedReferences="True">
+    <Context>
+      <CSharpContext context="Everywhere" minimumLanguageVersion="3.0" />
+    </Context>
+    <Categories />
+    <Variables>
+      <Variable name="NAME" expression="" initialRange="0" />
+    </Variables>
+    <CustomProperties />
+  </Template>
+  <Template uid="2d480da0-1c82-4ccd-a86b-b064787dd0d8" shortcut="pv" description="public void" text="public void $METHOD_NAME$()&#xD;&#xA;{&#xD;&#xA;  $END$&#xD;&#xA;}" reformat="True" shortenQualifiedReferences="True">
+    <Context>
+      <CSharpContext context="Everywhere" minimumLanguageVersion="3.0" />
+    </Context>
+    <Categories />
+    <Variables>
+      <Variable name="METHOD_NAME" expression="" initialRange="0" />
+    </Variables>
+    <CustomProperties />
+  </Template>
+  <Template uid="90dea78f-7524-466a-b3ea-34d81b8d31fc" shortcut="v" description="private" text="private $TYPE$ $NAME$;$END$" reformat="True" shortenQualifiedReferences="True">
+    <Context>
+      <CSharpContext context="Everywhere" minimumLanguageVersion="3.0" />
+    </Context>
+    <Categories />
+    <Variables>
+      <Variable name="TYPE" expression="" initialRange="0" />
+      <Variable name="NAME" expression="" initialRange="0" />
+    </Variables>
+    <CustomProperties />
+  </Template>
+  <Template uid="684f05d6-17aa-433f-9823-0437613b9642" shortcut="ae" description="Assert Equality" text="$result$.should_be_equal_to($expected$);$END$" reformat="True" shortenQualifiedReferences="True">
+    <Context>
+      <CSharpContext context="Everywhere" minimumLanguageVersion="3.0" />
+    </Context>
+    <Categories>
+      <Category name="bdd" />
+    </Categories>
+    <Variables>
+      <Variable name="result" expression="" initialRange="0" />
+      <Variable name="expected" expression="" initialRange="0" />
+    </Variables>
+    <CustomProperties />
+  </Template>
+  <Template uid="6935edd8-b498-41d7-a494-a56e4c685197" shortcut="ann" description="MbUnit Assert.IsNotNull" text="$object$.should_not_be_null();$END$" reformat="True" shortenQualifiedReferences="True">
+    <Context>
+      <CSharpContext context="Everywhere" minimumLanguageVersion="3.0" />
+    </Context>
+    <Categories>
+      <Category name="bdd" />
+    </Categories>
+    <Variables>
+      <Variable name="object" expression="" initialRange="0" />
+    </Variables>
+    <CustomProperties />
+  </Template>
+  <Template uid="2d681748-f392-4f5d-8831-cb6768eb4a33" shortcut="at" description="MbUnit Assert.IsTrue" text="$condition$.should_be_true();$END$" reformat="True" shortenQualifiedReferences="True">
+    <Context>
+      <CSharpContext context="Everywhere" minimumLanguageVersion="3.0" />
+    </Context>
+    <Categories>
+      <Category name="bdd" />
+    </Categories>
+    <Variables>
+      <Variable name="condition" expression="" initialRange="0" />
+    </Variables>
+    <CustomProperties />
+  </Template>
+  <Template uid="ea67fcd8-8835-40aa-a3f1-a44222a737c8" shortcut="bddac" description="After the sut has been created" text="after_the_sut_has_been_created ac = () =&gt;&#xD;&#xA;{&#xD;&#xA;  $END$&#xD;&#xA;};" reformat="True" shortenQualifiedReferences="True">
+    <Context>
+      <CSharpContext context="Everywhere" minimumLanguageVersion="2.0" />
+    </Context>
+    <Categories>
+      <Category name="bdd" />
+    </Categories>
+    <Variables />
+    <CustomProperties />
+  </Template>
+  <Template uid="c8614277-00b5-4fdb-baa0-18e00e416a2a" shortcut="bddae" description="After each observation" text="after_each_observation a = () =&gt;&#xD;&#xA;{&#xD;&#xA;   $END$&#xD;&#xA;};" reformat="True" shortenQualifiedReferences="True">
+    <Context>
+      <CSharpContext context="Everywhere" minimumLanguageVersion="3.0" />
+    </Context>
+    <Categories>
+      <Category name="bdd" />
+    </Categories>
+    <Variables />
+    <CustomProperties />
+  </Template>
+  <Template uid="ea0eba99-5802-44af-b603-44a3c3a80e9d" shortcut="bddb" description="BDD Because" text="because b = () =&gt;&#xD;&#xA;{&#xD;&#xA;     $END$&#xD;&#xA;};" reformat="True" shortenQualifiedReferences="True">
+    <Context>
+      <CSharpContext context="Everywhere" minimumLanguageVersion="3.0" />
+    </Context>
+    <Categories>
+      <Category name="bdd" />
+    </Categories>
+    <Variables />
+    <CustomProperties />
+  </Template>
+  <Template uid="9d29c398-b0b2-4b14-bc91-f3bef3ee8b67" shortcut="bddc" description="BDD Concern" text="context c = () =&gt;&#xD;&#xA;{&#xD;&#xA;   $END$&#xD;&#xA;};" reformat="True" shortenQualifiedReferences="True">
+    <Context>
+      <CSharpContext context="Everywhere" minimumLanguageVersion="3.0" />
+    </Context>
+    <Categories>
+      <Category name="bdd" />
+    </Categories>
+    <Variables />
+    <CustomProperties />
+  </Template>
+  <Template uid="5c50421e-629e-42be-b2e9-f4596334dec5" shortcut="ca" description="ConcernAttribute" text="[Concern(typeof($concern_type$))]" reformat="True" shortenQualifiedReferences="True">
+    <Context>
+      <CSharpContext context="Everywhere" minimumLanguageVersion="3.0" />
+    </Context>
+    <Categories>
+      <Category name="bdd" />
+    </Categories>
+    <Variables>
+      <Variable name="concern_type" expression="" initialRange="0" />
+    </Variables>
+    <CustomProperties />
+  </Template>
+  <Template uid="875ce880-3665-461b-8b97-b6bb2abec83e" shortcut="ig" description="MbUnit Ignore Attribute" text="[Ignore(&quot;$reason$&quot;)]$END$" reformat="True" shortenQualifiedReferences="True">
+    <Context>
+      <CSharpContext context="Everywhere" minimumLanguageVersion="3.0" />
+    </Context>
+    <Categories>
+      <Category name="bdd" />
+    </Categories>
+    <Variables>
+      <Variable name="reason" expression="" initialRange="0" />
+    </Variables>
+    <CustomProperties />
+  </Template>
+  <Template uid="4e8240f1-e38e-441e-a4d7-4f60a0dbe270" shortcut="owc" description="Observations for a sut with a contract" text="    public abstract class concern : observations_for_a_sut_with_a_contract&lt;$contract_interface$,&#xD;&#xA;        $contract_implementation$&gt;&#xD;&#xA;    {&#xD;&#xA;        &#xD;&#xA;    }&#xD;&#xA;&#xD;&#xA;    [Concern(typeof($contract_implementation$))]&#xD;&#xA;    public class when_$observation_name$ : concern&#xD;&#xA;    {&#xD;&#xA;        context c = () =&gt;&#xD;&#xA;        {&#xD;&#xA;            &#xD;&#xA;        };&#xD;&#xA;&#xD;&#xA;        because b = () =&gt;&#xD;&#xA;        {&#xD;&#xA;        &#xD;&#xA;        };&#xD;&#xA;&#xD;&#xA;        &#xD;&#xA;        it $first_observation$ = ()=&gt;&#xD;&#xA;        {&#xD;&#xA;            $END$&#xD;&#xA;            &#xD;&#xA;        };&#xD;&#xA;    }" reformat="True" shortenQualifiedReferences="True">
+    <Context>
+      <CSharpContext context="Everywhere" minimumLanguageVersion="3.0" />
+    </Context>
+    <Categories>
+      <Category name="bdd" />
+    </Categories>
+    <Variables>
+      <Variable name="contract_interface" expression="" initialRange="0" />
+      <Variable name="contract_implementation" expression="" initialRange="0" />
+      <Variable name="observation_name" expression="" initialRange="0" />
+      <Variable name="first_observation" expression="" initialRange="0" />
+    </Variables>
+    <CustomProperties />
+  </Template>
+  <Template uid="441152df-b007-4d0f-9f4e-c3c160337221" shortcut="owoc" description="Observations for a sut without a contract" text="    public abstract class concern : observations_for_a_sut_without_a_contract&lt;$implementation$&gt;&#xD;&#xA;    {&#xD;&#xA;        &#xD;&#xA;    }&#xD;&#xA;&#xD;&#xA;    [Concern(typeof($implementation$))]&#xD;&#xA;    public class when_$observation_name$ : concern&#xD;&#xA;    {&#xD;&#xA;        context c = () =&gt;&#xD;&#xA;        {&#xD;&#xA;            &#xD;&#xA;        };&#xD;&#xA;&#xD;&#xA;        because b = () =&gt;&#xD;&#xA;        {&#xD;&#xA;        &#xD;&#xA;        };&#xD;&#xA;&#xD;&#xA;        &#xD;&#xA;        it $first_observation$ = () =&gt;&#xD;&#xA;        {&#xD;&#xA;            $END$&#xD;&#xA;            &#xD;&#xA;        };&#xD;&#xA;    }" reformat="True" shortenQualifiedReferences="True">
+    <Context>
+      <CSharpContext context="Everywhere" minimumLanguageVersion="3.0" />
+    </Context>
+    <Categories>
+      <Category name="bdd" />
+    </Categories>
+    <Variables>
+      <Variable name="implementation" expression="" initialRange="0" />
+      <Variable name="observation_name" expression="" initialRange="0" />
+      <Variable name="first_observation" expression="" initialRange="0" />
+    </Variables>
+    <CustomProperties />
+  </Template>
+  <Template uid="048173ae-b526-46ac-bb0c-1818a9e681f9" shortcut="p" description="public" text="public" reformat="True" shortenQualifiedReferences="True">
+    <Context>
+      <CSharpContext context="Everywhere" minimumLanguageVersion="3.0" />
+    </Context>
+    <Categories>
+      <Category name="bdd" />
+    </Categories>
+    <Variables />
+    <CustomProperties />
+  </Template>
+  <Template uid="5af06698-750b-4313-9628-b95b37706e3f" shortcut="pca" description="Provide sut with a constructor argument" text="provide_a_basic_sut_constructor_argument($arg$);$END$" reformat="True" shortenQualifiedReferences="True">
+    <Context>
+      <CSharpContext context="Everywhere" minimumLanguageVersion="3.0" />
+    </Context>
+    <Categories>
+      <Category name="bdd" />
+    </Categories>
+    <Variables>
+      <Variable name="arg" expression="" initialRange="0" />
+    </Variables>
+    <CustomProperties />
+  </Template>
+  <Template uid="cf621454-3637-4ff1-8dfb-42880fe49e2c" shortcut="so" description="Static Observations" text="    public abstract class concern : observations_for_a_static_sut&#xD;&#xA;    {&#xD;&#xA;&#xD;&#xA;    }&#xD;&#xA;&#xD;&#xA;    [Concern(typeof($sut$))]&#xD;&#xA;    public class when_$name_of_first_context$ : concern&#xD;&#xA;    {&#xD;&#xA;        context c = () =&gt;&#xD;&#xA;        {&#xD;&#xA;        &#xD;&#xA;        };&#xD;&#xA;&#xD;&#xA;        because b = () =&gt;&#xD;&#xA;        {&#xD;&#xA;        &#xD;&#xA;        };&#xD;&#xA;S&#xD;&#xA;&#xD;&#xA;        &#xD;&#xA;        it $first_observation$ = () =&gt;&#xD;&#xA;        {&#xD;&#xA;          $END$&#xD;&#xA;          &#xD;&#xA;        };&#xD;&#xA;    }" reformat="True" shortenQualifiedReferences="True">
+    <Context>
+      <CSharpContext context="Everywhere" minimumLanguageVersion="3.0" />
+    </Context>
+    <Categories>
+      <Category name="bdd" />
+    </Categories>
+    <Variables>
+      <Variable name="sut" expression="" initialRange="0" />
+      <Variable name="name_of_first_context" expression="" initialRange="0" />
+      <Variable name="first_observation" expression="" initialRange="0" />
+    </Variables>
+    <CustomProperties />
+  </Template>
+  <Template uid="4f6dcc61-511a-4346-91c6-c0bf7a5cb097" shortcut="stub" description="Stub" text="$object$.Stub(x =&gt; x.$method_name$).Return($result$)" reformat="True" shortenQualifiedReferences="True">
+    <Context>
+      <CSharpContext context="Everywhere" minimumLanguageVersion="3.0" />
+    </Context>
+    <Categories>
+      <Category name="bdd" />
+    </Categories>
+    <Variables>
+      <Variable name="result" expression="" initialRange="0" />
+      <Variable name="object" expression="" initialRange="0" />
+      <Variable name="method_name" expression="" initialRange="0" />
+    </Variables>
+    <CustomProperties />
+  </Template>
+  <Template uid="b1e543b6-9d15-40fe-8349-b95ac6a91979" shortcut="tc" description="Test case" text="it $OBSERVATION_NAME$ = () =&gt;&#xD;&#xA;{&#xD;&#xA;  $END$&#xD;&#xA;  &#xD;&#xA;  &#xD;&#xA;};" reformat="True" shortenQualifiedReferences="True">
+    <Context>
+      <CSharpContext context="Everywhere" minimumLanguageVersion="3.0" />
+    </Context>
+    <Categories>
+      <Category name="bdd" />
+    </Categories>
+    <Variables>
+      <Variable name="OBSERVATION_NAME" expression="" initialRange="0" />
+    </Variables>
+    <CustomProperties />
+  </Template>
+</TemplatesExport>
