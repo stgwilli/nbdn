@@ -8,7 +8,7 @@ namespace nothinbutdotnetprep.infrastructure.extensions
     {
         public static IEnumerable<T> one_at_a_time<T>(this IEnumerable<T> items)
         {
-            return items.Select(item => item);
+            foreach (var item in items) yield return item;
         }
 
         public static void each<T>(this IEnumerable<T> items, Action<T> action)

@@ -42,6 +42,7 @@
     <Compile Include="collections\Movie.cs" />
     <Compile Include="collections\MovieLibrary.cs" />
     <Compile Include="collections\ProductionStudio.cs" />
+    <Compile Include="collections\ReadonlyList.cs" />
     <Compile Include="infrastructure\extensions\CollectionExtensions.cs" />
     <Compile Include="infrastructure\extensions\Iteration.cs" />
     <Compile Include="infrastructure\extensions\StringExtensions.cs" />
