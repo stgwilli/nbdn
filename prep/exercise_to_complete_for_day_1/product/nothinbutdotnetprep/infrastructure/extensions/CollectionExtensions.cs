@@ -11,11 +11,6 @@ namespace nothinbutdotnetprep.infrastructure.extensions
             foreach (var t in items) list.Add(t);
         }
 
-        static public IEnumerable<T> where<T>(this IEnumerable<T> list, Specification<T> condition)
-        {
-            return list.where(condition.is_satisfied_by);
-        }
-
         static public IEnumerable<T> where<T>(this IEnumerable<T> list, Predicate<T> condition)
         {
             foreach (var item in list) if (condition(item)) yield return item;

@@ -41,16 +41,5 @@ namespace nothinbutdotnetprep.collections
         {
             return new IsPublishedBy(studio).is_satisfied_by;
         }
-
-        static public Predicate<Movie> is_not_published_by_pixar()
-        {
-            return movie => ! is_published_by()(movie);
-        }
-
-        static public Predicate<Movie> is_published_by_or_after(DateTime date,ProductionStudio studio)
-        {
-            return movie => is_published_after(date)(movie) ||
-                            is_published_by()(movie);
-        }
     }
 }

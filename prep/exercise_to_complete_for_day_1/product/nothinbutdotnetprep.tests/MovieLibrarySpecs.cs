@@ -239,7 +239,7 @@ namespace nothinbutdotnetprep.tests
                 var condition = Where<Movie>.has_a(x => x.production_studio)
                     .equal_to(ProductionStudio.Pixar);
 
-                var results = sut.all_movies().where(condition);
+                var results = sut.all_movies().that_match(condition);
 
                 results.should_only_contain(cars, a_bugs_life);
             };
