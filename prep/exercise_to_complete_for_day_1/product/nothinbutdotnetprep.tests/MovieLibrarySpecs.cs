@@ -297,8 +297,12 @@ namespace nothinbutdotnetprep.tests
              * movies using different criteria. Feel free to change/remove explicit methods if you find a way to encompass sorting
              * without the need for using explicit methods. For this exercise, no linq queries are allowed!!. */
 
+            //be able to sort ascending,descending, with a discrete comparer
+            //combinations
+
             it should_be_able_to_sort_all_movies_by_title_descending = () =>
             {
+
                 var results = sut.sort_all_movies_by_title_descending();
 
                 results.should_only_contain_in_order(theres_something_about_mary, the_ring, shrek, pirates_of_the_carribean, indiana_jones_and_the_temple_of_doom,
