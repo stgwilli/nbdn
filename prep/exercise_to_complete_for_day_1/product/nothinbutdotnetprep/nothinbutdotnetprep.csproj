@@ -72,11 +72,12 @@
     <Compile Include="infrastructure\searching\SpecificationFactory.cs" />
     <Compile Include="infrastructure\searching\Where.cs" />
     <Compile Include="infrastructure\sorting\ChainedComparer.cs" />
+    <Compile Include="infrastructure\sorting\ComparableEnumerable.cs" />
     <Compile Include="infrastructure\sorting\Comparators.cs" />
     <Compile Include="infrastructure\sorting\PropertyComparer.cs" />
     <Compile Include="infrastructure\sorting\ReverseComparer.cs" />
     <Compile Include="infrastructure\sorting\Sort.cs" />
-    <Compile Include="infrastructure\sorting\SortBuilder.cs" />
+    <Compile Include="infrastructure\sorting\DefaultSortBuilder.cs" />
     <Compile Include="infrastructure\sorting\SortExtensions.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

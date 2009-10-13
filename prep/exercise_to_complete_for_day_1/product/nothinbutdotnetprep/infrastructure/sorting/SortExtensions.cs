@@ -1,7 +1,5 @@
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using nothinbutdotnetprep.infrastructure.extensions;
 
 namespace nothinbutdotnetprep.infrastructure.sorting
@@ -18,14 +16,11 @@ namespace nothinbutdotnetprep.infrastructure.sorting
             return new ChainedComparer<T>(first_comparer, second_comparer);
         }
 
-        public static IEnumerable<ItemToSort> order_by<ItemToSort, ItemProperty>(this IEnumerable<ItemToSort> items, Func<ItemToSort, ItemProperty> property_accessor) where ItemProperty: IComparable<ItemProperty>
+        public static ComparableEnumerable<ItemToSort> order_by<ItemToSort,ItemProperty>(this IEnumerable<ItemToSort> items, Func<ItemToSort, ItemProperty> property_accessor) where ItemProperty: IComparable<ItemProperty>
         {
-            return items.sort(new PropertyComparer<ItemToSort, ItemProperty>(property_accessor));
+            return new ComparableEnumerable<ItemToSort>(
+                new DefaultSortBuilder<ItemToSort>(new PropertyComparer<ItemToSort, ItemProperty>(property_accessor)), items); 
         }
 
-        public static IEnumerable<ItemToSort> then_by<ItemToSort, ItemProperty>(this IEnumerable<ItemToSort> items, Func<ItemToSort, ItemProperty> property_accessor) where ItemProperty : IComparable<ItemProperty>
-        {
-            return order_by(items, property_accessor);
-        }
     }
 }

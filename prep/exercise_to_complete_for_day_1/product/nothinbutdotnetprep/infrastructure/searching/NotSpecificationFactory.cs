@@ -1,5 +1,3 @@
-using System;
-
 namespace nothinbutdotnetprep.infrastructure.searching
 {
     public class NotSpecificationFactory<ItemToFilter, ItemProperty>

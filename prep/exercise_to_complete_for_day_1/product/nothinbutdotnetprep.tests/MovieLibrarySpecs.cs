@@ -1,5 +1,4 @@
 using System;
-using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using developwithpassion.bdd.contexts;
@@ -311,10 +310,9 @@ namespace nothinbutdotnetprep.tests
 
             it should_be_able_to_sort_all_movies_by_date_published_ascending = () =>
             {
-                var result = sut.all_movies().order_by(x => x.date_published)
-                                             .then_by(x => x.rating);
-
-                var results = sut.all_movies().sort(Sort<Movie>.by(x => x.date_published).build());
+                var results = sut.all_movies().order_by(x => x.date_published)
+                                             .then_by(x => x.rating)
+                                             .then_by(movie => movie.date_published.Year);
 
                 results.should_only_contain_in_order(indiana_jones_and_the_temple_of_doom, a_bugs_life, pirates_of_the_carribean, cars, the_ring, shrek, theres_something_about_mary);
             };
