@@ -39,15 +39,25 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="collections\Genre.cs" />
+    <Compile Include="collections\IsPublishedAfter.cs" />
+    <Compile Include="collections\IsPublishedBy.cs" />
     <Compile Include="collections\Movie.cs" />
     <Compile Include="collections\MovieLibrary.cs" />
     <Compile Include="collections\ProductionStudio.cs" />
     <Compile Include="collections\ReadonlyList.cs" />
+    <Compile Include="infrastructure\searching\AndSpecification.cs" />
+    <Compile Include="infrastructure\searching\AnonymousSpecification.cs" />
+    <Compile Include="infrastructure\searching\BinarySpecification.cs" />
+    <Compile Include="infrastructure\searching\OrSpecification.cs" />
+    <Compile Include="infrastructure\searching\Specification.cs" />
     <Compile Include="infrastructure\extensions\CollectionExtensions.cs" />
     <Compile Include="infrastructure\extensions\Iteration.cs" />
     <Compile Include="infrastructure\extensions\StringExtensions.cs" />
     <Compile Include="infrastructure\extensions\TypeCasting.cs" />
     <Compile Include="infrastructure\extensions\TypeExtensions.cs" />
+    <Compile Include="infrastructure\searching\SpecificationExtensions.cs" />
+    <Compile Include="infrastructure\searching\SpecificationFactory.cs" />
+    <Compile Include="infrastructure\searching\Where.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

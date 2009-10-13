@@ -6,6 +6,7 @@ using developwithpassion.bdd.harnesses.mbunit;
 using developwithpassion.bdddoc.core;
 using nothinbutdotnetprep.collections;
 using nothinbutdotnetprep.infrastructure.extensions;
+using nothinbutdotnetprep.infrastructure.searching;
 
 /* The following set of Contexts (TestFixture) are in place to specify the functionality that you need to complete for the MovieLibrary class.
  * MovieLibrary is an aggregate root for the Movie class. It exposes the ability to search,sort, and iterate over all of the movies that it aggregates.
@@ -62,12 +63,13 @@ namespace nothinbutdotnetprep.tests
             };
         } ;
 
-        public class when_iterating_using_yield : concern {
-
+        public class when_iterating_using_yield : concern
+        {
             context c = () =>
             {
                 movie_collection.Add(new Movie());
             };
+
             because b = () =>
             {
                 results = sut.all_movies();
@@ -76,7 +78,6 @@ namespace nothinbutdotnetprep.tests
             it should_be_able_to_iterate = () =>
             {
                 results.Count();
-
             };
 
             static IEnumerable<Movie> results;
@@ -222,6 +223,9 @@ namespace nothinbutdotnetprep.tests
             };
         }
 
+        public delegate bool Condition<T>(T item);
+
+
         [Concern(typeof (MovieLibrary))]
         public class when_searching_for_movies : searching_and_sorting_concerns_for_movie_library
         {
@@ -232,7 +236,10 @@ namespace nothinbutdotnetprep.tests
 
             it should_be_able_to_find_all_movies_published_by_pixar = () =>
             {
-                var results = sut.all_movies().where(x => x.production_studio == ProductionStudio.Pixar);
+                var condition = Where<Movie>.has_a(x => x.production_studio)
+                    .equal_to(ProductionStudio.Pixar);
+
+                var results = sut.all_movies().that_match(condition);
 
                 results.should_only_contain(cars, a_bugs_life);
             };
@@ -240,23 +247,21 @@ namespace nothinbutdotnetprep.tests
             it should_be_able_to_find_all_movies_published_by_pixar_or_disney = () =>
             {
                 var results =
-                    sut.all_movies().where(
-                        x =>
-                        x.production_studio == ProductionStudio.Disney || x.production_studio == ProductionStudio.Pixar);
+                    sut.all_movies().that_match(Where<Movie>.has_a(movie => movie.production_studio).equal_to_any(ProductionStudio.Pixar, ProductionStudio.Disney));
 
                 results.should_only_contain(a_bugs_life, pirates_of_the_carribean, cars);
             };
 
             it should_be_able_to_find_all_movies_not_published_by_pixar = () =>
             {
-                var results = sut.all_movies().where(x => x.production_studio != ProductionStudio.Pixar);
+                var results = sut.all_movies().where(movie => movie.production_studio != ProductionStudio.Pixar);
 
                 results.should_not_contain(cars, a_bugs_life);
             };
 
             it should_be_able_to_find_all_movies_published_after_a_certain_year = () =>
             {
-                var results = sut.all_movies().where(x => x.date_published.Year > 2004);
+                var results = sut.all_movies().where(Where<Movie>.has_an(x => x.date_published.year).greater_than(2004));
 
                 results.should_only_contain(the_ring, shrek, theres_something_about_mary);
             };
