@@ -17,7 +17,7 @@ namespace nothinbutdotnetprep.infrastructure.searching
 
         public DefaultComparableSpecificationFactory(Func<ItemToFilter, ItemProperty> property_accessor) : this(property_accessor, new DefaultSpecificationFactory<ItemToFilter, ItemProperty>(property_accessor)) {}
 
-        public NegatingComparableSpecificationFactory<ItemToFilter, ItemProperty> not
+        public NotComparableSpecificationFactory<ItemToFilter, ItemProperty> not
         {
             get 
             {

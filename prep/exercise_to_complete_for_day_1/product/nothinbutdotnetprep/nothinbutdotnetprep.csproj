@@ -57,7 +57,6 @@
     <Compile Include="infrastructure\searching\FallsInRangeSpecification.cs" />
     <Compile Include="infrastructure\searching\GreaterThanSpecification.cs" />
     <Compile Include="infrastructure\searching\NegatingSpecificationFactory.cs" />
-    <Compile Include="infrastructure\searching\NegatingComparableSpecificationFactory.cs" />
     <Compile Include="infrastructure\searching\NotComparableSpecificationFactory.cs" />
     <Compile Include="infrastructure\searching\NotSpecification.cs" />
     <Compile Include="infrastructure\searching\NotSpecificationFactory.cs" />

@@ -34,7 +34,7 @@ namespace nothinbutdotnetprep.tests
 
             public IDbCommand command { get; set; }
 
-            public SomethingWithConstructors(IDbConnection connection) {}
+            public SomethingWithConstructors(IDbConnection connection):this(connection, null) {}
 
             public SomethingWithConstructors(IDbConnection connection, IDbCommand command)
             {

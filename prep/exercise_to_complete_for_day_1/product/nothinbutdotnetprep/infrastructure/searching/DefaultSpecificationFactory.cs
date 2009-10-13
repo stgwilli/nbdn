@@ -2,11 +2,11 @@
 
 namespace nothinbutdotnetprep.infrastructure.searching
 {
-    public class DefaultSpecificationFactory<ItemToFilter, ItemProperty> : NegatingSpecificationFactory<ItemToFilter, ItemProperty>
+    public class DefaultSpecificationFactory<ItemToFilter, ItemProperty> : SpecificationFactory<ItemToFilter,ItemProperty>
     {
         Func<ItemToFilter, ItemProperty> property_accessor;
 
-        public SpecificationFactory<ItemToFilter, ItemProperty> not
+        public NotSpecificationFactory<ItemToFilter, ItemProperty> not
         {
             get
             {
@@ -30,7 +30,7 @@ namespace nothinbutdotnetprep.infrastructure.searching
             return new AnonymousSpecification<ItemToFilter>(f =>
             {
                 var have_match = false;
-                foreach (ItemProperty value in list)
+                foreach (var value in list)
                 {
                     have_match = have_match ||
                                  property_accessor(f).Equals(value);
