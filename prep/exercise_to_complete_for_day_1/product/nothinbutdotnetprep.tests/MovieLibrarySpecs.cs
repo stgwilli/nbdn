@@ -1,5 +1,4 @@
 using System;
-using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using developwithpassion.bdd.contexts;
@@ -7,7 +6,6 @@ using developwithpassion.bdd.harnesses.mbunit;
 using developwithpassion.bdddoc.core;
 using nothinbutdotnetprep.collections;
 using nothinbutdotnetprep.infrastructure.extensions;
-using nothinbutdotnetprep.infrastructure.ranges;
 using nothinbutdotnetprep.infrastructure.searching;
 
 /* The following set of Contexts (TestFixture) are in place to specify the functionality that you need to complete for the MovieLibrary class.
@@ -79,7 +77,6 @@ namespace nothinbutdotnetprep.tests
 
             it should_be_able_to_iterate = () =>
             {
-                new InclusiveRange<DateTime>(DateTime.Now, DateTime.Now.AddDays(20)).contains(DateTime.Now.AddDays(10));
                 results.Count();
             };
 
@@ -257,14 +254,14 @@ namespace nothinbutdotnetprep.tests
 
             it should_be_able_to_find_all_movies_not_published_by_pixar = () =>
             {
-                var results = sut.all_movies().all_matching(movie => movie.production_studio != ProductionStudio.Pixar);
+                var results = sut.all_movies().all_matching(Where<Movie>.has_a(x => x.production_studio).not.equal_to(ProductionStudio.Pixar));
 
                 results.should_not_contain(cars, a_bugs_life);
             };
 
             it should_be_able_to_find_all_movies_published_after_a_certain_year = () =>
             {
-                var results = sut.all_movies().that_match(Where<Movie>.has_an(x => x.date_published.Year).greater_than(2004));
+                var results = sut.all_movies().that_match(Where<Movie>.has_an_comparable(x => x.date_published.Year).greater_than(2004));
 
                 results.should_only_contain(the_ring, shrek, theres_something_about_mary);
             };
@@ -272,21 +269,21 @@ namespace nothinbutdotnetprep.tests
             it should_be_able_to_find_all_movies_published_between_a_certain_range_of_years = () =>
             {
                 var results =
-                    sut.all_movies().that_match(Where<Movie>.has_an(x => x.date_published.Year).between(1982, 2003));
+                    sut.all_movies().that_match(Where<Movie>.has_an_comparable(x => x.date_published.Year).between(1982, 2003));
 
                 results.should_only_contain(indiana_jones_and_the_temple_of_doom, a_bugs_life, pirates_of_the_carribean);
             };
 
             it should_be_able_to_find_all_kid_movies = () =>
             {
-                var results = sut.all_movies().all_matching(x => x.genre == Genre.kids);
+                var results = sut.all_movies().all_matching(Where<Movie>.has_a(x => x.genre).equal_to(Genre.kids));
 
                 results.should_only_contain(a_bugs_life, shrek, cars);
             };
 
             it should_be_able_to_find_all_action_movies = () =>
             {
-                var results = sut.all_movies().all_matching(x => x.genre == Genre.action);
+                var results = sut.all_movies().all_matching(Where<Movie>.has_a(x => x.genre).equal_to(Genre.action));
 
                 results.should_only_contain(indiana_jones_and_the_temple_of_doom, pirates_of_the_carribean);
             };
@@ -300,8 +297,12 @@ namespace nothinbutdotnetprep.tests
              * movies using different criteria. Feel free to change/remove explicit methods if you find a way to encompass sorting
              * without the need for using explicit methods. For this exercise, no linq queries are allowed!!. */
 
+            //be able to sort ascending,descending, with a discrete comparer
+            //combinations
+
             it should_be_able_to_sort_all_movies_by_title_descending = () =>
             {
+
                 var results = sut.sort_all_movies_by_title_descending();
 
                 results.should_only_contain_in_order(theres_something_about_mary, the_ring, shrek, pirates_of_the_carribean, indiana_jones_and_the_temple_of_doom,
