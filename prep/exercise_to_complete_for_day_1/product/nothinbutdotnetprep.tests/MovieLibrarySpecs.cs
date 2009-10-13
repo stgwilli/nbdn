@@ -1,4 +1,5 @@
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using developwithpassion.bdd.contexts;
@@ -35,7 +36,7 @@ using nothinbutdotnetprep.infrastructure.searching;
  *      
  *
  * As I said earlier, the tests are complete. You will just need to get the implementation working. As you progress through the exercise you will undoubtebly see areas
- * where refactoring can take place (particularly around the area of methods that don't need to be there on MovieLibrary. This is as much a design exercise as it is
+ * all_matching refactoring can take place (particularly around the area of methods that don't need to be there on MovieLibrary. This is as much a design exercise as it is
  * an implementation exercise. Do your best to refactor what you end up with to the best of your abilities.
  * 
  * One other stipulation of this exercise is that Linq is not to be used!! We will explore linq options together as we go through completed solutions
@@ -254,35 +255,36 @@ namespace nothinbutdotnetprep.tests
 
             it should_be_able_to_find_all_movies_not_published_by_pixar = () =>
             {
-                var results = sut.all_movies().where(movie => movie.production_studio != ProductionStudio.Pixar);
+                var results = sut.all_movies().all_matching(movie => movie.production_studio != ProductionStudio.Pixar);
 
                 results.should_not_contain(cars, a_bugs_life);
             };
 
             it should_be_able_to_find_all_movies_published_after_a_certain_year = () =>
             {
-                var results = sut.all_movies().where(Where<Movie>.has_an(x => x.date_published.year).greater_than(2004));
+                var results = sut.all_movies().that_match(Where<Movie>.has_an(x => x.date_published.Year).greater_than(2004));
 
                 results.should_only_contain(the_ring, shrek, theres_something_about_mary);
             };
 
             it should_be_able_to_find_all_movies_published_between_a_certain_range_of_years = () =>
             {
-                var results = sut.all_movies().where(x => x.date_published.Year >= 1982 && x.date_published.Year <= 2003);
+                var results =
+                    sut.all_movies().that_match(Where<Movie>.has_an(x => x.date_published.Year).between(1982, 2003));
 
                 results.should_only_contain(indiana_jones_and_the_temple_of_doom, a_bugs_life, pirates_of_the_carribean);
             };
 
             it should_be_able_to_find_all_kid_movies = () =>
             {
-                var results = sut.all_movies().where(x => x.genre == Genre.kids);
+                var results = sut.all_movies().all_matching(x => x.genre == Genre.kids);
 
                 results.should_only_contain(a_bugs_life, shrek, cars);
             };
 
             it should_be_able_to_find_all_action_movies = () =>
             {
-                var results = sut.all_movies().where(x => x.genre == Genre.action);
+                var results = sut.all_movies().all_matching(x => x.genre == Genre.action);
 
                 results.should_only_contain(indiana_jones_and_the_temple_of_doom, pirates_of_the_carribean);
             };

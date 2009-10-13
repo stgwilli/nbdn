@@ -9,9 +9,9 @@ namespace nothinbutdotnetprep.infrastructure.searching
             return new SpecificationFactory<ItemToFilter, ItemProperty>(property_accessor);
         }
 
-        public static YouFigureItOut<ItemToFilter, ItemProperty> has_an<ItemProperty>(Func<ItemToFilter, ItemProperty> property_accessor) where ItemProperty : IComparable<ItemProperty>
+        public static ComparableSpecificationFactory<ItemToFilter, ItemProperty> has_an<ItemProperty>(Func<ItemToFilter, ItemProperty> property_accessor) where ItemProperty : IComparable<ItemProperty>
         {
-            return new SpecificationFactory<ItemToFilter, ItemProperty>(property_accessor);
+            return new ComparableSpecificationFactory<ItemToFilter, ItemProperty>(property_accessor);
         }
     }
 }
