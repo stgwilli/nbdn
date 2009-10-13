@@ -1,25 +1,19 @@
 using System;
-using System.Collections;
 using System.Collections.Generic;
-using nothinbutdotnetprep.collections;
+using nothinbutdotnetprep.infrastructure.searching;
 
 namespace nothinbutdotnetprep.infrastructure.extensions
 {
-    public static class CollectionExtensions
+    static public class CollectionExtensions
     {
-        public static void add_all<T>(this IList<T> list, params T[] items)
+        static public void add_all<T>(this IList<T> list, params T[] items)
         {
             foreach (var t in items) list.Add(t);
         }
 
-        public static IEnumerable<T> Search<T>(this IList<T> list, Predicate<T> predicate)
+        static public IEnumerable<T> all_matching<T>(this IEnumerable<T> list, Predicate<T> condition)
         {
-            foreach (var item in list)
-            {
-                if (predicate(item))
-                    yield return item;
-            }
+            foreach (var item in list) if (condition(item)) yield return item;
         }
-
     }
 }

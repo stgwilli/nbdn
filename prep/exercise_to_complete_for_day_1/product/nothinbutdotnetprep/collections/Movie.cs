@@ -7,9 +7,7 @@ namespace nothinbutdotnetprep.collections
         public string title { get; set; }
         public ProductionStudio production_studio { get; set; }
         public Genre genre { get; set; }
-
         public int rating { get; set; }
-
         public DateTime date_published { get; set; }
 
         public bool Equals(Movie other)
@@ -32,6 +30,16 @@ namespace nothinbutdotnetprep.collections
         public override int GetHashCode()
         {
             return title.GetHashCode();
+        }
+
+        static public Predicate<Movie> is_published_after(DateTime date)
+        {
+            return new IsPublishedAfter(date).is_satisfied_by;
+        }
+
+        static public Predicate<Movie> is_published_by(ProductionStudio studio)
+        {
+            return new IsPublishedBy(studio).is_satisfied_by;
         }
     }
 }
