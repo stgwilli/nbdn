@@ -22,5 +22,25 @@ namespace nothinbutdotnetprep.infrastructure.sorting
                 new DefaultSortBuilder<ItemToSort>(new PropertyComparer<ItemToSort, ItemProperty>(property_accessor)), items); 
         }
 
+        public static ComparableEnumerable<ItemToSort> order_by<ItemToSort, ItemProperty>(this IEnumerable<ItemToSort> items, Func<ItemToSort, ItemProperty> property_accessor, params ItemProperty[] fixedSortList)
+        {
+            
+            return new ComparableEnumerable<ItemToSort>(new DefaultSortBuilder<ItemToSort>(new RankComparer<ItemToSort, ItemProperty>(property_accessor, fixedSortList)), items);
+        }
+
+        public static ComparableEnumerable<ItemToSort> order_by_descending<ItemToSort, ItemProperty>(this IEnumerable<ItemToSort> items, Func<ItemToSort, ItemProperty> property_accessor) where ItemProperty : IComparable<ItemProperty>
+        {
+            return new ComparableEnumerable<ItemToSort>(
+                new DefaultSortBuilder<ItemToSort>(new PropertyComparer<ItemToSort, ItemProperty>(property_accessor).reverse()), items);
+        }
+
+        public static ComparableEnumerable<ItemToSort> order_by_descending<ItemToSort, ItemProperty>(this IEnumerable<ItemToSort> items, Func<ItemToSort, ItemProperty> property_accessor, params ItemProperty[] fixedSortList)
+        {
+
+            return new ComparableEnumerable<ItemToSort>(new DefaultSortBuilder<ItemToSort>(new RankComparer<ItemToSort, ItemProperty>(property_accessor, fixedSortList).reverse()), items);
+        }
+
+        
+
     }
 }

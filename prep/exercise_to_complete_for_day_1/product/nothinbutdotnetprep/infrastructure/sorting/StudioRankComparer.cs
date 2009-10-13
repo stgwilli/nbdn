@@ -20,17 +20,4 @@ namespace nothinbutdotnetprep.infrastructure.sorting
             return StudioRankings[x.production_studio].CompareTo(StudioRankings[y.production_studio]);
         }
     }
-
-    //public class Comparators
-    //{
-        
-
-    //    public static readonly Comparison<ProductionStudio> StudioComparator = (x, y) => StudioRankings[x].CompareTo(StudioRankings[y]);
-
-    //    public static readonly Comparison<Movie> StudioAndDateMovieComparator = (x, y) =>
-    //    {
-    //        var result = StudioComparator(y.production_studio, x.production_studio);
-    //        return result != 0 ? result : x.date_published.CompareTo(y.date_published);
-    //    };
-    //}
 }

@@ -290,30 +290,26 @@ namespace nothinbutdotnetprep.tests
 
             it should_be_able_to_sort_all_movies_by_title_descending = () =>
             {
-                var results = sut.all_movies().sort(Sort<Movie>.by_descending(x => x.title).build());
+                var results = sut.all_movies().order_by_descending(x => x.title);
                 results.should_only_contain_in_order(theres_something_about_mary, the_ring, shrek, pirates_of_the_carribean, indiana_jones_and_the_temple_of_doom,
                                                      cars, a_bugs_life);
             };
 
             it should_be_able_to_sort_all_movies_by_title_ascending = () =>
             {
-                var results = sut.all_movies().sort(Sort<Movie>.by(x => x.title).build());
+                var results = sut.all_movies().order_by(x => x.title);
                 results.should_only_contain_in_order(a_bugs_life, cars, indiana_jones_and_the_temple_of_doom, pirates_of_the_carribean, shrek, the_ring, theres_something_about_mary);
             };
 
             it should_be_able_to_sort_all_movies_by_date_published_descending = () =>
             {
-                var results = sut.all_movies().sort(Sort<Movie>.by_descending(x => x.date_published).build());
-
+                var results = sut.all_movies().order_by_descending(x => x.date_published);
                 results.should_only_contain_in_order(theres_something_about_mary, shrek, the_ring, cars, pirates_of_the_carribean, a_bugs_life, indiana_jones_and_the_temple_of_doom);
             };
 
             it should_be_able_to_sort_all_movies_by_date_published_ascending = () =>
             {
-                var results = sut.all_movies().order_by(x => x.date_published)
-                                             .then_by(x => x.rating)
-                                             .then_by(movie => movie.date_published.Year);
-
+                var results = sut.all_movies().order_by(x => x.date_published);
                 results.should_only_contain_in_order(indiana_jones_and_the_temple_of_doom, a_bugs_life, pirates_of_the_carribean, cars, the_ring, shrek, theres_something_about_mary);
             };
 
@@ -325,9 +321,14 @@ namespace nothinbutdotnetprep.tests
                 //Dreamworks
                 //Universal
                 //Disney
-                var results =
-                    sut.all_movies().sort(Sort<Movie>.with(new StudioRankComparer().reverse())
-                    .then_by(x => x.date_published.Year));
+                var results = sut.all_movies().order_by(
+                    x => x.production_studio, 
+                        ProductionStudio.MGM, 
+                        ProductionStudio.Pixar, 
+                        ProductionStudio.Dreamworks, 
+                        ProductionStudio.Universal, 
+                        ProductionStudio.Disney)
+                    .then_by(x => x.date_published.Year);
                 /* should return a set of results 
                  * in the collection sorted by the rating of the production studio (not the movie rating) and year published. for this exercise you need to take the studio ratings
                  * into effect, which means that you first have to sort by movie studio (taking the ranking into account) and then by the
