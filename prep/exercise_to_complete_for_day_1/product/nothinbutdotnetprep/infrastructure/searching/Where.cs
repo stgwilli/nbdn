@@ -9,7 +9,7 @@ namespace nothinbutdotnetprep.infrastructure.searching
             return new DefaultSpecificationFactory<ItemToFilter, ItemProperty>(property_accessor);
         }
 
-        public static DefaultComparableSpecificationFactory<ItemToFilter, ItemProperty> has_an_comparable<ItemProperty>(Func<ItemToFilter, ItemProperty> property_accessor) where ItemProperty : IComparable<ItemProperty>
+        public static DefaultComparableSpecificationFactory<ItemToFilter, ItemProperty> has_an<ItemProperty>(Func<ItemToFilter, ItemProperty> property_accessor) where ItemProperty : IComparable<ItemProperty>
         {
             return new DefaultComparableSpecificationFactory<ItemToFilter, ItemProperty>(property_accessor);
         }

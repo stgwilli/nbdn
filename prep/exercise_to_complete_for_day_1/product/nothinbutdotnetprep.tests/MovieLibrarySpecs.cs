@@ -1,4 +1,5 @@
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using developwithpassion.bdd.contexts;
@@ -8,6 +9,7 @@ using nothinbutdotnetprep.collections;
 using nothinbutdotnetprep.infrastructure.extensions;
 using nothinbutdotnetprep.infrastructure.ranges;
 using nothinbutdotnetprep.infrastructure.searching;
+using nothinbutdotnetprep.infrastructure.sorting;
 
 /* The following set of Contexts (TestFixture) are in place to specify the functionality that you need to complete for the MovieLibrary class.
  * MovieLibrary is an aggregate root for the Movie class. It exposes the ability to search,sort, and iterate over all of the movies that it aggregates.
@@ -238,55 +240,43 @@ namespace nothinbutdotnetprep.tests
 
             it should_be_able_to_find_all_movies_published_by_pixar = () =>
             {
-                var condition = Where<Movie>.has_a(x => x.production_studio)
-                    .equal_to(ProductionStudio.Pixar);
-
-                var results = sut.all_movies().that_match(condition);
-
+                var results = sut.all_movies().that_match(Where<Movie>.has_a(x => x.production_studio).equal_to(ProductionStudio.Pixar));
                 results.should_only_contain(cars, a_bugs_life);
             };
 
             it should_be_able_to_find_all_movies_published_by_pixar_or_disney = () =>
             {
-                var results =
-                    sut.all_movies().that_match(Where<Movie>.has_a(movie => movie.production_studio).equal_to_any(ProductionStudio.Pixar, ProductionStudio.Disney));
-
+                var results = sut.all_movies().that_match(Where<Movie>.has_a(movie => movie.production_studio).equal_to_any(ProductionStudio.Pixar, ProductionStudio.Disney));
                 results.should_only_contain(a_bugs_life, pirates_of_the_carribean, cars);
             };
 
             it should_be_able_to_find_all_movies_not_published_by_pixar = () =>
             {
                 var results = sut.all_movies().all_matching(Where<Movie>.has_a(x => x.production_studio).not.equal_to(ProductionStudio.Pixar));
-
                 results.should_not_contain(cars, a_bugs_life);
             };
 
             it should_be_able_to_find_all_movies_published_after_a_certain_year = () =>
             {
-                var results = sut.all_movies().that_match(Where<Movie>.has_an_comparable(x => x.date_published.Year).greater_than(2004));
-
+                var results = sut.all_movies().that_match(Where<Movie>.has_an(x => x.date_published.Year).greater_than(2004));
                 results.should_only_contain(the_ring, shrek, theres_something_about_mary);
             };
 
             it should_be_able_to_find_all_movies_published_between_a_certain_range_of_years = () =>
             {
-                var results =
-                    sut.all_movies().that_match(Where<Movie>.has_an_comparable(x => x.date_published.Year).between(1982, 2003));
-
+                var results = sut.all_movies().that_match(Where<Movie>.has_an(x => x.date_published.Year).between(1982, 2003));
                 results.should_only_contain(indiana_jones_and_the_temple_of_doom, a_bugs_life, pirates_of_the_carribean);
             };
 
             it should_be_able_to_find_all_kid_movies = () =>
             {
                 var results = sut.all_movies().all_matching(Where<Movie>.has_a(x => x.genre).equal_to(Genre.kids));
-
                 results.should_only_contain(a_bugs_life, shrek, cars);
             };
 
             it should_be_able_to_find_all_action_movies = () =>
             {
                 var results = sut.all_movies().all_matching(Where<Movie>.has_a(x => x.genre).equal_to(Genre.action));
-
                 results.should_only_contain(indiana_jones_and_the_temple_of_doom, pirates_of_the_carribean);
             };
         }
@@ -299,35 +289,32 @@ namespace nothinbutdotnetprep.tests
              * movies using different criteria. Feel free to change/remove explicit methods if you find a way to encompass sorting
              * without the need for using explicit methods. For this exercise, no linq queries are allowed!!. */
 
-            //be able to sort ascending,descending, with a discrete comparer
-            //combinations
-
             it should_be_able_to_sort_all_movies_by_title_descending = () =>
             {
-
-                var results = sut.sort_all_movies_by_title_descending();
-
+                var results = sut.all_movies().sort(Sort<Movie>.by_descending(x => x.title).build());
                 results.should_only_contain_in_order(theres_something_about_mary, the_ring, shrek, pirates_of_the_carribean, indiana_jones_and_the_temple_of_doom,
                                                      cars, a_bugs_life);
             };
 
             it should_be_able_to_sort_all_movies_by_title_ascending = () =>
             {
-                var results = sut.sort_all_movies_by_title_ascending();
-
+                var results = sut.all_movies().sort(Sort<Movie>.by(x => x.title).build());
                 results.should_only_contain_in_order(a_bugs_life, cars, indiana_jones_and_the_temple_of_doom, pirates_of_the_carribean, shrek, the_ring, theres_something_about_mary);
             };
 
             it should_be_able_to_sort_all_movies_by_date_published_descending = () =>
             {
-                var results = sut.sort_all_movies_by_date_published_descending();
+                var results = sut.all_movies().sort(Sort<Movie>.by_descending(x => x.date_published).build());
 
                 results.should_only_contain_in_order(theres_something_about_mary, shrek, the_ring, cars, pirates_of_the_carribean, a_bugs_life, indiana_jones_and_the_temple_of_doom);
             };
 
             it should_be_able_to_sort_all_movies_by_date_published_ascending = () =>
             {
-                var results = sut.sort_all_movies_by_date_published_ascending();
+                var result = sut.all_movies().order_by(x => x.date_published)
+                                             .then_by(x => x.rating);
+
+                var results = sut.all_movies().sort(Sort<Movie>.by(x => x.date_published).build());
 
                 results.should_only_contain_in_order(indiana_jones_and_the_temple_of_doom, a_bugs_life, pirates_of_the_carribean, cars, the_ring, shrek, theres_something_about_mary);
             };
@@ -340,7 +327,9 @@ namespace nothinbutdotnetprep.tests
                 //Dreamworks
                 //Universal
                 //Disney
-                var results = sut.sort_all_movies_by_movie_studio_and_year_published();
+                var results =
+                    sut.all_movies().sort(Sort<Movie>.with(new StudioRankComparer().reverse())
+                    .then_by(x => x.date_published.Year));
                 /* should return a set of results 
                  * in the collection sorted by the rating of the production studio (not the movie rating) and year published. for this exercise you need to take the studio ratings
                  * into effect, which means that you first have to sort by movie studio (taking the ranking into account) and then by the
