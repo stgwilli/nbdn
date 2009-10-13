@@ -247,17 +247,10 @@ namespace nothinbutdotnetprep.tests
             it should_be_able_to_find_all_movies_published_by_pixar_or_disney = () =>
             {
                 var results =
-                    sut.all_movies().where(
-                        x =>
-                        x.production_studio == ProductionStudio.Disney || x.production_studio == ProductionStudio.Pixar);
+                    sut.all_movies().that_match(Where<Movie>.has_a(movie => movie.production_studio).equal_to_any(ProductionStudio.Pixar, ProductionStudio.Disney));
 
                 results.should_only_contain(a_bugs_life, pirates_of_the_carribean, cars);
             };
-
-            static public bool not_published_by_pixar(Movie movie)
-            {
-                return movie.production_studio != ProductionStudio.Pixar;
-            }
 
             it should_be_able_to_find_all_movies_not_published_by_pixar = () =>
             {
@@ -268,7 +261,7 @@ namespace nothinbutdotnetprep.tests
 
             it should_be_able_to_find_all_movies_published_after_a_certain_year = () =>
             {
-                var results = sut.all_movies().where(x => x.date_published.Year > 2004);
+                var results = sut.all_movies().where(Where<Movie>.has_an(x => x.date_published.year).greater_than(2004));
 
                 results.should_only_contain(the_ring, shrek, theres_something_about_mary);
             };
