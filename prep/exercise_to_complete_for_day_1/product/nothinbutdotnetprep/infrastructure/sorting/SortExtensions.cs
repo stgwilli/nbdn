@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -12,7 +12,7 @@ namespace nothinbutdotnetprep.infrastructure.sorting
             return new ReverseComparer<T>(comparer);
         }
 
-        public static IComparer<T> chain_with<T>(this IComparer<T> first_comparer, IComparer<T> second_comparer)
+        public static IComparer<T> followed_by<T>(this IComparer<T> first_comparer, IComparer<T> second_comparer)
         {
             return new ChainedComparer<T>(first_comparer, second_comparer);
         }

@@ -1,17 +1,19 @@
+using System;
+
 namespace nothinbutdotnetprep.infrastructure.searching
 {
     public class NotSpecification<T> : Specification<T>
     {
-        Specification<T> original;
+        Specification<T> _to_negate;
 
-        public NotSpecification(Specification<T> original)
+        public NotSpecification(Specification<T> to_negate)
         {
-            this.original = original;
+            _to_negate = to_negate;
         }
 
         public bool is_satisfied_by(T item)
         {
-            return !original.is_satisfied_by(item);
+            return !_to_negate.is_satisfied_by(item);
         }
     }
 }

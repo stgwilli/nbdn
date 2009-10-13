@@ -3,26 +3,19 @@ using System.Collections.Generic;
 
 namespace nothinbutdotnetprep.infrastructure.sorting
 {
-    public class PropertyComparer<Item, Property> : IComparer<Item>
+    public class PropertyComparer<Item, Property> : IComparer<Item> where Property : IComparable<Property>
     {
-        private readonly Comparison<Property> _comparison;
-        private readonly Func<Item, Property> _propertyAccessor;
+        Func<Item, Property> property_accessor;
 
         public PropertyComparer(Func<Item, Property> property_accessor)
-            : this(Comparer<Property>.Default.Compare, property_accessor)
         {
+            this.property_accessor = property_accessor;
         }
 
-        public PropertyComparer(Comparison<Property> comparer, Func<Item, Property> property_accessor)
-        {
-            _comparison = comparer;
-            _propertyAccessor = property_accessor;
-        }
 
         public int Compare(Item x, Item y)
         {
-            
-            return _comparison(_propertyAccessor(x), _propertyAccessor(y));
+            return property_accessor(x).CompareTo(property_accessor(y));
         }
     }
 }

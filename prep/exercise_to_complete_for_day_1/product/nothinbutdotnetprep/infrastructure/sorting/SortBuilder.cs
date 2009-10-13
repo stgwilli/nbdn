@@ -3,50 +3,43 @@ using System.Collections.Generic;
 
 namespace nothinbutdotnetprep.infrastructure.sorting
 {
-    
-
-    public class SortBuilder<ItemToSort>
+    public class SortBuilder<ItemToSort> : IComparer<ItemToSort>
     {
-        private IComparer<ItemToSort> _comparer;
+        IComparer<ItemToSort> comparer;
 
         public SortBuilder(IComparer<ItemToSort> comparer)
         {
-            _comparer = comparer;
+            this.comparer = comparer;
         }
 
-        public SortBuilder<ItemToSort> then_by<ItemProperty>(Func<ItemToSort, ItemProperty> property_accessor)
+        public SortBuilder<ItemToSort> then_by<ItemProperty>(Func<ItemToSort, ItemProperty> property_accessor) where ItemProperty : IComparable<ItemProperty>
         {
-            _comparer = _comparer.chain_with(next_comparer(property_accessor));
-            return this;
+            return then_by(next_comparer(property_accessor));
+        }
+
+
+        public SortBuilder<ItemToSort> then_by_desc<ItemProperty>(Func<ItemToSort, ItemProperty> property_accessor) where ItemProperty : IComparable<ItemProperty>
+        {
+            return then_by(next_comparer(property_accessor).reverse());
         }
 
         public SortBuilder<ItemToSort> then_by(IComparer<ItemToSort> custom_comparer)
         {
-            _comparer = _comparer.chain_with(custom_comparer);
+            comparer = comparer.followed_by(custom_comparer);
             return this;
         }
 
-
-        public SortBuilder<ItemToSort> then_by_desc<ItemProperty>(Func<ItemToSort, ItemProperty> property_accessor)
+        public int Compare(ItemToSort x, ItemToSort y)
         {
-            _comparer = _comparer.chain_with(next_comparer(property_accessor).reverse());
-
-            return this;
+            return comparer.Compare(x, y);
         }
-
-        public SortBuilder<ItemToSort> then_by_desc(IComparer<ItemToSort> custom_comparer)
-        {
-            _comparer = _comparer.chain_with(custom_comparer.reverse());
-            return this;
-        }
-
 
         public IComparer<ItemToSort> build()
         {
-            return _comparer;
+            return comparer;
         }
 
-        private PropertyComparer<ItemToSort, ItemProperty> next_comparer<ItemProperty>(Func<ItemToSort, ItemProperty> property_accessor)
+        PropertyComparer<ItemToSort, ItemProperty> next_comparer<ItemProperty>(Func<ItemToSort, ItemProperty> property_accessor) where ItemProperty : IComparable<ItemProperty>
         {
             return new PropertyComparer<ItemToSort, ItemProperty>(property_accessor);
         }
