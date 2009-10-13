@@ -7,6 +7,7 @@ using developwithpassion.bdd.harnesses.mbunit;
 using developwithpassion.bdddoc.core;
 using nothinbutdotnetprep.collections;
 using nothinbutdotnetprep.infrastructure.extensions;
+using nothinbutdotnetprep.infrastructure.ranges;
 using nothinbutdotnetprep.infrastructure.searching;
 
 /* The following set of Contexts (TestFixture) are in place to specify the functionality that you need to complete for the MovieLibrary class.
@@ -78,6 +79,8 @@ namespace nothinbutdotnetprep.tests
 
             it should_be_able_to_iterate = () =>
             {
+                New.range_of<int>.starting_at(1).up
+                new InclusiveRange<DateTime>(DateTime.Now, DateTime.Now.AddDays(20)).contains(DateTime.Now.AddDays(10));
                 results.Count();
             };
 
