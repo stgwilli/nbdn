@@ -1,5 +1,3 @@
-using System;
-
 namespace nothinbutdotnetprep.infrastructure.searching
 {
     public class EqualsSpecification<T> : Specification<T>
