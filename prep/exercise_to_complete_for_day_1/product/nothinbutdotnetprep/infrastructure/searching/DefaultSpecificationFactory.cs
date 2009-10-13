@@ -2,7 +2,7 @@
 
 namespace nothinbutdotnetprep.infrastructure.searching
 {
-    public class DefaultSpecificationFactory<ItemToFilter, ItemProperty> : SpecificationFactory<ItemToFilter, ItemProperty>
+    public class DefaultSpecificationFactory<ItemToFilter, ItemProperty> : BasicSpecificationFactory<ItemToFilter, ItemProperty>
     {
         Func<ItemToFilter, ItemProperty> property_accessor;
 
@@ -29,6 +29,11 @@ namespace nothinbutdotnetprep.infrastructure.searching
                 }
                 return have_match;
             });
+        }
+
+        public SpecificationFactory<ItemToFilter, ItemProperty> not
+        {
+            get { return new NotSpecificationFactory<ItemToFilter, ItemProperty>(this); }
         }
     }
 }

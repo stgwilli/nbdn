@@ -79,7 +79,7 @@ namespace nothinbutdotnetprep.tests
 
             it should_be_able_to_iterate = () =>
             {
-                New.range_of<int>.starting_at(1).up
+                //New.range_of<int>.starting_at(1).up
                 new InclusiveRange<DateTime>(DateTime.Now, DateTime.Now.AddDays(20)).contains(DateTime.Now.AddDays(10));
                 results.Count();
             };
@@ -251,7 +251,7 @@ namespace nothinbutdotnetprep.tests
             it should_be_able_to_find_all_movies_published_by_pixar_or_disney = () =>
             {
                 var results =
-                    sut.all_movies().that_match(Where<Movie>.has_a(movie => movie.production_studio).equal_to_any(ProductionStudio.Pixar, ProductionStudio.Disney));
+                    sut.all_movies().that_match(Where<Movie>.has_a(movie => movie.production_studio).not.equal_to_any(ProductionStudio.Pixar, ProductionStudio.Disney));
 
                 results.should_only_contain(a_bugs_life, pirates_of_the_carribean, cars);
             };

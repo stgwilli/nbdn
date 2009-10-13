@@ -55,6 +55,8 @@
     <Compile Include="infrastructure\searching\EqualsSpecification.cs" />
     <Compile Include="infrastructure\searching\FallsInRangeSpecification.cs" />
     <Compile Include="infrastructure\searching\GreaterThanSpecification.cs" />
+    <Compile Include="infrastructure\searching\NotSpecification.cs" />
+    <Compile Include="infrastructure\searching\NotSpecificationFactory.cs" />
     <Compile Include="infrastructure\searching\OrSpecification.cs" />
     <Compile Include="infrastructure\searching\PropertySpecification.cs" />
     <Compile Include="infrastructure\searching\Specification.cs" />

@@ -3,7 +3,7 @@ using nothinbutdotnetprep.infrastructure.ranges;
 
 namespace nothinbutdotnetprep.infrastructure.searching
 {
-    public class ComparableSpecificationFactory<ItemToFilter, ItemProperty> : SpecificationFactory<ItemToFilter, ItemProperty> where ItemProperty : IComparable<ItemProperty>
+    public class ComparableSpecificationFactory<ItemToFilter, ItemProperty> : BasicComparableSpecificationFactory<ItemToFilter, ItemProperty> where ItemProperty : IComparable<ItemProperty>
     {
         Func<ItemToFilter, ItemProperty> property_accessor;
         SpecificationFactory<ItemToFilter, ItemProperty> basic_factory;
@@ -14,7 +14,7 @@ namespace nothinbutdotnetprep.infrastructure.searching
             this.basic_factory = basic_factory;
         }
 
-        public ComparableSpecificationFactory(Func<ItemToFilter, ItemProperty> property_accessor) : this(property_accessor, new DefaultSpecificationFactory<ItemToFilter, ItemProperty>()) {}
+        public ComparableSpecificationFactory(Func<ItemToFilter, ItemProperty> property_accessor) : this(property_accessor, new DefaultSpecificationFactory<ItemToFilter, ItemProperty>(property_accessor)) {}
 
         public Specification<ItemToFilter> equal_to(ItemProperty value)
         {
@@ -41,6 +41,11 @@ namespace nothinbutdotnetprep.infrastructure.searching
         {
             return new PropertySpecification<ItemToFilter, ItemProperty>(property_accessor,
                 new FallsInRangeSpecification<ItemProperty>(range));
+        }
+
+        public SpecificationFactory<ItemToFilter, ItemProperty> not
+        {
+            get { throw new NotImplementedException(); }
         }
     }
 }

@@ -1,3 +1,5 @@
+using System;
+
 namespace nothinbutdotnetprep.infrastructure.searching
 {
     public interface Specification<T>
