@@ -52,9 +52,15 @@
     <Compile Include="infrastructure\searching\AnonymousSpecification.cs" />
     <Compile Include="infrastructure\searching\BinarySpecification.cs" />
     <Compile Include="infrastructure\searching\ComparableSpecificationFactory.cs" />
+    <Compile Include="infrastructure\searching\DefaultComparableSpecificationFactory.cs" />
     <Compile Include="infrastructure\searching\EqualsSpecification.cs" />
     <Compile Include="infrastructure\searching\FallsInRangeSpecification.cs" />
     <Compile Include="infrastructure\searching\GreaterThanSpecification.cs" />
+    <Compile Include="infrastructure\searching\NegatingSpecificationFactory.cs" />
+    <Compile Include="infrastructure\searching\NegatingComparableSpecificationFactory.cs" />
+    <Compile Include="infrastructure\searching\NotComparableSpecificationFactory.cs" />
+    <Compile Include="infrastructure\searching\NotSpecification.cs" />
+    <Compile Include="infrastructure\searching\NotSpecificationFactory.cs" />
     <Compile Include="infrastructure\searching\OrSpecification.cs" />
     <Compile Include="infrastructure\searching\PropertySpecification.cs" />
     <Compile Include="infrastructure\searching\Specification.cs" />

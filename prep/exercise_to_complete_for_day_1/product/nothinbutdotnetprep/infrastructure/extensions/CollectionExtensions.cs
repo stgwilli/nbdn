@@ -11,9 +11,9 @@ namespace nothinbutdotnetprep.infrastructure.extensions
             foreach (var t in items) list.Add(t);
         }
 
-        static public IEnumerable<T> all_matching<T>(this IEnumerable<T> list, Predicate<T> condition)
+        static public IEnumerable<T> all_matching<T>(this IEnumerable<T> list, Specification<T> condition)
         {
-            foreach (var item in list) if (condition(item)) yield return item;
+            foreach (var item in list) if (condition.is_satisfied_by(item)) yield return item;
         }
     }
 }

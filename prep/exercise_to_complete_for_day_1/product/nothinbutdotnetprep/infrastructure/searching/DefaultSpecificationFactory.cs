@@ -2,9 +2,17 @@
 
 namespace nothinbutdotnetprep.infrastructure.searching
 {
-    public class DefaultSpecificationFactory<ItemToFilter, ItemProperty> : SpecificationFactory<ItemToFilter, ItemProperty>
+    public class DefaultSpecificationFactory<ItemToFilter, ItemProperty> : NegatingSpecificationFactory<ItemToFilter, ItemProperty>
     {
         Func<ItemToFilter, ItemProperty> property_accessor;
+
+        public SpecificationFactory<ItemToFilter, ItemProperty> not
+        {
+            get
+            {
+                return new NotSpecificationFactory<ItemToFilter, ItemProperty>(this);
+            }
+        }
 
         public DefaultSpecificationFactory(Func<ItemToFilter, ItemProperty> property_accessor)
         {
@@ -13,8 +21,8 @@ namespace nothinbutdotnetprep.infrastructure.searching
 
         public Specification<ItemToFilter> equal_to(ItemProperty value)
         {
-            return new PropertySpecification<ItemToFilter, ItemProperty>(
-                property_accessor, new EqualsSpecification<ItemProperty>(value));
+            return new PropertySpecification<ItemToFilter, ItemProperty>(property_accessor,
+                                                                         new EqualsSpecification<ItemProperty>(value));
         }
 
         public Specification<ItemToFilter> equal_to_any(params ItemProperty[] list)
