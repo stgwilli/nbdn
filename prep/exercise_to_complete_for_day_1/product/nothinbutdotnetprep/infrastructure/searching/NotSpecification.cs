@@ -1,17 +1,17 @@
 namespace nothinbutdotnetprep.infrastructure.searching
 {
-    public class NotSpecification<T>: Specification<T>
+    public class NotSpecification<T> : Specification<T>
     {
-        private readonly Specification<T> original_specification;
+        Specification<T> original;
 
-        public NotSpecification(Specification<T> original_specification)
+        public NotSpecification(Specification<T> original)
         {
-            this.original_specification = original_specification;
+            this.original = original;
         }
 
         public bool is_satisfied_by(T item)
         {
-            return !original_specification.is_satisfied_by(item);
+            return !original.is_satisfied_by(item);
         }
     }
 }
