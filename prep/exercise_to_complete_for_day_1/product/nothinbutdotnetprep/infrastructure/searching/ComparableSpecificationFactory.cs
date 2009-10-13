@@ -45,7 +45,7 @@ namespace nothinbutdotnetprep.infrastructure.searching
 
         public SpecificationFactory<ItemToFilter, ItemProperty> not
         {
-            get { throw new NotImplementedException(); }
+            get { return new NotSpecificationFactory<ItemToFilter, ItemProperty>(this); }
         }
     }
 }
