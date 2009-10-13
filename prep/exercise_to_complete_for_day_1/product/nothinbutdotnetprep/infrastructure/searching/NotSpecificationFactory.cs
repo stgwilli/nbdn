@@ -2,7 +2,7 @@ using System;
 
 namespace nothinbutdotnetprep.infrastructure.searching
 {
-    public class NotSpecificationFactory<ItemToFilter, ItemProperty> : NegatingSpecificationFactory<ItemToFilter, ItemProperty>
+    public class NotSpecificationFactory<ItemToFilter, ItemProperty>
     {
         private readonly SpecificationFactory<ItemToFilter, ItemProperty> _specificationFactory;
 
@@ -10,11 +10,6 @@ namespace nothinbutdotnetprep.infrastructure.searching
         public NotSpecificationFactory(SpecificationFactory<ItemToFilter, ItemProperty> specificationFactory)
         {
             _specificationFactory = specificationFactory;
-        }
-
-        public SpecificationFactory<ItemToFilter, ItemProperty> not
-        {
-            get { return _specificationFactory; }
         }
 
         public Specification<ItemToFilter> equal_to(ItemProperty value)

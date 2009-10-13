@@ -3,7 +3,7 @@ using nothinbutdotnetprep.infrastructure.ranges;
 
 namespace nothinbutdotnetprep.infrastructure.searching
 {
-    public class NotComparableSpecificationFactory<ItemToFilter, ItemProperty> : NegatingComparableSpecificationFactory<ItemToFilter, ItemProperty> where ItemProperty : IComparable<ItemProperty>
+    public class NotComparableSpecificationFactory<ItemToFilter, ItemProperty> where ItemProperty : IComparable<ItemProperty>
     {
         private readonly ComparableSpecificationFactory<ItemToFilter, ItemProperty> _basicFactory;
 
@@ -26,7 +26,7 @@ namespace nothinbutdotnetprep.infrastructure.searching
         {
             return new NotSpecification<ItemToFilter>(_basicFactory.greater_than(value));
         }
-
+        
         public Specification<ItemToFilter> between(ItemProperty lowerValue, ItemProperty upperValue)
         {
             return new NotSpecification<ItemToFilter>(_basicFactory.between(lowerValue, upperValue));

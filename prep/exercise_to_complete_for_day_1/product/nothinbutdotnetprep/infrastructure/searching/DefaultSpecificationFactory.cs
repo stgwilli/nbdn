@@ -2,11 +2,11 @@
 
 namespace nothinbutdotnetprep.infrastructure.searching
 {
-    public class DefaultSpecificationFactory<ItemToFilter, ItemProperty> : NegatingSpecificationFactory<ItemToFilter, ItemProperty>
+    public class DefaultSpecificationFactory<ItemToFilter, ItemProperty> : SpecificationFactory<ItemToFilter, ItemProperty>
     {
         Func<ItemToFilter, ItemProperty> property_accessor;
 
-        public SpecificationFactory<ItemToFilter, ItemProperty> not
+        public NotSpecificationFactory<ItemToFilter, ItemProperty> not
         {
             get
             {
