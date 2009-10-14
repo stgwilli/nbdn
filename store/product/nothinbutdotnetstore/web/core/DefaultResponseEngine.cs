@@ -1,30 +1,26 @@
-using System;
 using System.Web;
-using nothinbutdotnetstore.web.application;
-using nothinbutdotnetstore.web.core.stubs;
 
 namespace nothinbutdotnetstore.web.core
 {
     public class DefaultResponseEngine : ResponseEngine
     {
-        ViewFactory _viewFactory;
+        ViewFactory view_factory;
         TransferBehaviour transfer_behaviour;
 
-        public DefaultResponseEngine(ViewFactory _viewFactory):this(_viewFactory, 
+        public DefaultResponseEngine(ViewFactory view_factory):this(view_factory, 
             (handler, preserve) => HttpContext.Current.Server.Transfer(handler, preserve))
         {
         }
 
-        public DefaultResponseEngine(ViewFactory _viewFactory, TransferBehaviour transfer_behaviour)
+        public DefaultResponseEngine(ViewFactory view_factory, TransferBehaviour transfer_behaviour)
         {
-            this._viewFactory = _viewFactory;
+            this.view_factory = view_factory;
             this.transfer_behaviour = transfer_behaviour;
         }
 
         public void process<ViewModel>(ViewModel model)
         {
-            var view = _viewFactory.get_view_for(model);
-            transfer_behaviour(view, true);
+            transfer_behaviour(view_factory.create_view_for(model), true);
         }
     }
 }

@@ -1,18 +1,11 @@
 <%@ MasterType VirtualPath="Store.master" %>
-<%@ Page Language="C#" AutoEventWireup="true" Inherits="System.Web.UI.Page" MasterPageFile="Store.master" %>
-
-
-<%@ Import Namespace="System.Runtime.Remoting.Contexts"%>
-<%@ Import Namespace="nothinbutdotnetstore.dto" %>
-<%@ Import Namespace="System.Collections.Generic" %>
-<%@ Import Namespace="nothinbutdotnetstore.web.application" %>
-<%@ Import Namespace="nothinbutdotnetstore.web.core" %>
+<%@ Page Language="C#" AutoEventWireup="true" Inherits="nothinbutdotnetstore.web.ui.views.DepartmentBrowser" CodeFile="DepartmentBrowser.aspx.cs" MasterPageFile="Store.master" %>
 <asp:Content ID="content" runat="server" ContentPlaceHolderID="childContentPlaceHolder">
     <p class="ListHead">Select An Isle</p>
 
-            <%--<table>            
+            <table>            
         	<%
-            	foreach (var department in this.Model)
+            	foreach (var department in this.model)
         	        %>
         	<%        	    
 {        	        %>
@@ -23,6 +16,5 @@
            	 </tr>        
            	 <%        	    
 }            %>
-           	 --%>
 	    </table>            
 </asp:Content>

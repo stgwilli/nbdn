@@ -1,11 +1,7 @@
-using System.Collections.Generic;
 using System.Web;
 using developwithpassion.bdd.contexts;
 using developwithpassion.bdd.harnesses.mbunit;
-using developwithpassion.bdd.mocking.rhino;
 using developwithpassion.bdddoc.core;
-using nothinbutdotnetstore.dto;
-using nothinbutdotnetstore.web.application;
 using nothinbutdotnetstore.web.core;
 using Rhino.Mocks;
 
@@ -22,12 +18,12 @@ namespace nothinbutdotnetstore.tests.web
             context c = () =>
             {
                 model = "items";
-                _viewFactory = the_dependency<ViewFactory>();
+                view_factory = the_dependency<ViewFactory>();
                 view = an<ViewForModel<string>>();
 
                 provide_a_basic_sut_constructor_argument<TransferBehaviour>((handler,preserve) => view_that_was_transferred_to = handler);
 
-                _viewFactory.Stub(registry => registry.get_view_for<string>(model)).Return(view);
+                view_factory.Stub(registry => registry.create_view_for(model)).Return(view);
             };
 
             because b = () =>
@@ -36,17 +32,12 @@ namespace nothinbutdotnetstore.tests.web
             };
 
 
-            it should_populate_the_view_with_its_view_model = () =>
-            {
-                view.model.should_be_equal_to(model);
-            };
-
             it should_transfer_processing_to_the_view_that_can_process_the_view_model = () => {
             
                 view_that_was_transferred_to.should_be_equal_to(view);
             };
 
-            static ViewFactory _viewFactory;
+            static ViewFactory view_factory;
             static ViewForModel<string> view;
             static string model;
             static IHttpHandler view_that_was_transferred_to;
