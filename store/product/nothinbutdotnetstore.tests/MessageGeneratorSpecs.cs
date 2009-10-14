@@ -1,5 +1,5 @@
 using developwithpassion.bdd.contexts;
-using developwithpassion.bdd.harnesses.mbunit;
+using developwithpassion.bdd.mbunit.standard.observations;
 using developwithpassion.bdddoc.core;
 
 namespace nothinbutdotnetstore.tests
