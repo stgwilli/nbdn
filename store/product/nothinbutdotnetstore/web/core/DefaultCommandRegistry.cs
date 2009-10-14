@@ -1,8 +1,8 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using nothinbutdotnetstore.tasks;
 using nothinbutdotnetstore.tasks.stubs;
+using nothinbutdotnetstore.web.application;
 
 namespace nothinbutdotnetstore.web.core
 {
@@ -15,14 +15,14 @@ namespace nothinbutdotnetstore.web.core
         static IEnumerable<RequestCommand> create_basic_commands()
         {
             //throw new NotImplementedException();
-            CatalogTasks ct = new StubCatalogTasks();
-            ResponseEngine re = new DefaultResponseEngine();
+            var ct = new StubCatalogTasks();
+            var re = new StubResponseEngine();
             var pr = new Predicate<Request>(x => true);
 
-            ApplicationWebCommand awc = new ViewMainDepartments(ct,re);
-            RequestCommand drc = new DefaultRequestCommand(pr,awc);
+            var awc = new ViewMainDepartments(ct,re);
+            var drc = new DefaultRequestCommand(pr,awc);
 
-            List<RequestCommand> li = new List<RequestCommand>();
+            var li = new List<RequestCommand>();
             li.Add(drc);
             return li;
         }

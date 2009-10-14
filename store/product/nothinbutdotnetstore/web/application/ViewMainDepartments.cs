@@ -1,8 +1,7 @@
-using System.Collections.Generic;
-using nothinbutdotnetstore.dto;
 using nothinbutdotnetstore.tasks;
+using nothinbutdotnetstore.web.core;
 
-namespace nothinbutdotnetstore.web.core
+namespace nothinbutdotnetstore.web.application
 {
     public class ViewMainDepartments : ApplicationWebCommand
     {
