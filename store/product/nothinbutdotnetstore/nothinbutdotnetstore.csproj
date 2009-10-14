@@ -56,6 +56,7 @@
     <Compile Include="web\core\RequestFactory.cs" />
     <Compile Include="web\core\RequestHandler.cs" />
     <Compile Include="web\core\ResponseEngine.cs" />
+    <Compile Include="web\core\stubs\StubRequestFactory.cs" />
     <Compile Include="web\core\ViewMainDepartments.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

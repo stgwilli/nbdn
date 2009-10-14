@@ -117,6 +117,12 @@
     <Content Include="views\Store.master" />
     <None Include="images\Thumbs.db" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\nothinbutdotnetstore\nothinbutdotnetstore.csproj">
+      <Project>{922EF2FE-820B-4ED5-9D64-7D716E135719}</Project>
+      <Name>nothinbutdotnetstore</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <Import Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v9.0\WebApplications\Microsoft.WebApplication.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
