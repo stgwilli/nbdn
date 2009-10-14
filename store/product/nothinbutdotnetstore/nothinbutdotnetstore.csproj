@@ -41,9 +41,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="web\core\ApplicationWebCommand.cs" />
     <Compile Include="web\core\CommandRegistry.cs" />
     <Compile Include="web\core\DefaultCommandRegistry.cs" />
     <Compile Include="web\core\DefaultFrontController.cs" />
+    <Compile Include="web\core\DefaultRequestCommand.cs" />
     <Compile Include="web\core\FrontController.cs" />
     <Compile Include="web\core\MissingRequestCommand.cs" />
     <Compile Include="web\core\RequestCommand.cs" />
