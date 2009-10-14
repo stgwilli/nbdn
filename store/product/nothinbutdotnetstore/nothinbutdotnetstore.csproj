@@ -41,6 +41,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="tasks\stubs\StubCatalogTasks.cs" />
     <Compile Include="web\core\ApplicationWebCommand.cs" />
     <Compile Include="web\core\CommandRegistry.cs" />
     <Compile Include="web\core\DefaultCommandRegistry.cs" />
@@ -54,7 +55,7 @@
     <Compile Include="web\core\Request.cs" />
     <Compile Include="web\core\RequestFactory.cs" />
     <Compile Include="web\core\RequestHandler.cs" />
-    <Compile Include="web\core\View.cs" />
+    <Compile Include="web\core\ResponseEngine.cs" />
     <Compile Include="web\core\ViewMainDepartments.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

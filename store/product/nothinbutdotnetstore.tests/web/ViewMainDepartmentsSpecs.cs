@@ -23,7 +23,7 @@ namespace nothinbutdotnetstore.tests.web
                 departments = an<IEnumerable<Department>>();
                 request = an<Request>();
                 catalog = the_dependency<CatalogTasks>();
-                view = the_dependency<View<IEnumerable<Department>>>();
+                response_engine = the_dependency<ResponseEngine>();
 
                 catalog.Stub(x => x.get_main_departments()).Return(departments);
             };
@@ -34,14 +34,14 @@ namespace nothinbutdotnetstore.tests.web
             };
 
 
-            it view_should_display_a_list_of_departments = () =>
+            it should_tell_the_response_engine_to_process_the_list_of_departments = () =>
             {
-                view.received(x => x.display(departments));
+                response_engine.received(x => x.process(departments));
             };
 
             static Request request;
             static CatalogTasks catalog;
-            static View<IEnumerable<Department>> view;
+            static ResponseEngine response_engine;
             static IEnumerable<Department> departments;
         }
     }
