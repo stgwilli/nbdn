@@ -1,4 +1,4 @@
-param($remote,$remote_branch="master",$branch_to_pull_to="development")
+param($remote,$branch_to_pull_to="development",$remote_branch="master")
 
 . .\git_utils.ps1
 
