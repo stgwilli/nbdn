@@ -1,4 +1,4 @@
-namespace nothinbutdotnetstore.web.core
+namespace nothinbutdotnetstore.dto
 {
     public class Department
     {

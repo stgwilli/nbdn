@@ -1,8 +1,9 @@
 using System.Collections.Generic;
+using nothinbutdotnetstore.dto;
 
-namespace nothinbutdotnetstore.web.core
+namespace nothinbutdotnetstore.tasks
 {
-    public interface DepartmentStore
+    public interface CatalogTasks
     {
         IEnumerable<Department> get_main_departments();
     }

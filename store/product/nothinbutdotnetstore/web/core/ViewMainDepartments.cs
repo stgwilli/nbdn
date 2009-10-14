@@ -1,21 +1,23 @@
 using System.Collections.Generic;
+using nothinbutdotnetstore.dto;
+using nothinbutdotnetstore.tasks;
 
 namespace nothinbutdotnetstore.web.core
 {
     public class ViewMainDepartments : ApplicationWebCommand
     {
-        private readonly DepartmentStore store;
-        private readonly View<IEnumerable<Department>> view;
+        CatalogTasks catalog;
+        View<IEnumerable<Department>> view;
 
-        public ViewMainDepartments(DepartmentStore store, View<IEnumerable<Department>> view)
+        public ViewMainDepartments(CatalogTasks catalog, View<IEnumerable<Department>> view)
         {
-            this.store = store;
+            this.catalog = catalog;
             this.view = view;
         }
 
         public void process(Request request)
         {
-            view.display(store.get_main_departments());
+            view.display(catalog.get_main_departments());
         }
     }
 }
