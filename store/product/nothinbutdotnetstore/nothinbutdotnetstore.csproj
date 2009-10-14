@@ -66,6 +66,8 @@
     <Compile Include="web\core\stubs\StubRequestFactory.cs" />
     <Compile Include="web\application\ViewMainDepartments.cs" />
     <Compile Include="web\core\stubs\StubViewRegistry.cs" />
+    <Compile Include="web\core\TransferBehaviour.cs" />
+    <Compile Include="web\core\ViewForModel.cs" />
     <Compile Include="web\core\ViewRegistry.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

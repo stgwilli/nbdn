@@ -5,9 +5,9 @@ namespace nothinbutdotnetstore.web.core
 {
     public class StubResponseEngine : ResponseEngine
     {
-        public void process<ViewModel>(ViewModel view_model)
+        public void process<ViewModel>(ViewModel model)
         {
-            HttpContext.Current.Items.Add(Keys.ViewModels.departments, view_model);
+            HttpContext.Current.Items.Add(Keys.ViewModels.departments, model);
             HttpContext.Current.Server.Transfer("~/views/DepartmentBrowser.aspx");
         }
     }

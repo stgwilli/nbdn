@@ -1,4 +1,5 @@
 using System;
+using System.Web;
 using nothinbutdotnetstore.web.application;
 using nothinbutdotnetstore.web.core.stubs;
 
@@ -6,26 +7,25 @@ namespace nothinbutdotnetstore.web.core
 {
     public class DefaultResponseEngine : ResponseEngine
     {
-        private Payload payload;
-        private ViewRegistry view_registry;
-        private RoutingEngine routing_engine;
+        ViewRegistry view_registry;
+        TransferBehaviour transfer_behaviour;
 
-        public DefaultResponseEngine() : this(new DefaultPayload(), new StubViewRegistry(), new DefaultRoutingEngine())
-        {}
-
-
-        public DefaultResponseEngine(Payload payload, ViewRegistry viewRegistry, RoutingEngine routingEngine)
+        public DefaultResponseEngine(ViewRegistry view_registry):this(view_registry, 
+            (handler, preserve) => HttpContext.Current.Server.Transfer(handler, preserve))
         {
-            this.payload = payload;
-            view_registry = viewRegistry;
-            routing_engine = routingEngine;
         }
 
-
-        public void process<ViewModel>(ViewModel view_model)
+        public DefaultResponseEngine(ViewRegistry view_registry, TransferBehaviour transfer_behaviour)
         {
-            payload.store(view_model);
-            routing_engine.transfer(view_registry.get_view_for(view_model));    
+            this.view_registry = view_registry;
+            this.transfer_behaviour = transfer_behaviour;
+        }
+
+        public void process<ViewModel>(ViewModel model)
+        {
+            var view = view_registry.get_view_for<ViewModel>();
+            view.model = model;
+            transfer_behaviour(view, true);
         }
     }
 }

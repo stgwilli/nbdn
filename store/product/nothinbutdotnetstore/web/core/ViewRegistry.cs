@@ -2,6 +2,6 @@ namespace nothinbutdotnetstore.web.core
 {
     public interface ViewRegistry
     {
-        string get_view_for<T>(T view_model);
+        ViewForModel<ViewModel> get_view_for<ViewModel>();
     }
 }

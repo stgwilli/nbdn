@@ -1,64 +1,55 @@
- using System.Collections.Generic;
- using developwithpassion.bdd.contexts;
- using developwithpassion.bdd.harnesses.mbunit;
- using developwithpassion.bdd.mocking.rhino;
- using developwithpassion.bdddoc.core;
- using nothinbutdotnetstore.dto;
- using nothinbutdotnetstore.web.application;
- using nothinbutdotnetstore.web.core;
- using Rhino.Mocks;
+using System.Collections.Generic;
+using System.Web;
+using developwithpassion.bdd.contexts;
+using developwithpassion.bdd.harnesses.mbunit;
+using developwithpassion.bdd.mocking.rhino;
+using developwithpassion.bdddoc.core;
+using nothinbutdotnetstore.dto;
+using nothinbutdotnetstore.web.application;
+using nothinbutdotnetstore.web.core;
+using Rhino.Mocks;
 
 namespace nothinbutdotnetstore.tests.web
- {   
-     public class ResponseEngineSpecs
-     {
-         public abstract class concern : observations_for_a_sut_with_a_contract<ResponseEngine,
-                                             DefaultResponseEngine>
-         {
-        
-         }
+{
+    public class ResponseEngineSpecs
+    {
+        public abstract class concern : observations_for_a_sut_with_a_contract<ResponseEngine,
+                                            DefaultResponseEngine> {}
 
-         [Concern(typeof(DefaultResponseEngine))]
-         public class when_processing_the_response : concern
-         {
-             context c = () =>
-                             {
-                                 payload = the_dependency<Payload>();
-                                 view_registry = the_dependency<ViewRegistry>();
-                                 routing_engine = the_dependency<RoutingEngine>();
-                                 view = "blah";
+        [Concern(typeof (DefaultResponseEngine))]
+        public class when_processing_the_response : concern
+        {
+            context c = () =>
+            {
+                model = "items";
+                view_registry = the_dependency<ViewRegistry>();
+                view = an<ViewForModel<string>>();
 
+                provide_a_basic_sut_constructor_argument<TransferBehaviour>((handler,preserve) => view_that_was_transferred_to = handler);
 
-                                 view_registry.Stub(x => x.get_view_for(departments)).Return(view);
-                             };
+                view_registry.Stub(registry => registry.get_view_for<string>()).Return(view);
+            };
 
-             because b = () =>
-                             {
-                                sut.process(departments);
-                             };
-
-        
-             it should_retrieve_the_correct_view_from_the_view_registry_based_on_the_dto = () =>
-                {
-                    view_registry.received(x => x.get_view_for(departments));
-                };
+            because b = () =>
+            {
+                sut.process(model);
+            };
 
 
-             it should_store_the_viewmodel_in_the_payload_key = () =>
-                {
-                    payload.received(x => x.store(departments));
-                };
+            it should_populate_the_view_with_its_view_model = () =>
+            {
+                view.model.should_be_equal_to(model);
+            };
 
-             it should_pass_the_view_to_the_routing_engine = () =>
-                 {
-                     routing_engine.received(x => x.transfer(view));
-                 };
+            it should_transfer_processing_to_the_view_that_can_process_the_view_model = () => {
+            
+                view_that_was_transferred_to.should_be_equal_to(view);
+            };
 
-             private static IEnumerable<Department> departments;
-             private static ViewRegistry view_registry;
-             private static Payload payload;
-             private static RoutingEngine routing_engine;
-             private static string view;
-         }
-     }
- }
+            static ViewRegistry view_registry;
+            static ViewForModel<string> view;
+            static string model;
+            static IHttpHandler view_that_was_transferred_to;
+        }
+    }
+}
