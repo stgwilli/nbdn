@@ -1,6 +1,9 @@
 using System;
+using System.Collections.Generic;
 using System.IO;
 using System.Web;
+using nothinbutdotnetstore.web.core;
+using System.Linq;
 
 namespace nothinbutdotnetstore.tests.utility
 {
@@ -19,6 +22,11 @@ namespace nothinbutdotnetstore.tests.utility
         static HttpRequest create_request()
         {
             return new HttpRequest("blah.aspx", "http://www.blah/blah.aspx", String.Empty);
+        }
+
+        static public IEnumerable<T> create_enumerable_from<T>(params T[] items)
+        {
+            return items.Select(item => item);
         }
     }
 }
