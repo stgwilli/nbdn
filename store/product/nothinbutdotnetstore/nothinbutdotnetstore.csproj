@@ -41,7 +41,25 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="MessageGenerator.cs" />
+    <Compile Include="tasks\stubs\StubCatalogTasks.cs" />
+    <Compile Include="web\application\ViewModelKeys.cs" />
+    <Compile Include="web\core\ApplicationWebCommand.cs" />
+    <Compile Include="web\core\CommandRegistry.cs" />
+    <Compile Include="web\core\DefaultCommandRegistry.cs" />
+    <Compile Include="web\core\DefaultFrontController.cs" />
+    <Compile Include="web\core\DefaultRequestCommand.cs" />
+    <Compile Include="dto\Department.cs" />
+    <Compile Include="tasks\CatalogTasks.cs" />
+    <Compile Include="web\core\FrontController.cs" />
+    <Compile Include="web\core\MissingRequestCommand.cs" />
+    <Compile Include="web\core\RequestCommand.cs" />
+    <Compile Include="web\core\Request.cs" />
+    <Compile Include="web\core\RequestFactory.cs" />
+    <Compile Include="web\core\RequestHandler.cs" />
+    <Compile Include="web\core\ResponseEngine.cs" />
+    <Compile Include="web\core\StubResponseEngine.cs" />
+    <Compile Include="web\core\stubs\StubRequestFactory.cs" />
+    <Compile Include="web\application\ViewMainDepartments.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

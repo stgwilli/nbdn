@@ -4,8 +4,8 @@ namespace nothinbutdotnetprep.infrastructure.sorting
 {
     public class ChainedComparer<T> : IComparer<T>
     {
-        IComparer<T> first;
-        IComparer<T> second;
+        private readonly IComparer<T> first;
+        private readonly IComparer<T> second;
 
         public ChainedComparer(IComparer<T> first, IComparer<T> second)
         {

@@ -4,16 +4,16 @@ namespace nothinbutdotnetprep.infrastructure.sorting
 {
     public class ReverseComparer<T> : IComparer<T>
     {
-        IComparer<T> comparer;
+        private readonly IComparer<T> _comparer;
 
         public ReverseComparer(IComparer<T> comparer)
         {
-            this.comparer = comparer;
+            _comparer = comparer;
         }
 
         public int Compare(T x, T y)
         {
-            return -comparer.Compare(x, y);
+            return -_comparer.Compare(x, y);
         }
     }
 }

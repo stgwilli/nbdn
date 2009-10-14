@@ -2,7 +2,7 @@
 
 namespace nothinbutdotnetprep.infrastructure.searching
 {
-    public class DefaultSpecificationFactory<ItemToFilter, ItemProperty> : SpecificationFactory<ItemToFilter,ItemProperty>
+    public class DefaultSpecificationFactory<ItemToFilter, ItemProperty> : SpecificationFactory<ItemToFilter, ItemProperty>
     {
         Func<ItemToFilter, ItemProperty> property_accessor;
 
