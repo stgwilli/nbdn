@@ -22,12 +22,12 @@ namespace nothinbutdotnetstore.tests.web
             context c = () =>
             {
                 model = "items";
-                view_registry = the_dependency<ViewRegistry>();
+                _viewFactory = the_dependency<ViewFactory>();
                 view = an<ViewForModel<string>>();
 
                 provide_a_basic_sut_constructor_argument<TransferBehaviour>((handler,preserve) => view_that_was_transferred_to = handler);
 
-                view_registry.Stub(registry => registry.get_view_for<string>()).Return(view);
+                _viewFactory.Stub(registry => registry.get_view_for<string>(model)).Return(view);
             };
 
             because b = () =>
@@ -46,7 +46,7 @@ namespace nothinbutdotnetstore.tests.web
                 view_that_was_transferred_to.should_be_equal_to(view);
             };
 
-            static ViewRegistry view_registry;
+            static ViewFactory _viewFactory;
             static ViewForModel<string> view;
             static string model;
             static IHttpHandler view_that_was_transferred_to;

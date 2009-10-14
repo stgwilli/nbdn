@@ -16,7 +16,7 @@ namespace nothinbutdotnetstore.web.core
         {
             //throw new NotImplementedException();
             var ct = new StubCatalogTasks();
-            var re = new StubResponseEngine();
+            var re = new DefaultResponseEngine(new DefaultViewFactory());
             var pr = new Predicate<Request>(x => true);
 
             var awc = new ViewMainDepartments(ct,re);

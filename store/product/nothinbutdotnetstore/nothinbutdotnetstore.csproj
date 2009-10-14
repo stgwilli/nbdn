@@ -54,6 +54,8 @@
     <Compile Include="tasks\CatalogTasks.cs" />
     <Compile Include="web\core\DefaultResponseEngine.cs" />
     <Compile Include="web\core\DefaultRoutingEngine.cs" />
+    <Compile Include="web\core\DefaultViewFactory.cs" />
+    <Compile Include="web\core\DefaultViewForModel.cs" />
     <Compile Include="web\core\FrontController.cs" />
     <Compile Include="web\core\MissingRequestCommand.cs" />
     <Compile Include="web\core\RequestCommand.cs" />
@@ -65,10 +67,12 @@
     <Compile Include="web\core\StubResponseEngine.cs" />
     <Compile Include="web\core\stubs\StubRequestFactory.cs" />
     <Compile Include="web\application\ViewMainDepartments.cs" />
-    <Compile Include="web\core\stubs\StubViewRegistry.cs" />
     <Compile Include="web\core\TransferBehaviour.cs" />
     <Compile Include="web\core\ViewForModel.cs" />
-    <Compile Include="web\core\ViewRegistry.cs" />
+    <Compile Include="web\core\ViewFactory.cs" />
+    <Compile Include="web\core\ViewPage.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
