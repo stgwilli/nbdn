@@ -1,7 +1,7 @@
  using System.Web;
- using developwithpassion.bdd;
  using developwithpassion.bdd.contexts;
- using developwithpassion.bdd.mbunit.standard.observations;
+ using developwithpassion.bdd.harnesses.mbunit;
+ using developwithpassion.bdd.mocking.rhino;
  using developwithpassion.bdddoc.core;
  using nothinbutdotnetstore.web.core;
  using Rhino.Mocks;
