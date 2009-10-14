@@ -46,12 +46,16 @@
     <Compile Include="web\core\DefaultCommandRegistry.cs" />
     <Compile Include="web\core\DefaultFrontController.cs" />
     <Compile Include="web\core\DefaultRequestCommand.cs" />
+    <Compile Include="web\core\Department.cs" />
+    <Compile Include="web\core\DepartmentStore.cs" />
     <Compile Include="web\core\FrontController.cs" />
     <Compile Include="web\core\MissingRequestCommand.cs" />
     <Compile Include="web\core\RequestCommand.cs" />
     <Compile Include="web\core\Request.cs" />
     <Compile Include="web\core\RequestFactory.cs" />
     <Compile Include="web\core\RequestHandler.cs" />
+    <Compile Include="web\core\View.cs" />
+    <Compile Include="web\core\ViewMainDepartments.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
