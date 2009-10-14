@@ -9,7 +9,7 @@ namespace nothinbutdotnetstore.tasks.stubs
     {
         public IEnumerable<Department> get_main_departments()
         {
-            return Enumerable.Range(1, 100).Select(i => new Department());
+            return Enumerable.Range(1, 100).Select(i => new Department("jason" + i.ToString()));
         }
     }
 }
