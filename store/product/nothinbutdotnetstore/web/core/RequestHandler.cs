@@ -1,4 +1,3 @@
-using System;
 using System.Web;
 
 namespace nothinbutdotnetstore.web.core
@@ -21,7 +20,7 @@ namespace nothinbutdotnetstore.web.core
 
         public bool IsReusable
         {
-            get { throw new NotImplementedException(); }
+            get { return true;}
         }
     }
 }

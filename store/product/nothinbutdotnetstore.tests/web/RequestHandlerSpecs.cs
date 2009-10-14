@@ -3,6 +3,7 @@
  using developwithpassion.bdd.harnesses.mbunit;
  using developwithpassion.bdd.mocking.rhino;
  using developwithpassion.bdddoc.core;
+ using nothinbutdotnetstore.tests.utility;
  using nothinbutdotnetstore.web.core;
  using Rhino.Mocks;
 
@@ -21,17 +22,17 @@ namespace nothinbutdotnetstore.tests.web
          {
              context c = () =>
              {
-                 item = null;
-                 request = new object();
+                 http_context = ObjectMother.create_http_context();
+                 request = an<Request>();
                  front_controller = the_dependency<FrontController>();
                  request_factory = the_dependency<RequestFactory>();
 
-                 request_factory.Stub(factory => factory.create_from(item)).Return(request);
+                 request_factory.Stub(factory => factory.create_from(http_context)).Return(request);
              };
 
              because b = () =>
              {
-                 sut.ProcessRequest(item);
+                 sut.ProcessRequest(http_context);
              };
 
         
@@ -40,10 +41,10 @@ namespace nothinbutdotnetstore.tests.web
                  front_controller.received(controller1 => controller1.process(request));
              };
 
-             static HttpContext item;
+             static HttpContext http_context;
              static FrontController front_controller;
              static RequestFactory request_factory;
-             static object request;
+             static Request request;
          }
      }
  }
