@@ -24,6 +24,8 @@ namespace nothinbutdotnetstore.tests.web
 
                 input_mapper.Stub(mapper => mapper.map(request_info)).Return(mapped_value);
                 input_mapping_registry.Stub(registry => registry.get_mapper_for<RequestInfo,string>()).Return(input_mapper);
+
+                provide_a_basic_sut_constructor_argument("blah");
             };
 
             because b = () =>

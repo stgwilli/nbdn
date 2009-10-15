@@ -4,6 +4,7 @@ using developwithpassion.bdd.contexts;
 using developwithpassion.bdd.harnesses.mbunit;
 using developwithpassion.bdddoc.core;
 using nothinbutdotnetstore.web.core;
+using Rhino.Mocks;
 
 namespace nothinbutdotnetstore.tests.web
 {
@@ -21,7 +22,7 @@ namespace nothinbutdotnetstore.tests.web
             {
                 request = an<Request>();
                 request_uri = "http://localhost/RawrCommand";
-                request.url = request_uri;
+                request.Stub(request1 => request1.url).Return(request_uri);
             };
 
             because b = () =>
@@ -46,12 +47,13 @@ namespace nothinbutdotnetstore.tests.web
             {
                 request = an<Request>();
                 request_uri = "http://localhost/RawrCommand";
-                request.url = "http://localhost/BlahCommand";
+                request.Stub(request1 => request1.url).Return(request_uri);
+
             };
 
             because b = () =>
             {
-                predicate = Url.contains(request_uri);
+                predicate = Url.contains("BlahCommand");
             };
 
             it should_return_a_predicate_that_evaluates_to_true = () =>
