@@ -41,10 +41,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="dto\Product.cs" />
     <Compile Include="tasks\stubs\StubCatalogTasks.cs" />
+    <Compile Include="web\application\AddProductToCart.cs" />
     <Compile Include="web\application\DefaultPayload.cs" />
     <Compile Include="web\application\Payload.cs" />
     <Compile Include="web\application\ViewModelKeys.cs" />
+    <Compile Include="web\application\ViewProductsInDepartment.cs" />
     <Compile Include="web\application\ViewSubDepartments.cs" />
     <Compile Include="web\core\ApplicationWebCommand.cs" />
     <Compile Include="web\core\CommandRegistry.cs" />
