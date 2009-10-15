@@ -41,33 +41,49 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="tasks\stubs\StubCatalogTasks.cs" />
+    <Compile Include="dto\Product.cs" />
+    <Compile Include="tasks\stubs\StubCatalogBrowsingTasks.cs" />
+    <Compile Include="web\application\AddProductToCart.cs" />
     <Compile Include="web\application\DefaultPayload.cs" />
     <Compile Include="web\application\Payload.cs" />
     <Compile Include="web\application\ViewModelKeys.cs" />
+    <Compile Include="web\application\ViewProductsInDepartment.cs" />
+    <Compile Include="web\application\ViewSubDepartments.cs" />
     <Compile Include="web\core\ApplicationWebCommand.cs" />
     <Compile Include="web\core\CommandRegistry.cs" />
     <Compile Include="web\core\DefaultCommandRegistry.cs" />
     <Compile Include="web\core\DefaultFrontController.cs" />
+    <Compile Include="web\core\DefaultRequest.cs" />
     <Compile Include="web\core\DefaultRequestCommand.cs" />
     <Compile Include="dto\Department.cs" />
-    <Compile Include="tasks\CatalogTasks.cs" />
+    <Compile Include="tasks\CatalogBrowsingTasks.cs" />
     <Compile Include="web\core\DefaultResponseEngine.cs" />
     <Compile Include="web\core\DefaultRoutingEngine.cs" />
+    <Compile Include="web\core\DefaultViewFactory.cs" />
+    <Compile Include="web\core\DefaultViewForModel.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
     <Compile Include="web\core\FrontController.cs" />
+    <Compile Include="web\core\Mapper.cs" />
+    <Compile Include="web\core\MapperRegistry.cs" />
     <Compile Include="web\core\MissingRequestCommand.cs" />
+    <Compile Include="web\core\PageFactory.cs" />
     <Compile Include="web\core\RequestCommand.cs" />
     <Compile Include="web\core\Request.cs" />
     <Compile Include="web\core\RequestFactory.cs" />
     <Compile Include="web\core\RequestHandler.cs" />
+    <Compile Include="web\core\RequestInfo.cs" />
     <Compile Include="web\core\ResponseEngine.cs" />
     <Compile Include="web\core\RoutingEngine.cs" />
-    <Compile Include="web\core\StubResponseEngine.cs" />
     <Compile Include="web\core\stubs\StubRequestFactory.cs" />
     <Compile Include="web\application\ViewMainDepartments.cs" />
     <Compile Include="web\core\stubs\StubViewRegistry.cs" />
     <Compile Include="web\core\TransferBehaviour.cs" />
     <Compile Include="web\core\ViewForModel.cs" />
+    <Compile Include="web\core\ViewFactory.cs" />
+    <Compile Include="web\core\ViewPage.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
     <Compile Include="web\core\ViewRegistry.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

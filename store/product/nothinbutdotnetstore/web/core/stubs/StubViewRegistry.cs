@@ -1,12 +1,10 @@
-using System;
-
 namespace nothinbutdotnetstore.web.core.stubs
 {
     public class StubViewRegistry : ViewRegistry
     {
-        public ViewForModel<ViewModel> get_view_for<ViewModel>()
+        public string get_view_path_for<ViewModel>()
         {
-            throw new NotImplementedException();
+            return "~/views/departmentbrowser.aspx";
         }
     }
 }
