@@ -10,9 +10,9 @@ namespace nothinbutdotnetprep.infrastructure.sorting
             return with(new PropertyComparer<ItemToSort, ItemProperty>(property_accessor));
         }
 
-        public static DefaultSortBuilder<ItemToSort> by_descending<ItemProperty>(Func<ItemToSort, ItemProperty> property_accessor) where ItemProperty: IComparable<ItemProperty>
+        public static DefaultSortBuilder<ItemToSort> by<ItemProperty>(Func<ItemToSort, ItemProperty> property_accessor,SortDirection direction) where ItemProperty : IComparable<ItemProperty>
         {
-            return with(new PropertyComparer<ItemToSort, ItemProperty>(property_accessor).reverse());
+            return with(new PropertyComparer<ItemToSort, ItemProperty>(property_accessor));
         }
 
         public static DefaultSortBuilder<ItemToSort>with(IComparer<ItemToSort> custom_comparer)
