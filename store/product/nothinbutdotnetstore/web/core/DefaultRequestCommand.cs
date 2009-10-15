@@ -7,7 +7,7 @@ namespace nothinbutdotnetstore.web.core
         Predicate<Request> request_criteria;
         ApplicationWebCommand application_command;
 
-        public DefaultRequestCommand(Predicate<Request> request_criteria,ApplicationWebCommand command)
+        public DefaultRequestCommand(Predicate<Request> request_criteria, ApplicationWebCommand command)
         {
             this.request_criteria = request_criteria;
             this.application_command = command;
