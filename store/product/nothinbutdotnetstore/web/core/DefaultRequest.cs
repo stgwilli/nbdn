@@ -5,20 +5,21 @@ namespace nothinbutdotnetstore.web.core
     public class DefaultRequest : Request
     {
         MapperRegistry input_mapping_registry;
-        RequestInfo request_info;
 
-        public DefaultRequest(MapperRegistry input_mapping_registry, RequestInfo request_info)
+        public DefaultRequest(MapperRegistry input_mapping_registry, string url)
         {
             this.input_mapping_registry = input_mapping_registry;
-            this.request_info = request_info;
+            this.url = url;
         }
 
         public InputModel map<InputModel>()
         {
-            return input_mapping_registry.get_mapper_for<RequestInfo, InputModel>()
-                .map(request_info);
+            return input_mapping_registry.get_mapper_for<string, InputModel>().map(url);
         }
 
-        public Uri uri{ get; set;}
+        public string url
+        {
+            get; set;
+        }
     }
 }

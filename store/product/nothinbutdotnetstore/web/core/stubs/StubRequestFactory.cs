@@ -11,12 +11,12 @@ namespace nothinbutdotnetstore.web.core.stubs
                 throw new NotImplementedException();
             }
 
-            public Uri uri { get; set; }
+            public string url { get; set; }
         }
 
         public Request create_from(HttpContext http_context)
         {
-            return new StubRequest(){uri = http_context.Request.Url};
+            return new StubRequest(){url = http_context.Request.Url.ToString()};
         }
     }
 }

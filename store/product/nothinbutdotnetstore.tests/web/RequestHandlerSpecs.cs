@@ -28,7 +28,7 @@ namespace nothinbutdotnetstore.tests.web
                  front_controller = the_dependency<FrontController>();
                  request_factory = the_dependency<RequestFactory>();
                  
-                 request_factory.Stub(factory => factory.create_from(Arg<Uri>.Is.Anything)).Return(request);
+                 request_factory.Stub(factory => factory.create_from(http_context)).Return(request);
              };
 
              because b = () =>

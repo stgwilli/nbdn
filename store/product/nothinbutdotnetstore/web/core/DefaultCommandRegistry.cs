@@ -14,12 +14,9 @@ namespace nothinbutdotnetstore.web.core
         {
             var li = new List<RequestCommand>
                          {
-                             new DefaultRequestCommand(Url.contains("ViewMainDepartments"),
-                                                       Actions.ViewMainDepartments),
-                             new DefaultRequestCommand(x => x.url.PathAndQuery.StartsWith("ViewSubDepartments"),
-                                                       Actions.ViewSubDepartments),
-                             new DefaultRequestCommand(x => x.url.PathAndQuery.StartsWith("ViewProducts"),
-                                                       Actions.ViewProductsInDerpartments)
+                             new DefaultRequestCommand(Url.contains("ViewMainDepartments"), Actions.ViewMainDepartments),
+                             new DefaultRequestCommand(Url.contains("ViewSubDepartments"), Actions.ViewSubDepartments),
+                             new DefaultRequestCommand(Url.contains("ViewProducts"), Actions.ViewProductsInDerpartments)
                          };
 
             return li;

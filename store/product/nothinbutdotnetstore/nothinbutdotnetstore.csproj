@@ -88,6 +88,7 @@
     <Compile Include="web\application\ViewMainDepartments.cs" />
     <Compile Include="web\core\stubs\StubViewRegistry.cs" />
     <Compile Include="web\core\TransferBehaviour.cs" />
+    <Compile Include="web\core\Url.cs" />
     <Compile Include="web\core\ViewCommand.cs" />
     <Compile Include="web\core\ViewForModel.cs" />
     <Compile Include="web\core\ViewFactory.cs" />
