@@ -83,5 +83,34 @@ namespace nothinbutdotnetstore.tests.infrastructure
             static ContainerItemFactory connection_container_item_factory;
             static Exception original_exception;
         }
+
+        [Concern(typeof (DefaultContainer))]
+        public class when_resolving_an_instance_of_an_contract_using_a_type : concern
+        {
+            context c = () =>
+            {
+                sql_connection = new SqlConnection();
+                connection_container_item_factory = an<ContainerItemFactory>();
+
+
+                connection_container_item_factory.Stub(item => item.create()).Return(sql_connection);
+                container_item_factory_registry.Stub(registry => registry.get_resolution_item_for(typeof (IDbConnection))).Return(connection_container_item_factory);
+            };
+
+            because b = () =>
+            {
+                result = sut.instance_of(typeof (IDbConnection));
+            };
+
+
+            it should_return_the_instance_resolved_by_the_types_item_factory = () =>
+            {
+                result.should_be_equal_to(sql_connection);
+            };
+
+            static object result;
+            static SqlConnection sql_connection;
+            static ContainerItemFactory connection_container_item_factory;
+        }
     }
 }
