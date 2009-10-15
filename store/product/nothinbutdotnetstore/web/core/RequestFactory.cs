@@ -5,6 +5,6 @@ namespace nothinbutdotnetstore.web.core
 {
     public interface RequestFactory
     {
-        Request create_from(Uri uri);
+        Request create_from(HttpContext http_context );
     }
 }

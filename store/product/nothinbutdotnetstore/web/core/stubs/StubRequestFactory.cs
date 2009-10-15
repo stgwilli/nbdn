@@ -14,9 +14,9 @@ namespace nothinbutdotnetstore.web.core.stubs
             public Uri uri { get; set; }
         }
 
-        public Request create_from(Uri uri)
+        public Request create_from(HttpContext http_context)
         {
-            return new StubRequest(){uri = uri};
+            return new StubRequest(){uri = http_context.Request.Url};
         }
     }
 }

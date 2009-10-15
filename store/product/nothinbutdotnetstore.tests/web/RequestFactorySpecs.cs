@@ -32,7 +32,7 @@ namespace nothinbutdotnetstore.tests.web
 
             it should_add_the_uri_to_the_request = () =>
                                                        {
-                                                           uri.should_be_equal_to(request.uri);
+                                                           uri.should_be_equal_to(request.url);
                                                        };
 
             private static Uri uri;
