@@ -1,5 +1,4 @@
 using System;
-using System.Collections;
 using System.Collections.Generic;
 using developwithpassion.bdd.contexts;
 using developwithpassion.bdd.harnesses.mbunit;
@@ -28,7 +27,7 @@ namespace nothinbutdotnetstore.tests.web
                 catalog_browsing = an<CatalogBrowsingTasks>();
                 response_engine = the_dependency<ResponseEngine>();
 
-                provide_a_basic_sut_constructor_argument<Func<Request, IEnumerable<Department>>>(x => catalog_browsing.get_main_departments());
+                provide_a_basic_sut_constructor_argument<ViewQuery<IEnumerable<Department>>>(x => catalog_browsing.get_main_departments());
 
                 catalog_browsing.Stub(x => x.get_main_departments()).Return(departments);
             };

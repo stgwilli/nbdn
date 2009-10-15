@@ -1,13 +1,13 @@
-﻿using System;
-
-namespace nothinbutdotnetstore.web.core
+﻿namespace nothinbutdotnetstore.web.core
 {
+    public delegate ViewModel ViewQuery<ViewModel>(Request request);
+
     public class ViewCommand<ViewModel> : ApplicationWebCommand
     {
         ResponseEngine response_engine;
-        Func<Request, ViewModel> get_view_model;
+        ViewQuery<ViewModel> get_view_model;
 
-        public ViewCommand(ResponseEngine response_engine, Func<Request, ViewModel> get_view_model)
+        public ViewCommand(ResponseEngine response_engine, ViewQuery<ViewModel> get_view_model)
         {
             this.get_view_model = get_view_model;
             this.response_engine = response_engine;

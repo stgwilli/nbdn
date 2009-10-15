@@ -31,7 +31,7 @@ namespace nothinbutdotnetstore.tests.web
                 catalog_browsing.Stub(tasks => tasks.get_all_departments_in(main_department)).Return(sub_departments);
                 request.Stub(request1 => request1.map<Department>()).Return(main_department);
 
-                provide_a_basic_sut_constructor_argument<Func<Request, IEnumerable<Department>>>(x => catalog_browsing.get_all_departments_in(request.map<Department>()));
+                provide_a_basic_sut_constructor_argument<ViewQuery<IEnumerable<Department>>>(x => catalog_browsing.get_all_departments_in(request.map<Department>()));
             };
 
             because b = () =>

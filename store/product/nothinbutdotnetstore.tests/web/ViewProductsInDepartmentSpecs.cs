@@ -32,7 +32,7 @@ namespace nothinbutdotnetstore.tests.web
                 catalog_browsing.Stub(tasks => tasks.get_products_in(department)).Return(products);
                 request.Stub(request1 => request1.map<Department>()).Return(department);
 
-                provide_a_basic_sut_constructor_argument<Func<Request, IEnumerable<Product>>>(x => catalog_browsing.get_products_in(request.map<Department>()));
+                provide_a_basic_sut_constructor_argument<ViewQuery<IEnumerable<Product>>>(x => catalog_browsing.get_products_in(request.map<Department>()));
             };
 
             because b = () =>
