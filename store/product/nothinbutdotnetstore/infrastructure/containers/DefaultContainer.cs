@@ -20,7 +20,14 @@ namespace nothinbutdotnetstore.infrastructure.containers
 
         public object instance_of(Type dependency_type)
         {
-            return registry.get_resolution_item_for(dependency_type).create();
+            try
+            {
+                return registry.get_resolution_item_for(dependency_type).create();
+            }
+            catch (Exception exception)
+            {
+                throw new ContainerItemResolutionException(exception, dependency_type);
+            }
         }
 
         public IEnumerable<DependencyType> all_instances_of<DependencyType>()
