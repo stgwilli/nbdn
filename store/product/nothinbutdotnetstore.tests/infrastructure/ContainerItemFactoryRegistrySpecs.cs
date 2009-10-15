@@ -24,7 +24,9 @@ namespace nothinbutdotnetstore.tests.infrastructure
                  the_type = typeof (string);
                  container_item_factory = an<ContainerItemFactory>();
                  factory_dictionary = the_dependency<IDictionary<Type, ContainerItemFactory>>();
-                 factory_dictionary[the_type] = container_item_factory;                 
+                 factory_dictionary[the_type] = container_item_factory;
+
+                 factory_dictionary.Stub(x => x.ContainsKey(the_type)).Return(true);
              };
 
              because b = () =>
