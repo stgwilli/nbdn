@@ -1,39 +1,42 @@
+ using System;
  using System.Web;
  using developwithpassion.bdd.contexts;
  using developwithpassion.bdd.harnesses.mbunit;
  using developwithpassion.bdddoc.core;
  using nothinbutdotnetstore.web.core;
+ using nothinbutdotnetstore.web.core.stubs;
 
 namespace nothinbutdotnetstore.tests.web
- {   
-     public class RequestFactorySpecs
-     {
-         public abstract class concern : observations_for_a_sut_with_a_contract<RequestFactory,
-                                             DefaultRequestFactory>
-         {
+{
+    public class RequestFactorySpecs
+    {
+        public abstract class concern : observations_for_a_sut_with_a_contract<RequestFactory,
+                                            StubRequestFactory>
+        {
         
-         }
+        }
 
-         [Concern(typeof(DefaultRequestFactory))]
-         public class when_creating_a_request_from_an_http_context : concern
-         {
-             context c = () =>
-                             {
+        [Concern(typeof(StubRequestFactory))]
+        public class when_creating_a_request : concern
+        {
+            context c = () =>
+                            {
+                                uri = new Uri("http://blah.com");
+                                request = an<Request>();
+                            };
 
-                             };
+            because b = () =>
+                            {
+                                request = sut.create_from(uri);
+                            };
 
-             because b = () =>
-                             {
+            it should_add_the_uri_to_the_request = () =>
+                                                       {
+                                                           uri.should_be_equal_to(request.uri);
+                                                       };
 
-                             };
-
-             it should_return_the_request_with_the_correct_information = () =>
-                        {
-                            
-            
-            
-                        };
-
-         }
-     }
- }
+            private static Uri uri;
+            private static Request request;
+        }
+    }
+}

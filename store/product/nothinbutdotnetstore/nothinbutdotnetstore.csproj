@@ -31,6 +31,14 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="developwithpassion.bdd, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\thirdparty\developwithpassion.bdd\developwithpassion.bdd.dll</HintPath>
+    </Reference>
+    <Reference Include="developwithpassion.bdddoc, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\thirdparty\developwithpassion.bdddoc\developwithpassion.bdddoc.exe</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.configuration" />
     <Reference Include="System.Core">
@@ -49,8 +57,10 @@
     <Compile Include="web\application\ViewModelKeys.cs" />
     <Compile Include="web\application\ViewProductsInDepartment.cs" />
     <Compile Include="web\application\ViewSubDepartments.cs" />
+    <Compile Include="web\CommandFromUriParser.cs" />
     <Compile Include="web\core\ApplicationWebCommand.cs" />
     <Compile Include="web\core\CommandRegistry.cs" />
+    <Compile Include="web\core\ContextWrapper.cs" />
     <Compile Include="web\core\DefaultCommandRegistry.cs" />
     <Compile Include="web\core\DefaultFrontController.cs" />
     <Compile Include="web\core\DefaultRequest.cs" />

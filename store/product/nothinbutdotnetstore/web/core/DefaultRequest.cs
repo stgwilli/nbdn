@@ -6,13 +6,11 @@ namespace nothinbutdotnetstore.web.core
     {
         MapperRegistry input_mapping_registry;
         RequestInfo request_info;
-        private Uri uri;
 
-        public DefaultRequest(MapperRegistry input_mapping_registry, RequestInfo request_info, Uri uri)
+        public DefaultRequest(MapperRegistry input_mapping_registry, RequestInfo request_info)
         {
             this.input_mapping_registry = input_mapping_registry;
             this.request_info = request_info;
-            this.uri = uri;
         }
 
         public InputModel map<InputModel>()
@@ -21,10 +19,6 @@ namespace nothinbutdotnetstore.web.core
                 .map(request_info);
         }
 
-        public Uri Uri
-        {
-            get { return uri; }
-        }
-
+        public Uri uri{ get; set;}
     }
 }
