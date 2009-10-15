@@ -290,7 +290,7 @@ namespace nothinbutdotnetprep.tests
 
             it should_be_able_to_sort_all_movies_by_title_descending = () =>
             {
-                var results = sut.all_movies().order_by(x => x.title);
+                var results = sut.all_movies().order_by(x => x.title,SortDirections.descending);
                 results.should_only_contain_in_order(theres_something_about_mary, the_ring, shrek, pirates_of_the_carribean, indiana_jones_and_the_temple_of_doom,
                                                      cars, a_bugs_life);
             };
