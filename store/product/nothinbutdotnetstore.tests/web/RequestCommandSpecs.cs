@@ -33,6 +33,7 @@ namespace nothinbutdotnetstore.tests.web
                 result.should_be_true();
             };
 
+           
             static bool result;
             static Request request;
         }

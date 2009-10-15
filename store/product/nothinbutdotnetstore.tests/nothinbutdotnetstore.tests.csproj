@@ -78,6 +78,7 @@
     <Compile Include="web\DefaultViewFactorySpecs.cs" />
     <Compile Include="web\FrontControllerSpecs.cs" />
     <Compile Include="web\RequestCommandSpecs.cs" />
+    <Compile Include="web\RequestFactorySpecs.cs" />
     <Compile Include="web\RequestHandlerSpecs.cs" />
     <Compile Include="web\RequestSpecs.cs" />
     <Compile Include="web\ResponseEngineSpecs.cs" />

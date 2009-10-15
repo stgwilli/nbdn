@@ -18,7 +18,7 @@ namespace nothinbutdotnetstore.web.core
 
         public void ProcessRequest(HttpContext context)
         {
-            front_controller.process(request_factory.create_from(context));
+            front_controller.process(request_factory.create_from(context.Request.Url));
         }
 
         public bool IsReusable
