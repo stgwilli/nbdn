@@ -23,12 +23,12 @@ namespace nothinbutdotnetstore.tests.web
             {
                 request = an<Request>();
                 sub_departments = new List<Department>();
-                catalog_tasks = the_dependency<CatalogTasks>();
+                catalog_browsing_tasks = the_dependency<CatalogBrowsingTasks>();
                 response_engine = the_dependency<ResponseEngine>();
 
                 main_department = new Department();
 
-                catalog_tasks.Stub(tasks => tasks.get_all_departments_in(main_department)).Return(sub_departments);
+                catalog_browsing_tasks.Stub(tasks => tasks.get_all_departments_in(main_department)).Return(sub_departments);
 
                 request.Stub(request1 => request1.map<Department>()).Return(main_department);
             };
@@ -48,7 +48,7 @@ namespace nothinbutdotnetstore.tests.web
             static IEnumerable<Department> sub_departments;
             static Request request;
             static Department main_department;
-            static CatalogTasks catalog_tasks;
+            static CatalogBrowsingTasks catalog_browsing_tasks;
         }
     }
 }

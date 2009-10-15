@@ -14,7 +14,7 @@ namespace nothinbutdotnetstore.web.core
 
         static IEnumerable<RequestCommand> create_basic_commands()
         {
-            var ct = new StubCatalogTasks();
+            var ct = new StubCatalogBrowsingTasks();
             var re = new DefaultResponseEngine(new DefaultViewFactory());
             var pr = new Predicate<Request>(x => true);
 

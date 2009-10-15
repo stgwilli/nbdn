@@ -1,4 +1,3 @@
-using System;
 using nothinbutdotnetstore.dto;
 using nothinbutdotnetstore.tasks;
 using nothinbutdotnetstore.web.core;
@@ -8,17 +7,17 @@ namespace nothinbutdotnetstore.web.application
     public class ViewProductsInDepartment : ApplicationWebCommand
     {
         private ResponseEngine response_engine;
-        private CatalogTasks catalog_tasks;
+        private CatalogBrowsingTasks catalog_browsing_tasks;
 
-        public ViewProductsInDepartment(ResponseEngine responseEngine, CatalogTasks catalogTasks)
+        public ViewProductsInDepartment(ResponseEngine responseEngine, CatalogBrowsingTasks catalog_browsing_tasks)
         {
             response_engine = responseEngine;
-            catalog_tasks = catalogTasks;
+            this.catalog_browsing_tasks = catalog_browsing_tasks;
         }
 
         public void process(Request request)
         {
-            response_engine.process(catalog_tasks.get_products_in(request.map<Department>()));
+            response_engine.process(catalog_browsing_tasks.get_products_in(request.map<Department>()));
         }
     }
 }

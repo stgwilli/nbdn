@@ -23,10 +23,10 @@ namespace nothinbutdotnetstore.tests.web
             {
                 departments = an<IEnumerable<Department>>();
                 request = an<Request>();
-                catalog = the_dependency<CatalogTasks>();
+                catalog_browsing = the_dependency<CatalogBrowsingTasks>();
                 response_engine = the_dependency<ResponseEngine>();
 
-                catalog.Stub(x => x.get_main_departments()).Return(departments);
+                catalog_browsing.Stub(x => x.get_main_departments()).Return(departments);
             };
 
             because b = () =>
@@ -41,7 +41,7 @@ namespace nothinbutdotnetstore.tests.web
             };
 
             static Request request;
-            static CatalogTasks catalog;
+            static CatalogBrowsingTasks catalog_browsing;
             static ResponseEngine response_engine;
             static IEnumerable<Department> departments;
         }

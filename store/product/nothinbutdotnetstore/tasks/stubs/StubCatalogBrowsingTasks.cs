@@ -5,7 +5,7 @@ using nothinbutdotnetstore.dto;
 
 namespace nothinbutdotnetstore.tasks.stubs
 {
-    public class StubCatalogTasks : CatalogTasks
+    public class StubCatalogBrowsingTasks : CatalogBrowsingTasks
     {
         public IEnumerable<Department> get_main_departments()
         {

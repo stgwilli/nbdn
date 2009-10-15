@@ -1,4 +1,3 @@
-using System;
 using nothinbutdotnetstore.dto;
 using nothinbutdotnetstore.tasks;
 using nothinbutdotnetstore.web.core;
@@ -7,16 +6,16 @@ namespace nothinbutdotnetstore.web.application
 {
     public class AddProductToCart : ApplicationWebCommand
     {
-        private CatalogTasks catalog_tasks;
+        private ShoppingTasks shopping_tasks;
 
-        public AddProductToCart(CatalogTasks catalogTasks)
+        public AddProductToCart(ShoppingTasks shopping_tasks)
         {
-            catalog_tasks = catalogTasks;
+            this.shopping_tasks = shopping_tasks;
         }
 
         public void process(Request request)
         {
-            catalog_tasks.add_to_cart(request.map<Product>());
+            shopping_tasks.add_to_cart(request.map<Product>());
         }
     }
 }

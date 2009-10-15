@@ -1,13 +1,11 @@
-using System;
-using System.Collections.Generic;
-
 namespace nothinbutdotnetstore.web.core
 {
     public class DefaultRequest : Request
     {
-        private readonly InputMappingRegistry input_mapping_registry;
+        MapperRegistry input_mapping_registry;
+        RequestInfo request_info;
 
-        public DefaultRequest(InputMappingRegistry input_mapping_registry, RequestInfo request_info)
+        public DefaultRequest(MapperRegistry input_mapping_registry, RequestInfo request_info)
         {
             this.input_mapping_registry = input_mapping_registry;
             this.request_info = request_info;
@@ -15,9 +13,9 @@ namespace nothinbutdotnetstore.web.core
 
         public InputModel map<InputModel>()
         {
-            return input_mapping_registry.create_mapping_for<InputModel>().GetInputModel<InputModel>(request_info);
+            return input_mapping_registry.get_mapper_for<RequestInfo, InputModel>()
+                .map(request_info);
         }
 
-        public RequestInfo request_info { get; private set; }
     }
 }

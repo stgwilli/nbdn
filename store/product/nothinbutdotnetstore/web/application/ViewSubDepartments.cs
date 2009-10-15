@@ -7,17 +7,17 @@ namespace nothinbutdotnetstore.web.application
     public class ViewSubDepartments : ApplicationWebCommand
     {
         ResponseEngine response_engine;
-        CatalogTasks catalog_tasks;
+        CatalogBrowsingTasks catalog_browsing_tasks;
 
-        public ViewSubDepartments(ResponseEngine response_engine, CatalogTasks catalog_tasks)
+        public ViewSubDepartments(ResponseEngine response_engine, CatalogBrowsingTasks catalog_browsing_tasks)
         {
             this.response_engine = response_engine;
-            this.catalog_tasks = catalog_tasks;
+            this.catalog_browsing_tasks = catalog_browsing_tasks;
         }
 
         public void process(Request request)
         {
-            response_engine.process(catalog_tasks.get_all_departments_in(request.map<Department>()));
+            response_engine.process(catalog_browsing_tasks.get_all_departments_in(request.map<Department>()));
         }
     }
 }

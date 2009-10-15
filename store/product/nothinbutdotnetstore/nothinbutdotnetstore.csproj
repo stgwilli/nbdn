@@ -42,7 +42,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="dto\Product.cs" />
-    <Compile Include="tasks\stubs\StubCatalogTasks.cs" />
+    <Compile Include="tasks\stubs\StubCatalogBrowsingTasks.cs" />
     <Compile Include="web\application\AddProductToCart.cs" />
     <Compile Include="web\application\DefaultPayload.cs" />
     <Compile Include="web\application\Payload.cs" />
@@ -56,7 +56,7 @@
     <Compile Include="web\core\DefaultRequest.cs" />
     <Compile Include="web\core\DefaultRequestCommand.cs" />
     <Compile Include="dto\Department.cs" />
-    <Compile Include="tasks\CatalogTasks.cs" />
+    <Compile Include="tasks\CatalogBrowsingTasks.cs" />
     <Compile Include="web\core\DefaultResponseEngine.cs" />
     <Compile Include="web\core\DefaultRoutingEngine.cs" />
     <Compile Include="web\core\DefaultViewFactory.cs" />
@@ -64,8 +64,8 @@
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="web\core\FrontController.cs" />
-    <Compile Include="web\core\InputMapper.cs" />
-    <Compile Include="web\core\InputMappingRegistry.cs" />
+    <Compile Include="web\core\Mapper.cs" />
+    <Compile Include="web\core\MapperRegistry.cs" />
     <Compile Include="web\core\MissingRequestCommand.cs" />
     <Compile Include="web\core\PageFactory.cs" />
     <Compile Include="web\core\RequestCommand.cs" />

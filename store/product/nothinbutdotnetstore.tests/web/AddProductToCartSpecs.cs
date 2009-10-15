@@ -21,7 +21,7 @@ namespace nothinbutdotnetstore.tests.web
             context c = () =>
             {
                 request = an<Request>();
-                catalog_tasks = the_dependency<CatalogTasks>();
+                shopping_tasks = the_dependency<ShoppingTasks>();
                 product = new Product();
 
 
@@ -36,11 +36,11 @@ namespace nothinbutdotnetstore.tests.web
 
             it should_be_told_to_add_a_product_to_the_cart = () =>
             {
-                catalog_tasks.received(x => x.add_to_cart(product));
+                shopping_tasks.received(x => x.add_to_cart(product));
             };
 
             static Request request;
-            static CatalogTasks catalog_tasks;
+            static ShoppingTasks shopping_tasks;
             static Product product;
         }
     }
