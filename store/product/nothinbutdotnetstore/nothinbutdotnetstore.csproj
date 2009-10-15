@@ -58,6 +58,8 @@
     <Compile Include="infrastructure\containers\DefaultContainer.cs" />
     <Compile Include="infrastructure\containers\ContainerItemFactory.cs" />
     <Compile Include="infrastructure\containers\ContainerItemFactoryRegistry.cs" />
+    <Compile Include="infrastructure\containers\DefaultContainerItemFactoryRegistry.cs" />
+    <Compile Include="infrastructure\containers\MissingContainerItemFactory.cs" />
     <Compile Include="tasks\stubs\StubCatalogBrowsingTasks.cs" />
     <Compile Include="web\application\Actions.cs" />
     <Compile Include="web\application\AddProductToCart.cs" />
