@@ -1,3 +1,4 @@
+ using System;
  using System.Web;
  using developwithpassion.bdd.contexts;
  using developwithpassion.bdd.harnesses.mbunit;
@@ -26,8 +27,8 @@ namespace nothinbutdotnetstore.tests.web
                  request = an<Request>();
                  front_controller = the_dependency<FrontController>();
                  request_factory = the_dependency<RequestFactory>();
-
-                 request_factory.Stub(factory => factory.create_from(http_context)).Return(request);
+                 
+                 request_factory.Stub(factory => factory.create_from(Arg<Uri>.Is.Anything)).Return(request);
              };
 
              because b = () =>
@@ -45,6 +46,7 @@ namespace nothinbutdotnetstore.tests.web
              static FrontController front_controller;
              static RequestFactory request_factory;
              static Request request;
+             private static Uri uri;
          }
      }
  }

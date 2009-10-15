@@ -1,3 +1,5 @@
+using System;
+
 namespace nothinbutdotnetstore.web.core
 {
     public class DefaultRequest : Request
@@ -17,5 +19,6 @@ namespace nothinbutdotnetstore.web.core
                 .map(request_info);
         }
 
+        public Uri uri{ get; set;}
     }
 }
