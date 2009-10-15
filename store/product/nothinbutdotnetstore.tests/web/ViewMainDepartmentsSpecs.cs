@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using developwithpassion.bdd.contexts;
 using developwithpassion.bdd.harnesses.mbunit;
@@ -14,7 +15,7 @@ namespace nothinbutdotnetstore.tests.web
     public class ViewMainDepartmentsSpecs
     {
         public abstract class concern : observations_for_a_sut_with_a_contract<ApplicationWebCommand,
-                                            ViewMainDepartments> {}
+                                            ViewCommand<IEnumerable<Department>>> {}
 
         [Concern(typeof (ViewMainDepartments))]
         public class when_viewing_main_departments : concern
@@ -23,8 +24,10 @@ namespace nothinbutdotnetstore.tests.web
             {
                 departments = an<IEnumerable<Department>>();
                 request = an<Request>();
-                catalog_browsing = the_dependency<CatalogBrowsingTasks>();
+                catalog_browsing = an<CatalogBrowsingTasks>();
                 response_engine = the_dependency<ResponseEngine>();
+
+                provide_a_basic_sut_constructor_argument<ViewQuery<IEnumerable<Department>>>(x => catalog_browsing.get_main_departments());
 
                 catalog_browsing.Stub(x => x.get_main_departments()).Return(departments);
             };
@@ -33,7 +36,6 @@ namespace nothinbutdotnetstore.tests.web
             {
                 sut.process(request);
             };
-
 
             it should_tell_the_response_engine_to_process_the_list_of_departments = () =>
             {
@@ -44,6 +46,7 @@ namespace nothinbutdotnetstore.tests.web
             static CatalogBrowsingTasks catalog_browsing;
             static ResponseEngine response_engine;
             static IEnumerable<Department> departments;
+            static Func<Request, IEnumerable<Department>> get_view_model;
         }
     }
 }
