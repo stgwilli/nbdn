@@ -67,16 +67,15 @@ namespace nothinbutdotnetstore.tests.infrastructure
 
             because b = () =>
             {
-                result = sut.instance_of<IDbConnection>();
+                doing(() => sut.instance_of<IDbConnection>());
             };
 
             it should_throw_a_resolution_exception_that_provides_access_to_the_underlying_exception_and_the_type_that_could_not_be_resolved = () =>
             {
                 var thrown_exception = exception_thrown_by_the_sut.should_be_an_instance_of<ContainerItemResolutionException>();
                 thrown_exception.InnerException.should_be_equal_to(original_exception);
-                thrown_exception.type_that_could_not_be_resolved.should_be_equal_to(typeof(IDbConnection));
+                thrown_exception.type_that_could_not_be_resolved.should_be_equal_to(typeof (IDbConnection));
             };
-
 
 
             static IDbConnection result;
