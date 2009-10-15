@@ -15,6 +15,8 @@ namespace nothinbutdotnetstore.web.core.stubs
             {
                 throw new NotImplementedException();
             }
+
+            public RequestInfo request_info { get; private set; }
         }
     }
 }
