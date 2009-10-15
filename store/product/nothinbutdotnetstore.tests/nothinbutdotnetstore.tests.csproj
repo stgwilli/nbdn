@@ -73,7 +73,6 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="utility\empty_test_fixture_for_test_driven.cs" />
     <Compile Include="utility\ObjectMother.cs" />
-    <Compile Include="web\ActionFromUriParserSpecs.cs" />
     <Compile Include="web\AddProductToCartSpecs.cs" />
     <Compile Include="web\CommandRegistrySpecs.cs" />
     <Compile Include="web\DefaultViewFactorySpecs.cs" />

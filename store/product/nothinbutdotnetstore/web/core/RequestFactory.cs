@@ -7,12 +7,4 @@ namespace nothinbutdotnetstore.web.core
     {
         Request create_from(Uri uri);
     }
-
-    public class DefaultRequestFactory : RequestFactory
-    {
-        public Request create_from(HttpContext http_context)
-        {
-
-        }
-    }
 }

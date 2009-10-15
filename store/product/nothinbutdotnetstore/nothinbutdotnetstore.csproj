@@ -51,9 +51,8 @@
   <ItemGroup>
     <Compile Include="dto\Product.cs" />
     <Compile Include="tasks\stubs\StubCatalogBrowsingTasks.cs" />
+    <Compile Include="web\application\Actions.cs" />
     <Compile Include="web\application\AddProductToCart.cs" />
-    <Compile Include="web\application\DefaultPayload.cs" />
-    <Compile Include="web\application\Payload.cs" />
     <Compile Include="web\application\ViewModelKeys.cs" />
     <Compile Include="web\application\ViewProductsInDepartment.cs" />
     <Compile Include="web\application\ViewSubDepartments.cs" />

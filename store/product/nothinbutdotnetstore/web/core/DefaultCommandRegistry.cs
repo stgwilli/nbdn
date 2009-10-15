@@ -14,11 +14,11 @@ namespace nothinbutdotnetstore.web.core
         {
             var li = new List<RequestCommand>
                          {
-                             new DefaultRequestCommand(x => x.Uri.PathAndQuery.StartsWith("ViewMainDepartments"),
+                             new DefaultRequestCommand(x => x.uri.PathAndQuery.StartsWith("ViewMainDepartments"),
                                                        Actions.ViewMainDepartments),
-                             new DefaultRequestCommand(x => x.Uri.PathAndQuery.StartsWith("ViewSubDepartments"),
+                             new DefaultRequestCommand(x => x.uri.PathAndQuery.StartsWith("ViewSubDepartments"),
                                                        Actions.ViewSubDepartments),
-                             new DefaultRequestCommand(x => x.Uri.PathAndQuery.StartsWith("ViewProducts"),
+                             new DefaultRequestCommand(x => x.uri.PathAndQuery.StartsWith("ViewProducts"),
                                                        Actions.ViewProductsInDerpartments)
                          };
 
