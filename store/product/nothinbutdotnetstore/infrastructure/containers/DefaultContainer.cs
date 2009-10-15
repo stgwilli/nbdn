@@ -6,7 +6,7 @@ namespace nothinbutdotnetstore.infrastructure.containers
 {
     public class DefaultContainer : Container
     {
-        private readonly ContainerItemFactoryRegistry registry;
+        ContainerItemFactoryRegistry registry;
 
         public DefaultContainer(ContainerItemFactoryRegistry registry)
         {
