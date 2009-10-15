@@ -7,6 +7,11 @@
         ResponseEngine response_engine;
         ViewQuery<ViewModel> get_view_model;
 
+        public ViewCommand(ViewQuery<ViewModel> get_view_model)
+            : this(new DefaultResponseEngine(new DefaultViewFactory()), get_view_model)
+        {
+        }
+
         public ViewCommand(ResponseEngine response_engine, ViewQuery<ViewModel> get_view_model)
         {
             this.get_view_model = get_view_model;

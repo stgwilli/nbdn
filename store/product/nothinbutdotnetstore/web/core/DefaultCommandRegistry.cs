@@ -1,7 +1,5 @@
-using System;
 using System.Collections.Generic;
 using System.Linq;
-using nothinbutdotnetstore.tasks.stubs;
 using nothinbutdotnetstore.web.application;
 
 namespace nothinbutdotnetstore.web.core
@@ -14,15 +12,16 @@ namespace nothinbutdotnetstore.web.core
 
         static IEnumerable<RequestCommand> create_basic_commands()
         {
-            var ct = new StubCatalogBrowsingTasks();
-            var re = new DefaultResponseEngine(new DefaultViewFactory());
-            var pr = new Predicate<Request>(x => true);
+            var li = new List<RequestCommand>
+                         {
+                             new DefaultRequestCommand(x => x.Uri.PathAndQuery.StartsWith("ViewMainDepartments"),
+                                                       Actions.ViewMainDepartments),
+                             new DefaultRequestCommand(x => x.Uri.PathAndQuery.StartsWith("ViewSubDepartments"),
+                                                       Actions.ViewSubDepartments),
+                             new DefaultRequestCommand(x => x.Uri.PathAndQuery.StartsWith("ViewProducts"),
+                                                       Actions.ViewProductsInDerpartments)
+                         };
 
-            var awc = new ViewMainDepartments(ct,re);
-            var drc = new DefaultRequestCommand(pr,awc);
-
-            var li = new List<RequestCommand>();
-            li.Add(drc);
             return li;
         }
 
