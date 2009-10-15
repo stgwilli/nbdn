@@ -45,6 +45,7 @@
     <Compile Include="web\application\DefaultPayload.cs" />
     <Compile Include="web\application\Payload.cs" />
     <Compile Include="web\application\ViewModelKeys.cs" />
+    <Compile Include="web\application\ViewSubDepartments.cs" />
     <Compile Include="web\core\ApplicationWebCommand.cs" />
     <Compile Include="web\core\CommandRegistry.cs" />
     <Compile Include="web\core\DefaultCommandRegistry.cs" />
