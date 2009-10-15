@@ -53,6 +53,7 @@
     <Compile Include="web\core\CommandRegistry.cs" />
     <Compile Include="web\core\DefaultCommandRegistry.cs" />
     <Compile Include="web\core\DefaultFrontController.cs" />
+    <Compile Include="web\core\DefaultRequest.cs" />
     <Compile Include="web\core\DefaultRequestCommand.cs" />
     <Compile Include="dto\Department.cs" />
     <Compile Include="tasks\CatalogTasks.cs" />
@@ -63,12 +64,15 @@
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="web\core\FrontController.cs" />
+    <Compile Include="web\core\InputMapper.cs" />
+    <Compile Include="web\core\InputMappingRegistry.cs" />
     <Compile Include="web\core\MissingRequestCommand.cs" />
     <Compile Include="web\core\PageFactory.cs" />
     <Compile Include="web\core\RequestCommand.cs" />
     <Compile Include="web\core\Request.cs" />
     <Compile Include="web\core\RequestFactory.cs" />
     <Compile Include="web\core\RequestHandler.cs" />
+    <Compile Include="web\core\RequestInfo.cs" />
     <Compile Include="web\core\ResponseEngine.cs" />
     <Compile Include="web\core\RoutingEngine.cs" />
     <Compile Include="web\core\stubs\StubRequestFactory.cs" />
