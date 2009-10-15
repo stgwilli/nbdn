@@ -20,6 +20,12 @@ namespace nothinbutdotnetprep.infrastructure.sorting
         {
             return order_by(items, property_accessor, SortDirections.ascending);
         }
+        static public ComparableEnumerable<ItemToSort> order_by<ItemToSort, ItemProperty>(this IEnumerable<ItemToSort> items, Func<ItemToSort, ItemProperty> property_accessor,SortDirection direction)
+            where ItemProperty : IComparable<ItemProperty>
+        {
+            var property_comparer = new PropertyComparer<ItemToSort,ItemProperty>(property_accessor);
+            return new ComparableEnumerable<ItemToSort>(new DefaultSortBuilder<ItemToSort>(direction.apply_against(property_comparer)),items);
+        }
 
         static public ComparableEnumerable<ItemToSort> order_by<ItemToSort, ItemProperty>(this IEnumerable<ItemToSort> items, Func<ItemToSort, ItemProperty> property_accessor, SortDirection direction,
                                                                                           params ItemProperty[] fixed_sort_list)
