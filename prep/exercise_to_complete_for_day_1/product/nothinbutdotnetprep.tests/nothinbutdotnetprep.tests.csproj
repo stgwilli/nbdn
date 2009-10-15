@@ -69,7 +69,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="FixedComparerSpecs.cs" />
     <Compile Include="IterationSpecs.cs" />
     <Compile Include="MovieLibrarySpecs.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
