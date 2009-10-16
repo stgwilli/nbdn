@@ -27,9 +27,10 @@ namespace nothinbutdotnetstore.tasks.startup
 
         public void run()
         {
-            Start.by<ConfiguringCoreServices>()
-                .followed_by<ConfiguringFrontController>()
-                .followed_by<ConfigureRouting>();
+//            Start.by<ConfiguringCoreServices>()
+//                .followed_by<ConfiguringFrontController>()
+//                .followed_by<ConfigureRouting>();
+
 
             configure_core_services();
             configure_service_layer();
