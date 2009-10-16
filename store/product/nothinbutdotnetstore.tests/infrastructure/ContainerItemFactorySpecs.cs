@@ -6,15 +6,15 @@
 
 namespace nothinbutdotnetstore.tests.infrastructure
  {   
-     public class StrategyContainerItemFactorySpecs
+     public class ContainerItemFactorySpecs
      {
          public abstract class concern : observations_for_a_sut_with_a_contract<ContainerItemFactory,
-                                             StrategyContainerItemFactory<string>>
+                                             FunctionalContainerItemFactory<string>>
          {
         
          }
 
-         [Concern(typeof(StrategyContainerItemFactory<string>))]
+         [Concern(typeof(FunctionalContainerItemFactory<string>))]
          public class when_creating_an_item_that_it_can_create : concern
          {
              context c = () =>
