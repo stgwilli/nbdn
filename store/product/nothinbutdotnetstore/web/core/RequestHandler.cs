@@ -1,5 +1,6 @@
 using System.Web;
-using nothinbutdotnetstore.web.core.stubs;
+using developwithpassion.commons.core.infrastructure.containers;
+using developwithpassion.commons.core.infrastructure.logging;
 
 namespace nothinbutdotnetstore.web.core
 {
@@ -8,7 +9,8 @@ namespace nothinbutdotnetstore.web.core
         FrontController front_controller;
         RequestFactory request_factory;
 
-        public RequestHandler():this(new DefaultFrontController(),new StubRequestFactory()) {}
+        public RequestHandler() : this(IOC.resolve.instance_of<FrontController>(),
+                                       IOC.resolve.instance_of<RequestFactory>()) {}
 
         public RequestHandler(FrontController front_controller, RequestFactory request_factory)
         {
@@ -23,7 +25,7 @@ namespace nothinbutdotnetstore.web.core
 
         public bool IsReusable
         {
-            get { return true;}
+            get { return true; }
         }
     }
 }

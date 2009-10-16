@@ -1,6 +1,5 @@
 using System.Collections.Generic;
 using System.Linq;
-using nothinbutdotnetstore.web.application;
 
 namespace nothinbutdotnetstore.web.core
 {
@@ -8,19 +7,6 @@ namespace nothinbutdotnetstore.web.core
     {
         IEnumerable<RequestCommand> commands;
 
-        public DefaultCommandRegistry():this(create_basic_commands()) {}
-
-        static IEnumerable<RequestCommand> create_basic_commands()
-        {
-            var li = new List<RequestCommand>
-                         {
-                             new DefaultRequestCommand(Url.contains("ViewMainDepartments"), Actions.ViewMainDepartments),
-                             new DefaultRequestCommand(Url.contains("ViewSubDepartments"), Actions.ViewSubDepartments),
-                             new DefaultRequestCommand(Url.contains("ViewProducts"), Actions.ViewProductsInDerpartments)
-                         };
-
-            return li;
-        }
 
         public DefaultCommandRegistry(IEnumerable<RequestCommand> commands)
         {
