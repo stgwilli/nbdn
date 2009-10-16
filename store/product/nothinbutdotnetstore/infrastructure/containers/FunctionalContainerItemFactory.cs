@@ -2,11 +2,11 @@ using System;
 
 namespace nothinbutdotnetstore.infrastructure.containers
 {
-    public class FunctionalContainerItemFactory<ImplementationType> : ContainerItemFactory
+    public class FunctionalContainerItemFactory : ContainerItemFactory
     {
-        Func<ImplementationType> type_creator;
+        Func<object> type_creator;
 
-        public FunctionalContainerItemFactory(Func<ImplementationType> type_creator)
+        public FunctionalContainerItemFactory(Func<object> type_creator)
         {
             this.type_creator = type_creator;
         }
