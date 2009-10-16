@@ -63,7 +63,6 @@
     <Compile Include="infrastructure\containers\MissingContainerItemFactory.cs" />
     <Compile Include="tasks\startup\ApplicationStartup.cs" />
     <Compile Include="tasks\stubs\StubCatalogBrowsingTasks.cs" />
-    <Compile Include="web\application\Actions.cs" />
     <Compile Include="web\application\AddProductToCart.cs" />
     <Compile Include="web\application\ViewModelKeys.cs" />
     <Compile Include="web\application\ViewProductsInDepartment.cs" />

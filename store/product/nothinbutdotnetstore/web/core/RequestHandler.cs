@@ -1,6 +1,5 @@
 using System.Web;
 using developwithpassion.commons.core.infrastructure.containers;
-using developwithpassion.commons.core.infrastructure.logging;
 
 namespace nothinbutdotnetstore.web.core
 {
