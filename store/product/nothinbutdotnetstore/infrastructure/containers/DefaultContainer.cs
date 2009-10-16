@@ -1,14 +1,13 @@
 using System;
 using System.Collections.Generic;
-using developwithpassion.commons.core.infrastructure.containers;
 
 namespace nothinbutdotnetstore.infrastructure.containers
 {
-    public class DefaultContainer : Container
+    public class DefaultContainer : MutableContainer
     {
-        ContainerItemFactoryRegistry registry;
+        MutableContainerItemFactoryRegistry registry;
 
-        public DefaultContainer(ContainerItemFactoryRegistry registry)
+        public DefaultContainer(MutableContainerItemFactoryRegistry registry)
         {
             this.registry = registry;
         }
@@ -33,6 +32,16 @@ namespace nothinbutdotnetstore.infrastructure.containers
         public IEnumerable<DependencyType> all_instances_of<DependencyType>()
         {
             throw new NotImplementedException();
+        }
+
+        public void register<T>(ContainerItemFactory factory)
+        {
+            registry.register<T>(factory);
+        }
+
+        public void register<T>(T item)
+        {
+            registry.register<T>(new FunctionalContainerItemFactory(() => item));
         }
     }
 }

@@ -17,7 +17,7 @@ namespace nothinbutdotnetstore.tests.infrastructure
         {
             context c = () =>
             {
-                container_item_factory_registry = the_dependency<ContainerItemFactoryRegistry>();
+                container_item_factory_registry = the_dependency<MutableContainerItemFactoryRegistry>();
                 connection_container_item_factory = an<ContainerItemFactory>();
             };
 

@@ -62,6 +62,7 @@
     <Compile Include="infrastructure\containers\FunctionalContainerItemFactory.cs" />
     <Compile Include="infrastructure\containers\DefaultContainerItemFactoryRegistry.cs" />
     <Compile Include="infrastructure\containers\MissingContainerItemFactory.cs" />
+    <Compile Include="infrastructure\containers\MutableContainer.cs" />
     <Compile Include="tasks\startup\ApplicationStartup.cs" />
     <Compile Include="tasks\startup\ApplicationStartupItem.cs" />
     <Compile Include="tasks\startup\ConfigureApplicationCommands.cs" />

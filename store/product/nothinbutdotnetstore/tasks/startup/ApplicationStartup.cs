@@ -31,7 +31,7 @@ namespace nothinbutdotnetstore.tasks.startup
 //                .followed_by<ConfiguringFrontController>()
 //                .followed_by<ConfigureRouting>();
 
-
+            
             configure_core_services();
             configure_service_layer();
             configure_front_controller();

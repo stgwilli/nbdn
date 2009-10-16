@@ -6,4 +6,11 @@ namespace nothinbutdotnetstore.infrastructure.containers
     {
         ContainerItemFactory get_resolution_item_for(Type type);
     }
+
+
+    public interface MutableContainerItemFactoryRegistry : ContainerItemFactoryRegistry
+    {
+        void register<T>(ContainerItemFactory factory);
+        
+    }
 }
