@@ -35,7 +35,7 @@ namespace nothinbutdotnetstore.tests.infrastructure
 
             static string object_to_check_for;
             static object returned_type;
-            static Func<string> strategy;
+            static Func<object> strategy;
         }
     }
 }
