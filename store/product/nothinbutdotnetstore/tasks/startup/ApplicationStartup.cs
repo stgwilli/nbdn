@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Web.Compilation;
 using developwithpassion.commons.core.infrastructure.containers;
 using nothinbutdotnetstore.infrastructure.containers;
 using nothinbutdotnetstore.tasks.stubs;
@@ -11,53 +12,92 @@ namespace nothinbutdotnetstore.tasks.startup
 {
     public class ApplicationStartup
     {
-        static public void run()
+        IDictionary<Type, ContainerItemFactory> container;
+
+        static public void start()
         {
-            IOC.initialize_with(new DefaultContainer(new DefaultContainerItemFactoryRegistry(initialize_container_dictionary())));
+            new ApplicationStartup(new Dictionary<Type, ContainerItemFactory>());
         }
 
-        static IDictionary<Type, ContainerItemFactory> initialize_container_dictionary()
+        public ApplicationStartup(IDictionary<Type, ContainerItemFactory> container)
         {
-            var dictionary = new Dictionary<Type, ContainerItemFactory>
-                             {
-                                 {
-                                     typeof (ViewFactory),
-                                     new FunctionalContainerItemFactory(() => new DefaultViewFactory())
-                                     },
-                                 {
-                                     typeof (ResponseEngine), new FunctionalContainerItemFactory(
-                                     () => new DefaultResponseEngine(IOC.resolve.instance_of<ViewFactory>()))
-                                     },
-                                 {
-                                     typeof (CatalogBrowsingTasks),
-                                     new FunctionalContainerItemFactory(
-                                     () => new StubCatalogBrowsingTasks())
-                                     }
-                             };
-
-
-            dictionary.Add(typeof (List<RequestCommand>), new FunctionalContainerItemFactory(() => new List<RequestCommand>
-                                                                                                   {
-                                                                                                       new DefaultRequestCommand(Url.contains("ViewMainDepartments"),
-                                                                                                                                 new ViewMainDepartments(
-                                                                                                                                     IOC.resolve.instance_of<CatalogBrowsingTasks>
-                                                                                                                                         (),
-                                                                                                                                     IOC.resolve.instance_of<ResponseEngine>())),
-                                                                                                       new DefaultRequestCommand(Url.contains("ViewSubDepartments"),
-                                                                                                                                 new ViewSubDepartments(
-                                                                                                                                     IOC.resolve.instance_of<ResponseEngine>(),
-                                                                                                                                     IOC.resolve.instance_of<CatalogBrowsingTasks>
-                                                                                                                                         ())),
-                                                                                                       new DefaultRequestCommand(Url.contains("ViewProductsInDepartment"),
-                                                                                                                                 new ViewProductsInDepartment(
-                                                                                                                                     IOC.resolve.instance_of<ResponseEngine>(),
-                                                                                                                                     IOC.resolve.instance_of<CatalogBrowsingTasks>
-                                                                                                                                         ()))
-                                                                                                   }));
-            dictionary.Add(typeof (CommandRegistry), new FunctionalContainerItemFactory(() => new DefaultCommandRegistry(IOC.resolve.instance_of<List<RequestCommand>>())));
-            dictionary.Add(typeof (FrontController), new FunctionalContainerItemFactory(() => new DefaultFrontController(IOC.resolve.instance_of<CommandRegistry>())));
-            dictionary.Add(typeof (RequestFactory), new FunctionalContainerItemFactory(() => new StubRequestFactory()));
-            return dictionary;
+            this.container = container;
+            run();
         }
-    }
+
+        public void run()
+        {
+            Start.by<ConfiguringCoreServices>()
+                .followed_by<ConfiguringFrontController>()
+                .followed_by<ConfigureRouting>();
+
+            configure_core_services();
+            configure_service_layer();
+            configure_front_controller();
+            configure_routing();    
+            configure_application_commands();
+        }
+
+        void configure_core_services()
+        {
+            IOC.initialize_with(new DefaultContainer(new DefaultContainerItemFactoryRegistry(container)));
+        }
+
+        void configure_application_commands()
+        {
+            register<ViewMainDepartments>(() => new ViewMainDepartments(resolve<CatalogBrowsingTasks>(), resolve<ResponseEngine>()));
+            register<ViewSubDepartments>(() => new ViewSubDepartments(resolve<ResponseEngine>(), resolve<CatalogBrowsingTasks>()));
+            register<ViewProductsInDepartment>(() => new ViewProductsInDepartment(resolve<ResponseEngine>(), resolve<CatalogBrowsingTasks>()));
+            register<AddProductToCart>(() => new AddProductToCart(resolve<ShoppingTasks>()));
+        }
+
+        void configure_service_layer()
+        {
+            register<CatalogBrowsingTasks>(() => new StubCatalogBrowsingTasks());
+        }
+
+        void configure_front_controller()
+        {
+            register<PageFactory>((path, type) => BuildManager.CreateInstanceFromVirtualPath(path, type));
+            register<FrontController>(() => new DefaultFrontController(resolve<CommandRegistry>()));
+            register<CommandRegistry>(() => new DefaultCommandRegistry(resolve<IEnumerable<RequestCommand>>()));
+            register<RequestFactory>(() => new StubRequestFactory());
+            register<ResponseEngine>(() => new DefaultResponseEngine(resolve<ViewFactory>()));
+            register<ViewRegistry>(() => new StubViewRegistry());
+            register<ViewFactory>(() => new DefaultViewFactory(resolve<ViewRegistry>(), resolve<PageFactory>()));
+        }
+
+        void configure_routing()
+        {
+            register<IEnumerable<RequestCommand>>(() => create_routes());
+        }
+
+        IEnumerable<RequestCommand> create_routes()
+        {
+            yield return create_command<ViewMainDepartments>();
+            yield return create_command<ViewProductsInDepartment>();
+            yield return create_command<ViewSubDepartments>();
+            yield return create_command<AddProductToCart>();
+        }
+
+        RequestCommand create_command<AppCommand>() where AppCommand : ApplicationWebCommand
+        {
+            return new DefaultRequestCommand(Url.contains(typeof (AppCommand).Name), resolve<AppCommand>());
+        }
+
+        Dependency resolve<Dependency>()
+        {
+            return IOC.resolve.instance_of<Dependency>();
+        }
+
+        void register<Dependency>(Func<object> factory)
+        {
+            container.Add(typeof (Dependency), new FunctionalContainerItemFactory(factory));
+        }
+
+        void register<Dependency>(Dependency item)
+        {
+            container.Add(typeof (Dependency), new FunctionalContainerItemFactory(() => item));
+        }
+    } ;
 }

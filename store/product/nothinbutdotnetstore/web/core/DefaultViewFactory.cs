@@ -1,16 +1,9 @@
-using System.Web.Compilation;
-using nothinbutdotnetstore.web.core.stubs;
-
 namespace nothinbutdotnetstore.web.core
 {
     public class DefaultViewFactory : ViewFactory
     {
         ViewRegistry view_registry;
         PageFactory page_factory;
-
-        public DefaultViewFactory() : this(new StubViewRegistry(), (path,type) => BuildManager.CreateInstanceFromVirtualPath(path, type))
-        {
-        }
 
         public DefaultViewFactory(ViewRegistry view_registry, PageFactory page_factory)
         {

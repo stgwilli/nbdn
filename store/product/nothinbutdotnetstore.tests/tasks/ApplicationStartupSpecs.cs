@@ -16,7 +16,7 @@ namespace nothinbutdotnetstore.tests.tasks
         {
             because b = () =>
             {
-                ApplicationStartup.run();
+                ApplicationStartup.start();
             };
 
 
