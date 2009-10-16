@@ -8,6 +8,7 @@ function delete_branch($branch)
 {
   git branch -D $branch 
 }
+
 function checkout($branch)
 {
    git checkout $branch
